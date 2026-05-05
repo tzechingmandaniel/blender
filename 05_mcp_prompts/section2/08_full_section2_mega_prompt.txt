@@ -1,0 +1,40 @@
+MCP Mega Prompt §2.13 — Full Section 2 (Ready-to-Use)
+======================================================
+
+Use the existing Blender scene from Section 1. Create Section 2 blockout for a
+non-functional AK-style exterior 3D prop.
+
+Important safety and scope:
+- This is only a visual exterior prop.
+- Do not create internal firearm mechanisms.
+- Do not create functional barrel, chamber, bolt, spring, trigger mechanism,
+  firing system, detachable magazine system, or manufacturing-level details.
+- All objects must be solid decorative exterior meshes only.
+
+Task:
+Create separate blockout objects in the 02_BLOCKOUT collection:
+ 1. BLK_receiver_main
+ 2. BLK_stock_main
+ 3. BLK_grip_main
+ 4. BLK_magazine_main
+ 5. BLK_handguard_lower
+ 6. BLK_handguard_upper
+ 7. BLK_gas_tube_outer
+ 8. BLK_barrel_outer_closed
+ 9. BLK_dustcover_main
+10. BLK_front_sight_block_visual
+11. BLK_rear_sight_visual
+12. BLK_trigger_guard_visual
+
+Use the locked side-view reference image and guide markers to match the
+exterior silhouette. Use simple primitive-based geometry with clean bevels and
+weighted normals. Keep each part as a separate object. Apply placeholder
+materials:
+- dark metal for receiver, barrel, dust cover, sights
+- dark wood for stock and handguards
+- dark reddish brown for grip
+- black metal for magazine
+
+Do not add small rivets, scratches, final textures, real mechanical openings,
+or internal components yet. Focus only on proportion, silhouette, part
+separation, and clean blockout volume.

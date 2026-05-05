@@ -1,0 +1,6 @@
+MCP Prompt — Receiver (placeholder for Section 2/3, do not run yet)
+====================================================================
+
+[TBD — to be written when Section 2 (blockout) and Section 3 (major parts)
+plan documents are provided. The receiver is a major part and falls under
+Section 3 in the planned workflow.]

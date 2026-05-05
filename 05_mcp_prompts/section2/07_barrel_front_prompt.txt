@@ -1,0 +1,9 @@
+MCP Prompt §2.9.2-7 — Barrel and Front Assembly Exterior
+=========================================================
+
+Create only the exterior barrel visual blockout and front assembly visual
+blocks for the non-functional AK-style prop. Name the objects
+BLK_barrel_outer_closed, BLK_front_sight_block_visual, and
+BLK_front_ring_visual. Use dark metal placeholder material. Keep all parts
+solid and decorative. Do not create a functional barrel bore, chamber, muzzle
+device details, or internal mechanical components.

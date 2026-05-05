@@ -1,0 +1,8 @@
+MCP Prompt §2.9.2-2 — Receiver Blockout Only
+=============================================
+
+Create only the receiver blockout for a non-functional exterior AK-style prop.
+Use a rectangular hard-surface form aligned to the side reference image. Name
+it BLK_receiver_main. Keep it solid and exterior-only. Add basic bevels and
+weighted normals. Do not create internal mechanisms, real openings, firing
+parts, or functional geometry.

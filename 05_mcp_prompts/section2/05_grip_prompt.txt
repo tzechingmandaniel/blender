@@ -1,0 +1,7 @@
+MCP Prompt §2.9.2-5 — Grip Blockout Only
+=========================================
+
+Create only the pistol grip exterior blockout for the non-functional AK-style
+prop. Name it BLK_grip_main. Use an angled tapered form with rounded edges and
+a simple base cap. Keep it solid and decorative. Do not create functional
+trigger or firing mechanism details.

@@ -1,0 +1,26 @@
+Blender MCP Working Rules
+=========================
+
+1. One Prompt, One Goal — never ask MCP to build the whole model in one step.
+
+GOOD:  "Create the project collections and import the side reference image."
+BAD:   "Create the full AK-style model with all parts, details, materials, and final render."
+
+2. Naming convention prefixes:
+   REF_   = reference image
+   GUIDE_ = guide object
+   BLK_   = blockout part
+   AK_    = final model part
+   MAT_   = material
+   CTRL_  = control/helper
+   LOD_   = level of detail
+
+3. Save a new version (.blend) at every milestone:
+   v01_project_setup.blend       <-- SECTION 1 (this file)
+   v02_blockout.blend            <-- SECTION 2 (rough silhouette)
+   v03_major_parts.blend         <-- SECTION 3
+   v04_detail_pass.blend
+   v05_materials.blend
+   v06_final_assembly.blend
+
+4. Avoid bad names: final.blend, finalnew.blend, copy of copy.

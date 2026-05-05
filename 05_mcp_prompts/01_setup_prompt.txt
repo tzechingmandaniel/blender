@@ -1,0 +1,9 @@
+MCP Prompt 1 — Scene Setup
+==========================
+
+Set up a Blender scene for a non-functional exterior 3D prop model. Use metric
+units, create organized collections named 00_REFERENCE, 01_GUIDES, 02_BLOCKOUT,
+03_MAJOR_PARTS, 04_MINOR_PARTS, 05_DETAIL_PARTS, 06_MATERIAL_TESTS, 07_ASSEMBLY,
+08_LIGHTING_CAMERA, and 09_EXPORT_READY. Add placeholder materials for dark
+metal, black metal, dark wood, reddish brown grip, guide wire, and neutral clay.
+Do not create any firearm internal mechanism or functional components.

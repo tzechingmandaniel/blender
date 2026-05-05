@@ -1,0 +1,8 @@
+MCP Prompt §2.9.2-4 — Magazine Blockout Only
+=============================================
+
+Create only the curved magazine exterior blockout for the non-functional
+AK-style prop. Name it BLK_magazine_main. Make it a solid visual exterior part
+with a curved silhouette and simple thickness. Add a basic baseplate shape for
+visual reference only. Do not create real feed lips, locking features,
+cartridge areas, or internal magazine structure.

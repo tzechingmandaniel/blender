@@ -1,0 +1,8 @@
+MCP Prompt 3 — Guide Objects (Section 1.10.4)
+==============================================
+
+Create non-renderable guide objects for the exterior prop: a wireframe overall
+bounding box, a horizontal centerline, and labelled visual marker planes for
+stock, receiver, grip, magazine, handguard, barrel exterior, front sight area,
+and rear sight area. Put all guide objects in 01_GUIDES. Use simple wireframe
+display and lock transforms after placement.

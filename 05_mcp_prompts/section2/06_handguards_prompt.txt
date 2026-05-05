@@ -1,0 +1,8 @@
+MCP Prompt §2.9.2-6 — Handguard Blockout
+=========================================
+
+Create only the lower and upper handguard exterior blockout for the
+non-functional AK-style prop. Name the objects BLK_handguard_lower and
+BLK_handguard_upper. Use reddish-brown wood placeholder material. Match the
+exterior silhouette and approximate volume from the reference images. Do not
+create functional internal gas system details or real attachment features.

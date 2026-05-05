@@ -1,0 +1,34 @@
+Reference Notes — AK-47 Non-Functional Prop
+=============================================
+
+Scope:
+- Non-functional exterior 3D visual prop only
+- No internal mechanism, no working parts
+
+Reference limitation:
+- Only one accurate side-view reference at start
+- Top, bottom, front, rear views approximated for visual use only
+- Final model prioritises exterior silhouette and render quality, not mechanical accuracy
+
+Scale:
+- Overall prop length ≈ 1.0 Blender unit (NOT real manufacturing dimensions)
+- X axis = model length
+- Y axis = model thickness
+- Z axis = model height
+
+Visual target:
+- Dark blued / worn black metal receiver
+- Dark brown wooden stock + handguards
+- Curved black/dark metal magazine
+- Decorative exterior sights + front assembly
+- Weathered but clean realistic prop finish
+
+Paintover colour code:
+  Red    = receiver
+  Blue   = stock
+  Green  = magazine
+  Yellow = handguard
+  Purple = grip
+  Orange = barrel exterior
+  Cyan   = sight blocks
+  White  = small exterior details

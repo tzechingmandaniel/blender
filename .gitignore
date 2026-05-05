@@ -1,0 +1,37 @@
+# Blender autosave / backup files
+*.blend1
+*.blend2
+*.blend3
+*.blend@
+*.blend.lock
+*~
+
+# Blender debug logs
+blender-debug-*.txt
+*.crash.txt
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor noise
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# Render output you may not want versioned (uncomment if needed)
+# 04_renders/final_turntable/
+# 04_renders/material_tests/
+
+# Test exports
+02_exports/test_exports/
+
+# Large binary that's better fetched separately if you want it (uncomment if it grows)
+# 02_exports/glb/*.glb

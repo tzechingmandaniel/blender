@@ -1,0 +1,11 @@
+MCP Prompt §2.9.2-1 — Blockout Collection Setup
+================================================
+
+Create the blockout objects for a non-functional AK-style exterior prop. Do not
+create internal mechanisms or functional firearm components. Use the existing
+reference image and guide objects. Create only simple placeholder blockout
+meshes for the main exterior parts: receiver, stock, grip, magazine, lower
+handguard, upper handguard, barrel exterior, dust cover, front sight exterior,
+and rear sight exterior. Put them in the 02_BLOCKOUT collection. Use separate
+objects with clear names beginning with BLK_. Apply simple placeholder
+materials only.

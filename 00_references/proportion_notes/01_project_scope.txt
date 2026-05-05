@@ -1,0 +1,27 @@
+Project Scope Documentation — Section 1.1 of Plan
+=====================================================
+
+1.1.1 Project Type
+------------------
+Project type: Non-functional AK-style exterior 3D prop
+Use case:     Blender render / game asset / portfolio display
+Style:        Realistic exterior hard-surface model
+Functionality: None
+
+1.1.2 Safety Boundary
+---------------------
+This model is a non-functional 3D visual prop.
+It will only include exterior visible shapes.
+No internal firearm mechanism will be modelled.
+No functional barrel, firing system, detachable magazine system,
+spring, bolt, chamber, or real assembly mechanism will be created.
+
+1.1.3 Visual Target
+-------------------
+Dark blued or worn black metal receiver
+Dark brown wooden stock
+Dark brown wooden lower and upper handguard
+Curved black or dark metal magazine
+Decorative exterior sights
+Decorative exterior front assembly
+Weathered but clean realistic prop finish

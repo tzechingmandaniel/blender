@@ -1,0 +1,8 @@
+MCP Prompt §2.9.2-3 — Stock Blockout Only
+==========================================
+
+Create only the wooden buttstock blockout for the non-functional AK-style
+exterior prop. Name it BLK_stock_main. Use a tapered wooden stock silhouette
+based on the side reference. Keep it as one solid exterior visual object with
+rounded bevels. Do not create functional attachment details or internal
+structures.

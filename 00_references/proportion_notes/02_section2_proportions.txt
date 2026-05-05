@@ -1,0 +1,33 @@
+Section 2 Proportion Planning Notes
+====================================
+
+§2.7.1 Overall Length Reference
+-------------------------------
+Stock end -> front muzzle exterior end = full visual length (~1.0 Blender unit)
+This is a visual proportion guide only, not a manufacturing dimension.
+
+§2.7.2 Proportion Zones (5 zones along X axis)
+----------------------------------------------
+  Rear stock zone        : X = -0.50 to -0.18   (length 0.32)
+  Receiver zone          : X = -0.18 to +0.05   (length 0.23)
+  Magazine / grip zone   : X = -0.13 to +0.02   (below receiver, Z negative)
+  Handguard zone         : X = +0.05 to +0.22   (length 0.17)
+  Barrel / front zone    : X = +0.22 to +0.42   (length 0.20)
+
+§2.7.3 Side-View Proportion Checks (run after every part)
+---------------------------------------------------------
+  - Does it match the reference silhouette?
+  - Is the part too long?
+  - Is the part too short?
+  - Is it too thick vertically?
+  - Does it overlap another part incorrectly?
+  - Does it destroy the overall balance?
+
+§2.4.2 Major parts (define overall proportion)
+----------------------------------------------
+  Receiver, Stock, Magazine, Grip, Lower handguard, Barrel exterior
+
+§2.4.3 Minor parts (added in later sections)
+--------------------------------------------
+  Dust cover ribs, Rivets, Sight silhouettes, Sling loop,
+  Surface panel lines, Magazine grooves, Wood edge bevels

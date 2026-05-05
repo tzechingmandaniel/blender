@@ -1,0 +1,57 @@
+MCP Mega Prompt — Section 1.16 (Ready-to-Use Full)
+====================================================
+
+Set up a Blender project scene for a non-functional AK-style exterior 3D prop
+model.
+
+Do not create any working firearm mechanism, internal parts, functional barrel,
+chamber, bolt, spring, firing system, or detachable mechanical assembly. This
+is only a visual exterior prop for rendering or game asset use.
+
+Scene setup:
+1. Set units to Metric with unit scale 1.0.
+
+2. Create collections:
+   - 00_REFERENCE
+   - 01_GUIDES
+   - 02_BLOCKOUT
+   - 03_MAJOR_PARTS
+   - 04_MINOR_PARTS
+   - 05_DETAIL_PARTS
+   - 06_MATERIAL_TESTS
+   - 07_ASSEMBLY
+   - 08_LIGHTING_CAMERA
+   - 09_EXPORT_READY
+
+3. Create placeholder materials:
+   - MAT_placeholder_dark_metal
+   - MAT_placeholder_black_metal
+   - MAT_placeholder_dark_wood
+   - MAT_placeholder_bakelite_grip
+   - MAT_placeholder_neutral_clay
+   - MAT_placeholder_guide_wire
+
+4. Import the provided side-view reference image as REF_ak47_side_view.
+   - Put it in 00_REFERENCE.
+   - Align it for side-view modelling.
+   - Set opacity to around 40%.
+   - Lock transforms.
+   - Make it non-selectable if possible.
+
+5. Create guide objects in 01_GUIDES:
+   - GUIDE_overall_length_box as a wireframe bounding box.
+   - GUIDE_centerline as a horizontal alignment line.
+   - GUIDE_stock_region
+   - GUIDE_receiver_region
+   - GUIDE_grip_region
+   - GUIDE_magazine_region
+   - GUIDE_handguard_region
+   - GUIDE_barrel_outer_region
+   - GUIDE_front_sight_region
+   - GUIDE_rear_sight_region
+
+6. Create a preview camera named CAM_preview_3quarter.
+7. Create two area lights named Area_Light_Key and Area_Light_Fill.
+8. Keep all objects clearly named.
+9. Do not start modelling the actual parts yet. Only complete the project
+   setup, references, guides, placeholder materials, camera, and lighting.

@@ -1,0 +1,10 @@
+MCP Prompt 2 — Reference Setup (Section 1.10.3)
+================================================
+
+Import the provided AK-style side-view reference image as a locked reference
+plane. Place it in the 00_REFERENCE collection. Align it flat for side-view
+modelling, set opacity around 40 percent, lock its transforms, and make it
+unselectable if possible. Add visual guide markers only for exterior silhouette
+alignment: overall length, stock end, receiver region, magazine region,
+handguard region, and front barrel exterior region. These guides are for visual
+proportion only, not real manufacturing dimensions.

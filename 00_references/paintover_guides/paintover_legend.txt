@@ -1,0 +1,14 @@
+Paintover Colour Code (per Section 1.3.5)
+==========================================
+
+Red    = receiver
+Blue   = stock
+Green  = magazine
+Yellow = handguard
+Purple = grip
+Orange = barrel exterior
+Cyan   = sight blocks
+White  = small exterior details
+
+Use these colours when creating any paintover guide on top of the side
+reference image to identify which silhouette region maps to which part.
