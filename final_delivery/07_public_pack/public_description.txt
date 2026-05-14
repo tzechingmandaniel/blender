@@ -1,0 +1,17 @@
+Public Description
+====================
+Non-functional AK-style exterior 3D prop created for visual rendering
+and game-asset presentation. The project focuses on hard-surface
+exterior modelling, material separation, worn dark metal, reddish-brown
+wood, blackened magazine metal, bakelite-style grip, controlled edge
+wear, and clean portfolio presentation.
+
+Longer description
+------------------
+This project is a non-functional exterior 3D prop developed as a Blender
+hard-surface modelling and material workflow exercise. The focus was on
+exterior silhouette, modular part organisation, decorative surface
+detail, UV/material planning, dark metal and wood look development,
+final studio renders, close-up material presentation, turntable
+animation, and clean delivery packaging. The asset is intended only for
+visual rendering, portfolio presentation, and game-prop display.

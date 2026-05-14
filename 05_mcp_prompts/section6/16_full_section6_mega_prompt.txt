@@ -1,0 +1,40 @@
+Phase 6 Mega Prompt — Final Texture / Material Refinement + Lookdev
+====================================================================
+
+Runs Phase 6 end-to-end on top of v05_uv_materials.blend. Output is
+v06_final_textures_lookdev.blend. Deliverables:
+
+  1. Save v05 as v06.
+  2. Lookdev readiness report into lookdev_notes.txt.
+  3. Create 08_LIGHTING_CAMERA with 6 cameras + 3 area lights (§6.6).
+  4. Build EdgeWearMask + CavityAO NodeGroups.
+  5. Rebuild MAT_metal_dark_blued as procedural blued steel with
+     Pointiness edge wear + cavity AO + noise scratches.
+  6. Rebuild MAT_metal_black_magazine as more-matte blackened metal.
+  7. Rebuild MAT_wood_dark_reddish as Wave-driven dark reddish wood,
+     grain runs lengthwise along +X.
+  8. Rebuild MAT_grip_dark_bakelite as fine-noise bakelite/polymer,
+     no wave/grain pattern, distinct from wood.
+  9. Add subtle scratch/roughness variation per material (Prompt 9).
+ 10. Add subtle dirt/weathering via inverted CavityAO (Prompt 10).
+ 11. Confirm material balance (Prompt 11).
+ 12. Render lookdev test renders into 04_renders/lookdev/ (Prompt 12).
+ 13. Write 08_reviews/phase_6_material_issue_tracker.txt (Prompt 13).
+ 14. Final cleanup (Prompt 14).
+ 15. Update phase_notes / material_notes / texture_workflow_notes /
+     lookdev_notes (Prompt 15).
+ 16. Save v06_final_textures_lookdev.blend.
+
+Hard scope (enforced):
+  - non-functional, exterior-only
+  - no internal mechanism, no working trigger, no chamber/bolt/spring
+  - no functional magazine, no bore, no rifling
+  - no real openings, no booleans
+  - no manufacturing dimensions, no real assembly
+  - no aggressive scene context
+
+Outputs:
+  - 01_blender/v06_final_textures_lookdev.blend
+  - 04_renders/lookdev/lookdev_*.png (8 files)
+  - 06_documentation/{phase,material,texture_workflow,lookdev}_notes.txt
+  - 08_reviews/phase_6_material_issue_tracker.txt

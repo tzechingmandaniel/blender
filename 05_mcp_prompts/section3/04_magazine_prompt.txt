@@ -1,0 +1,29 @@
+MCP Prompt §3.4 — AK_magazine_main
+===================================
+
+Refine the magazine from BLK_magazine_main into AK_magazine_main. Exterior
+visual only — no real opening at top, no working follower, no real catch.
+
+Geometry:
+- Start from a box 0.110 (X) × 0.050 (Y) × 0.150 (Z). Centre at
+  ~(-0.050, 0, -0.105).
+- Subdivide 4 times along Z so the banana curve is smooth.
+- Bend: bottom (-Z) shifts forward (+X) according to a quadratic curve so
+  the front face is convex. Total curl ≈ +0.060 X at the bottom.
+- Decorative side ribs: two raised bands on the ±Y faces — extrude a small
+  strip ~0.002 outward in Y. Bands at Z ≈ +0.030 and Z ≈ -0.030. Each band
+  ~0.008 tall in Z. Visual only.
+- Floorplate: a separate box ~0.115 × 0.060 × 0.012 located at the bottom
+  of the magazine (Z ≈ -0.080, X offset matches the curled bottom).
+  Joined into the same object as the body so AK_magazine_main is one mesh.
+- Top of the magazine is closed (no opening) — this prop is non-functional.
+
+Modifiers:
+- Bevel (Angle limit 30°, width 0.0015, segments 2).
+- Weighted Normal (weight 50, threshold 0.01, keep sharp).
+
+Material: MAT_placeholder_black_metal
+Collection: 03_MAJOR_PARTS
+Parent: AK47_MASTER_ASSET
+Origin: geometric center, transform applied.
+Naming: AK_magazine_main.

@@ -1,0 +1,34 @@
+Phase 8 Prompt 4 — Copy Final Still Renders
+============================================
+
+Copy the 14 stills from 04_renders/final/ into final_delivery/04_final_renders/
+with the §8.9 renaming:
+
+  04_renders/final/render_01_side_profile.png            -> final_delivery/04_final_renders/full_model/01_side_profile.png
+  04_renders/final/render_02_front_3quarter_hero.png     -> .../full_model/02_front_3quarter_hero.png
+  04_renders/final/render_03_rear_3quarter.png           -> .../full_model/03_rear_3quarter.png
+  04_renders/final/render_04_top_angle.png               -> .../full_model/04_top_angle.png
+  04_renders/final/render_05_closeup_receiver_metal.png  -> .../closeups/05_closeup_receiver_metal.png
+  04_renders/final/render_06_closeup_wood_stock.png      -> .../closeups/06_closeup_wood_stock.png
+  04_renders/final/render_07_closeup_handguard_wood.png  -> .../closeups/07_closeup_handguard_wood.png
+  04_renders/final/render_08_closeup_magazine.png        -> .../closeups/08_closeup_magazine.png
+  04_renders/final/render_09_closeup_front_sight_visual.png -> .../closeups/09_closeup_front_sight_visual.png
+  04_renders/final/render_10_closeup_grip.png            -> .../closeups/10_closeup_grip.png
+  04_renders/final/render_11_closeup_edgewear.png        -> .../closeups/11_closeup_edgewear.png
+  04_renders/final/render_12_clay_full_model.png         -> .../clay_wireframe_optional/12_clay_full_model.png
+  04_renders/final/render_13_wireframe_full_model.png    -> .../clay_wireframe_optional/13_wireframe_full_model.png
+  04_renders/final/render_14_material_breakdown.png      -> .../clay_wireframe_optional/14_material_breakdown.png
+
+Also copy the §8.9 portfolio_selected set (5 files) into
+final_delivery/04_final_renders/portfolio_selected/:
+  02_front_3quarter_hero.png
+  01_side_profile.png
+  05_closeup_receiver_metal.png
+  06_closeup_wood_stock.png
+  08_closeup_magazine.png
+
+Hard scope: no scene render in Phase 8 — copy-only.
+
+After running:
+  [ ] 14 stills copied with §8.9 names
+  [ ] 5 portfolio_selected copies present

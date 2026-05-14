@@ -1,0 +1,23 @@
+Phase 8 Prompt 1 — Final Delivery Folder Plan
+==============================================
+
+Create the final_delivery directory tree:
+
+  final_delivery/
+    01_blender_final/
+    02_exports/{fbx,glb,obj}/
+    03_textures/{metal,wood,magazine,grip,shared}/
+    04_final_renders/{full_model,closeups,clay_wireframe_optional,portfolio_selected}/
+    05_turntable/{turntable_frames}/
+    06_documentation/
+    07_public_pack/
+    08_archive_notes/
+
+All folders must exist before any file copy step runs. Idempotent —
+running again on existing folders does not error.
+
+Hard scope: non-functional exterior prop only.
+
+After running:
+  [ ] All 21 leaf folders exist
+  [ ] No file copied yet

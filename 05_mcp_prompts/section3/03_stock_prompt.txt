@@ -1,0 +1,30 @@
+MCP Prompt §3.3 — AK_stock_main
+================================
+
+Refine the stock from BLK_stock_main into AK_stock_main. Exterior-only, no
+real sling hole, no functional internal storage compartment.
+
+Geometry:
+- Start from a box filling §2.7.2 rear stock zone (X = -0.50 .. -0.18,
+  Y ±0.020, Z ±0.045). Centre at ~(-0.34, 0, -0.005).
+- Add 3 loop cuts along X.
+- Buttplate curve (rear face, X = -0.50): pull vertices forward (+X) at the
+  vertical midline so the rear face is concave along Z — classic curved
+  AK buttstock.
+- Cheek slope: top edge slopes down from rear (Z=+0.045) toward the receiver
+  end (Z=+0.020). Apply by lowering the front-top edge verts.
+- Wrist (front, near receiver): narrow in Y and Z. At X ≈ -0.18,
+  Y collapses to ±0.015 and Z collapses to ±0.025.
+- Sling slot silhouette: shallow recess on the lower-rear edge at
+  X ≈ -0.40, Z ≈ -0.03. Push 4 verts inward (+Z) by ~0.003 across a
+  ~0.030 X-range. Visual only, NOT a real hole.
+
+Modifiers:
+- Bevel (Angle limit 30°, width 0.0025, segments 2).
+- Weighted Normal (weight 50, threshold 0.01, keep sharp).
+
+Material: MAT_placeholder_dark_wood
+Collection: 03_MAJOR_PARTS
+Parent: AK47_MASTER_ASSET
+Origin: geometric center, transform applied.
+Naming: AK_stock_main.

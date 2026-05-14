@@ -1,0 +1,27 @@
+Phase 7 Prompt 10 — Prepare Export-Ready Collection
+====================================================
+
+Ensure top-level collection 09_EXPORT_READY exists. Inside it:
+
+  EXPORT_AK47_EXTERIOR_PROP_MASTER  — empty (PLAIN_AXES, size 0.05) at origin.
+
+Cross-link every AK_ object into 09_EXPORT_READY (link, do NOT unlink
+from its original 03_/04_ collection). Each AK_ object should end up in
+both its original collection and 09_EXPORT_READY.
+
+Exclude from 09_EXPORT_READY:
+  - reference image planes
+  - guide objects
+  - blockout objects
+  - material test objects
+  - rejected detail tests
+  - cameras + lights (Phase 7 lighting)
+  - presentation stage planes (BG_, FLOOR_)
+  - lookdev preview spheres
+
+Hard scope: export collection contains visual exterior prop ONLY.
+
+After running:
+  [ ] 09_EXPORT_READY exists with EXPORT_AK47_EXTERIOR_PROP_MASTER empty
+  [ ] Every AK_ object is also linked into 09_EXPORT_READY
+  [ ] No cameras/lights/stage objects in 09_EXPORT_READY

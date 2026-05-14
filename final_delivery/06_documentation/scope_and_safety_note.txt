@@ -1,0 +1,15 @@
+Scope and Safety Note
+=====================
+This project is a non-functional exterior 3D prop intended for visual
+rendering, portfolio presentation, and game-asset display. It does not
+include internal firearm mechanisms, working firing components,
+manufacturing dimensions, or real assembly instructions. All decorative
+exterior details — rivets, panel lines, grooves, ribs, contour bands,
+sling loops, seam markers, edge-wear placeholders — are surface
+geometry only and contain no functional features.
+
+The prop's silhouette is referenced to the AKM/AK-47 family for
+stylistic recognition only. The model is a hard-surface modelling and
+material/lookdev workflow exercise. Any resemblance to a manufactured
+firearm is intentional only at the level of exterior silhouette; the
+geometry is closed and solid with no real openings.

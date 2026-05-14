@@ -1,0 +1,28 @@
+Phase 7 Prompt 8 — Optional Clay + Wireframe Renders
+====================================================
+
+Two optional breakdown renders to support portfolio storytelling:
+
+  render_12_clay_full_model.png
+    - Temporarily swap every AK_ object onto MAT_clay_neutral_preview.
+    - Render from CAM_final_front_3quarter.
+    - Restore original materials after render.
+
+  render_13_wireframe_full_model.png
+    - Enable Freestyle (or use a wireframe modifier override) so the
+      mesh wireframe is visible in dark colour over the clay material.
+    - Render from CAM_final_front_3quarter.
+    - Disable Freestyle / restore after render.
+
+Optional:
+  render_14_material_breakdown.png
+    - Render the side view with each material group identified by a
+      thin colour border (post-process labels added outside Blender are
+      out of scope here; we just produce the side render at 1920x1080).
+
+Hard scope: no dimensions, no internal cutaway, no functional diagram.
+
+After running:
+  [ ] render_12_clay_full_model.png exists
+  [ ] render_13_wireframe_full_model.png exists
+  [ ] AK_ objects are back on their final MAT_* afterward

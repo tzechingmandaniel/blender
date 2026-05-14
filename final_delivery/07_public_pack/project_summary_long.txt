@@ -1,0 +1,40 @@
+Project Summary (long)
+========================
+This project is a non-functional AK-style exterior 3D prop developed as
+a Blender hard-surface modelling and material workflow exercise. The
+work is organised across eight phases:
+
+  Section 1   Project setup, references, placeholder materials.
+  Section 2   Rough exterior blockout (14 BLK_ objects).
+  Section 3   Refined major exterior AK_ parts (8 objects) with bevel +
+              WeightedNormal modifiers.
+  Section 4   Decorative exterior surface details (51 objects):
+              rivets, ribs, grooves, contour bands, sling loops, seam
+              markers, edge-wear placeholders.
+  Section 5   UV planning + per-material atlas density balancing.
+              10 final MAT_* placeholder materials.
+  Section 6   Final procedural shader graphs for the four hero
+              materials — dark blued metal, blackened magazine metal,
+              dark reddish wood (Wave-driven lengthwise grain), and
+              bakelite/polymer grip. Reusable NodeGroups (EdgeWearMask,
+              CavityAO).
+  Section 7   Final scene with 13 cameras, 4 studio lights, neutral
+              presentation stage, 360° turntable animation, and
+              FBX/GLB/OBJ export-ready collection.
+  Section 8   Final delivery packaging, documentation, public pack,
+              and archive.
+
+The asset is intended only for visual rendering, portfolio presentation,
+and game-prop display. It is a non-functional exterior visual prop: no
+internal firearm mechanism, no working trigger system, no chamber, no
+bolt, no spring, no firing components, no functional magazine system,
+no bore, no rifling, no manufacturing dimensions, no real assembly
+instructions.
+
+Workflow highlights:
+  - Procedural-only shader graphs (no PNG textures required for the
+    .blend to render correctly).
+  - Per-material UV atlas density balancing.
+  - Geometry-driven edge wear via Pointiness.
+  - AmbientOcclusion-driven cavity darkening and grime.
+  - Deterministic, reproducible Python executors per phase.

@@ -1,0 +1,19 @@
+Phase 7 Prompt 4 — Final Studio Lighting
+========================================
+
+Create 4 area lights inside 08_LIGHTING_CAMERA (replace any existing):
+
+  LIGHT_final_key_soft          AREA 0.70m  50 W  (1.0, 0.96, 0.88)  ( 0.7,-0.7, 0.55)
+  LIGHT_final_fill_soft         AREA 1.20m  20 W  (1.0, 1.0, 1.0)    (-0.7,-0.5, 0.30)
+  LIGHT_final_rim_subtle        AREA 0.45m  25 W  (0.88,0.92,1.0)    ( 0.0, 0.7, 0.45)
+  LIGHT_final_top_soft_optional AREA 1.50m  18 W  (1.0, 1.0, 1.0)    ( 0.0, 0.0, 0.95)
+
+All face the world origin (track-quat). Phase 6 lookdev lights
+(LIGHT_lookdev_*) are set hide_render = True so they don't interfere.
+
+Hard scope: clean studio lighting, no aggressive combat mood.
+
+After running:
+  [ ] All 4 LIGHT_final_* exist with correct energies + colors
+  [ ] LIGHT_lookdev_* are hidden from render
+  [ ] Background remains neutral

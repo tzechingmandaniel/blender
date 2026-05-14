@@ -1,0 +1,151 @@
+Section 7 Final Scene / Cameras / Lights / Renders / Turntable / Export
+=======================================================================
+
+Section 7 takes the Phase 6 textured-and-lookdev'd model and produces the
+final presentation outputs: portfolio still renders, a 360° turntable
+animation, and clean export files. No new geometry — only scene-level
+additions (cameras, lights, background, turntable empty, export
+collection) and render output.
+
+Strictly exterior, strictly non-functional. No bore, chamber, working
+trigger, functional magazine, real openings, manufacturing detail.
+
+§7.1 Source / output
+--------------------
+Input:  01_blender/v06_final_textures_lookdev.blend
+Output: 01_blender/v07_final_scene_export.blend
+
+§7.2 Collections to HIDE in final renders
+-----------------------------------------
+00_REFERENCE, 01_GUIDES, 02_BLOCKOUT, 06_MATERIAL_TESTS,
+04Z_detail_tests_archive, 11_ARCHIVE_BACKUP (if present), 07_ASSEMBLY
+(assembly is a cross-link mirror; it'd double-render). Plus the
+REF_ak47_side_view image plane.
+
+Collections to KEEP visible:
+03_MAJOR_PARTS, 04_MINOR_PARTS (all sub-collections 04A..04H), 08_LIGHTING_CAMERA,
+09_EXPORT_READY (only when staging exports), 10_FINAL_RENDERS, the new
+12_PRESENTATION_STAGE (background + floor).
+
+§7.3 Master assembly
+--------------------
+AK47_MASTER_ASSET already exists (from Section 3) and parents every AK_
+object. AK47_MASTER_ASSEMBLY already exists (from Section 5) inside
+07_ASSEMBLY. For the turntable rotation, we add:
+  EMPTY_turntable_center  — at world origin (model already centered).
+  EMPTY_turntable_center is parented to nothing.
+  AK47_MASTER_ASSET (which already parents all AK_ parts) is parented to
+  EMPTY_turntable_center so rotating the empty rotates the whole prop
+  without modifying any AK_ object transforms.
+
+§7.4 Final cameras (under 08_LIGHTING_CAMERA)
+---------------------------------------------
+Full-model:
+  CAM_final_side_profile        ORTHO        loc (0.0, -0.8, 0.0)   rot ( 90,  0,   0)  ortho 1.10
+  CAM_final_front_3quarter      PERSP 50mm   loc ( 0.55, -0.55, 0.20) rot ( 75,  0,  40)
+  CAM_final_rear_3quarter       PERSP 50mm   loc (-0.55, -0.55, 0.20) rot ( 75,  0, -40)
+  CAM_final_top_angle           PERSP 50mm   loc ( 0.05, -0.30, 0.60) rot ( 35,  0,   0)
+  CAM_final_low_angle_optional  PERSP 50mm   loc ( 0.05, -0.45,-0.18) rot (105,  0,   0)
+
+Close-ups (PERSP 70mm, all face +Y at the model):
+  CAM_closeup_receiver           ( 0.00, -0.35,  0.02)  rot (90, 0,   0)
+  CAM_closeup_wood_stock         (-0.30, -0.35,  0.00)  rot (90, 0,   0)
+  CAM_closeup_handguard          ( 0.18, -0.35,  0.02)  rot (90, 0,   0)
+  CAM_closeup_magazine           (-0.04, -0.35, -0.07)  rot (90, 0,   0)
+  CAM_closeup_front_sight        ( 0.27, -0.35,  0.05)  rot (90, 0,   0)
+  CAM_closeup_grip               (-0.05, -0.30, -0.04)  rot (90, 0,   0)
+  CAM_closeup_material_edgewear  ( 0.05, -0.30,  0.05)  rot (90, 0,   0)
+
+Turntable:
+  CAM_turntable_main             ( 0.00, -0.95,  0.20)  rot (78, 0,   0)  PERSP 50mm
+
+All cameras live in 08_LIGHTING_CAMERA. None of them is parented to the
+turntable empty — only the model rotates.
+
+§7.5 Final studio lighting (under 08_LIGHTING_CAMERA)
+-----------------------------------------------------
+  LIGHT_final_key_soft           AREA 0.70m  energy  50 W  warm  (1.0, 0.96, 0.88)  loc ( 0.7, -0.7,  0.55)
+  LIGHT_final_fill_soft          AREA 1.20m  energy  20 W  neutral (1.0, 1.0, 1.0)  loc (-0.7, -0.5,  0.30)
+  LIGHT_final_rim_subtle         AREA 0.45m  energy  25 W  cool  (0.88, 0.92, 1.0)  loc ( 0.0,  0.7,  0.45)
+  LIGHT_final_top_soft_optional  AREA 1.50m  energy  18 W  neutral (1.0, 1.0, 1.0)  loc ( 0.0,  0.0,  0.95)
+
+Lights are pointed at the world origin via track-quat. Lookdev lights
+from Phase 6 are turned off in render but kept in scene for reference.
+
+§7.6 Presentation stage (12_PRESENTATION_STAGE)
+-----------------------------------------------
+  FLOOR_final_studio_plane    25 m x 25 m plane at z = -0.10
+  BG_final_neutral_backdrop   3 m x 3 m curved backdrop behind model (z 0..1)
+
+Both use MAT_background_neutral_dark = base (0.085, 0.090, 0.100),
+metallic 0, roughness 0.85 (matte neutral grey).
+
+§7.7 Final render outputs (under 04_renders/final/)
+---------------------------------------------------
+Full-model stills:
+  render_01_side_profile.png            CAM_final_side_profile          1920×1080 ortho
+  render_02_front_3quarter_hero.png     CAM_final_front_3quarter        1920×1080
+  render_03_rear_3quarter.png           CAM_final_rear_3quarter         1920×1080
+  render_04_top_angle.png               CAM_final_top_angle             1920×1080
+
+Close-ups:
+  render_05_closeup_receiver_metal.png  CAM_closeup_receiver            1080×1080
+  render_06_closeup_wood_stock.png      CAM_closeup_wood_stock          1080×1080
+  render_07_closeup_handguard_wood.png  CAM_closeup_handguard           1080×1080
+  render_08_closeup_magazine.png        CAM_closeup_magazine            1080×1080
+  render_09_closeup_front_sight_visual.png  CAM_closeup_front_sight     1080×1080
+  render_10_closeup_grip.png            CAM_closeup_grip                1080×1080
+  render_11_closeup_edgewear.png        CAM_closeup_material_edgewear   1080×1080
+
+Optional breakdown:
+  render_12_clay_full_model.png         CAM_final_front_3quarter (clay swap) 1920×1080
+  render_13_wireframe_full_model.png    CAM_final_front_3quarter (wire over) 1920×1080
+  render_14_material_breakdown.png      side view with material legend       1920×1080
+
+§7.8 Turntable animation
+------------------------
+File: 04_renders/final/turntable_ak_style_prop.mp4
+180 frames at 24 fps (7.5 s loop), linear interpolation, full 360° rotation
+of EMPTY_turntable_center around Z. Camera static. Background visible.
+For headless execution, render the animation as PNG frames into
+04_renders/final/turntable_frames/ and either encode separately or accept
+the frame sequence as the deliverable. A 12-frame low-resolution preview
+(960×540, every 15° step) is rendered first for sanity, saved as
+turntable_preview_12frames.mp4 (or PNG sequence).
+
+§7.9 Export-ready collection (09_EXPORT_READY)
+----------------------------------------------
+Mirror only the AK_ exterior prop objects into 09_EXPORT_READY/
+EXPORT_AK47_EXTERIOR_PROP_MASTER. No cameras, no lights, no references,
+no blockout, no material-test geometry. Materials and UV layers are
+preserved.
+
+§7.10 Export files (02_exports/)
+--------------------------------
+  AK47_exterior_prop_visual.fbx
+  AK47_exterior_prop_visual.glb
+  AK47_exterior_prop_visual.obj
+
+Each is exported with selection-only from the export-ready collection,
+with applied modifiers, embedded materials, and preserved UV layer. No
+mesh decimation. No baked textures (procedural shaders are preserved in
+the .blend; exporters will use either Principled BSDF defaults or write a
+flat color depending on format).
+
+§7.11 Documentation (under 06_documentation/)
+---------------------------------------------
+  render_notes.txt  — new
+  export_notes.txt  — new
+  phase_notes.txt   — append Section 7 entry (idempotent like Phase 6)
+
+§7.12 Issue tracker (08_reviews/)
+---------------------------------
+  phase_7_render_issue_tracker.txt — populated with Phase 7 self-audit
+  issues (low-severity, deferred to Phase 8 or no-fix-needed).
+
+§7.13 Safety scope reminders
+----------------------------
+No combat scenery. No ammunition. No tactical accessories. Background +
+floor are flat neutral grey. Close-ups frame surface/material only — not
+mechanism. Turntable rotates a parent empty, not individual functional
+parts. Export collection contains only exterior visual prop geometry.

@@ -1,0 +1,83 @@
+UV Notes — Section 5
+====================
+Scope reminder: non-functional exterior prop only.
+
+UV readiness check (§5.18 / Prompt 5):
+  AK_ objects scanned                   : 59
+  with non-uniform scale                 : 0
+  empty meshes (zero faces)              : 0
+  with Boolean modifier (breaks UVs)     : 0
+  broken normals                         : 0
+  ngon-heavy (>5% of faces)              : 7
+    -> ['AK_barrel_exterior_main(4/68)', 'AK_rivet_receiver_001(2/16)', 'AK_rivet_receiver_002(2/16)', 'AK_rivet_receiver_003(2/16)', 'AK_rivet_receiver_004(2/16)', 'AK_rivet_receiver_005(2/16)', 'AK_rivet_receiver_006(2/16)']
+  duplicate names                        : 0
+
+UV groups (per §5.5):
+  UV_receiver_metal       receiver + dust cover + receiver/cover details
+  UV_stock_wood           stock + stock contours + edge wear
+  UV_handguards_wood      hg lower/upper + hg contours + edge wear
+  UV_magazine_black_metal magazine body + grooves + spines + baseplate seam
+  UV_grip_bakelite        grip body + grooves + basecap seam
+  UV_barrel_front_metal   barrel + front-sight + gas block + front ring + sling loops
+  UV_small_details        seam markers, edge wear, misc placeholders
+
+UV seam strategy (per §5.6):
+  Receiver / dust cover  -> seam loop on the bottom perimeter (least visible).
+  Stock / lower hg       -> seam along -Z bottom edge, +X = +U.
+  Upper hg               -> seam along +Z top edge (faces down when mounted).
+  Magazine               -> seam on rear spine + horizontal seam at baseplate.
+  Grip                   -> seam on the +X front face (front grip surface).
+  Barrel                 -> cylinder seam on -Z bottom strip; +X = +U.
+  Small details          -> Smart UV Project at angle 66°, margin 0.02.
+
+Wood grain direction (per §5.7):
+  Stock, lower hg, upper hg UVs rotated so +X = +U; painted/procedural wood
+  grain runs lengthwise from butt to receiver / front to rear.
+
+Texel density check (§5.22 / Prompt 8):
+  All AK_ objects sharing one MAT_* are atlased into a single 0..1 UV space
+  via Blender's average_islands_scale + pack_islands. Absolute density per
+  object scales with object area; in-group spread is the meaningful quality
+  metric. Phase 6 will choose the final atlas resolution (e.g. 2K or 4K) and
+  scale UVs uniformly if needed.
+
+  Per-object density (target 1024 px/m, atlas-OK = in-group spread <= 1.5x):
+  AK_receiver_main                 2507.6 px/m   ratio  2.45   [atlas OK]
+  AK_stock_main                    2172.6 px/m   ratio  2.12   [atlas OK]
+  AK_handguard_lower_main          2172.1 px/m   ratio  2.12   [atlas OK]
+  AK_handguard_upper_main          2173.9 px/m   ratio  2.12   [atlas OK]
+  AK_magazine_main                 2725.1 px/m   ratio  2.66   [atlas OK]
+  AK_grip_main                     5451.7 px/m   ratio  5.32   [atlas OK]
+  AK_barrel_exterior_main          2507.1 px/m   ratio  2.45   [atlas OK]
+  AK_dustcover_main                2507.1 px/m   ratio  2.45   [atlas OK]
+
+  Per-material-group atlas spread (max/min px/m within the group):
+    MAT_detail_dark_metal           13 obj   10347.7..10347.7 px/m   spread 1.00x   [OK]
+    MAT_edge_wear_light_metal        3 obj    4640.6.. 4640.6 px/m   spread 1.00x   [OK]
+    MAT_edge_wear_worn_wood          5 obj    3921.7.. 3921.7 px/m   spread 1.00x   [OK]
+    MAT_grip_dark_bakelite           5 obj    5228.6.. 5451.7 px/m   spread 1.04x   [OK]
+    MAT_metal_black_magazine         8 obj    2724.9.. 2725.1 px/m   spread 1.00x   [OK]
+    MAT_metal_dark_blued             5 obj    2507.1.. 2507.6 px/m   spread 1.00x   [OK]
+    MAT_shadow_seam_dark            11 obj    3372.4.. 3372.4 px/m   spread 1.00x   [OK]
+    MAT_wood_dark_reddish            9 obj    2172.1.. 2173.9 px/m   spread 1.00x   [OK]
+
+UV checker review (§5.29 / Prompt 11):
+  Checker render: 04_renders/uv_checker/v05_uv_checker_3quarter.png
+  Checker render: 04_renders/uv_checker/v05_uv_checker_side.png
+  Material used : MAT_uv_checker_review (Tex Checker -> Base Color,
+                  driven by UVMap node).
+  Findings      :
+    - Wood (stock + handguards): checker squares run lengthwise as planned.
+    - Receiver side panels: clean checker, no major stretching.
+    - Dust cover top: checker is uniform along the curve.
+    - Magazine curved sides: minor stretching tolerated for placeholder stage.
+    - Grip: checker reads cleanly on visible front/side faces.
+    - Barrel cylinder: checker wraps cleanly; seam on -Z bottom (least visible).
+    - Small details (rivets, ribs, seams): Smart-UV gives acceptable density.
+
+Known issues / deferred fixes:
+  - Detail objects use Smart UV Project; per-island optimisation is rough.
+  - Atlas absolute density varies by group; will normalise when Phase 6
+    chooses the per-group texture resolution (planned 2K / 4K).
+  - Multi-material magazine spine objects are flat boxes; Smart-UV gives
+    one island per face which is OK for placeholder textures.

@@ -1,0 +1,25 @@
+Phase 7 Prompt 14 — Phase 7 Documentation
+==========================================
+
+Create / update under 06_documentation/:
+
+  render_notes.txt   — new — final cameras, lights, background, render
+                      resolution, render output filenames, turntable
+                      settings, known visual issues, output folder.
+
+  export_notes.txt   — new — 09_EXPORT_READY collection, export
+                      formats, file names, export scope, excluded
+                      objects, texture path notes, safe-prop scope.
+
+  phase_notes.txt    — append "Section 7" entry (idempotent: replace if
+                      a Section 7 block already exists).
+
+Each doc opens with "Scope reminder: non-functional exterior prop only."
+
+Hard scope: text only. No model edits.
+
+After running:
+  [ ] render_notes.txt + export_notes.txt exist
+  [ ] phase_notes.txt has exactly one "Section 7" block
+  [ ] Each doc mentions Phase 7 explicitly
+  [ ] Each doc mentions the safety scope

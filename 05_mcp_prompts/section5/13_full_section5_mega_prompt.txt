@@ -1,0 +1,42 @@
+Phase 5 Mega Prompt — Full UV / Material / Texture Workflow Prep
+================================================================
+
+This mega prompt runs Phase 5 end-to-end on top of v04_minor_details.blend.
+The output is v05_uv_materials.blend. The deliverables are:
+
+  1. Save v04_minor_details.blend as v05_uv_materials.blend.
+  2. Create 06_MATERIAL_TESTS (+ 3 sub-collections), 07_ASSEMBLY (+ 6
+     material groups + AK47_MASTER_ASSEMBLY empty), and 09_EXPORT_READY.
+  3. Cross-link every AK_ object from 03_/04_ into one 07_ASSEMBLY group
+     based on its material identity (do not unlink from original).
+  4. Create the 10 final MAT_* materials (Principled BSDF, placeholder
+     values only) — see §5.10.
+  5. Reassign every AK_ object from MAT_placeholder_* to the matching
+     MAT_*.
+  6. Mark UV seams per §5.6 on all major parts, then unwrap all AK_
+     objects (Unwrap for marked-seam parts, Smart UV Project for small
+     details). Wood/handguard islands rotated so +X = +U.
+  7. Measure texel density at 1024 px/m target and write the report into
+     06_documentation/uv_notes.txt.
+  8. Create 03_textures/{metal,wood,magazine,grip,shared}/README.txt
+     with planned map names.
+  9. Create 4 PREVIEW_* spheres in 06A_material_preview_objects. Hide
+     06_MATERIAL_TESTS in viewport + render.
+ 10. Create MAT_uv_checker_review for the checker render pass.
+ 11. Write phase_notes.txt, material_notes.txt, uv_notes.txt, and
+     texture_workflow_notes.txt under 06_documentation/.
+ 12. Save v05_uv_materials.blend.
+
+Hard scope (enforced):
+  - non-functional, exterior-only
+  - no internal mechanism, no working trigger, no chamber/bolt/spring
+  - no functional magazine, no bore, no rifling
+  - no manufacturing dimensions, no real assembly
+  - no real openings; no booleans
+  - no final texture maps yet (Phase 6)
+
+Render outputs (driven by separate scripts):
+  - 04_renders/clay_renders/v05_uv_materials_3quarter.png
+  - 04_renders/clay_renders/v05_uv_materials_side.png
+  - 04_renders/uv_checker/v05_uv_checker_3quarter.png
+  - 04_renders/uv_checker/v05_uv_checker_side.png

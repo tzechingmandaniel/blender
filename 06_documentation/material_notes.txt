@@ -1,0 +1,117 @@
+Material Notes — Section 5
+==========================
+Scope reminder: non-functional exterior prop only.
+
+Final MAT_* placeholders (all Principled BSDF, no texture nodes yet):
+
+  MAT_metal_dark_blued       base (0.05, 0.05, 0.07)   metallic 1.0  rough 0.40
+    Receiver, dust cover, barrel exterior, gas tube outer, sights,
+    trigger guard visual, front ring/gas block, muzzle front visual,
+    sling loop visuals front + rear.
+
+  MAT_metal_black_magazine   base (0.04, 0.04, 0.04)   metallic 1.0  rough 0.55
+    Magazine body + AK_groove_magazine_* + AK_spine_magazine_* +
+    AK_seam_magazine_baseplate_*.
+
+  MAT_wood_dark_reddish      base (0.18, 0.07, 0.04)   metallic 0.0  rough 0.55
+    Stock, lower handguard, upper handguard, AK_contour_*.
+
+  MAT_grip_dark_bakelite     base (0.10, 0.05, 0.04)   metallic 0.0  rough 0.50
+    Grip body + AK_groove_grip_* + AK_seam_grip_basecap_*.
+
+  MAT_shadow_seam_dark       base (0.02, 0.02, 0.025)  metallic 0.0  rough 0.85
+    All AK_seam_* except magazine baseplate + grip basecap.
+
+  MAT_edge_wear_light_metal  base (0.55, 0.53, 0.50)   metallic 0.6  rough 0.40
+    Metal edge-wear placeholder strips.
+
+  MAT_edge_wear_worn_wood    base (0.42, 0.30, 0.22)   metallic 0.0  rough 0.55
+    Wood edge-wear placeholder strips.
+
+  MAT_detail_dark_metal      base (0.07, 0.07, 0.08)   metallic 1.0  rough 0.50
+    Receiver rivets/panel lines, dust-cover ribs, front-sight cap,
+    front ring.
+
+  MAT_reference_hidden       base (0.50, 0.50, 0.50)   metallic 0.0  rough 0.80
+    Reserved for hidden / reference geometry. Currently unassigned.
+
+  MAT_clay_neutral_preview   base (0.62, 0.60, 0.57)   metallic 0.0  rough 0.70
+    Used for the clay preview render only.
+
+Phase 6 plan:
+  - replace base color placeholders with painted basecolor maps
+  - add roughness/metallic/normal/AO maps and connect via Image Texture nodes
+  - add edge-wear masks + dirt + cavity AO
+  - final lookdev
+
+
+Section 6 — Final lookdev materials (procedural, final tuned values)
+---------------------------------------------------------------------
+Reusable node groups:
+  EdgeWearMask : Geometry.Pointiness -> Map Range(CrispnessLow..High)
+                 -> Multiply by WearStrength -> 0..1 Mask
+  CavityAO     : Ambient Occlusion(samples=8, dist=AODistance) -> ColorRamp
+                 -> 1 - (1 - AO) * AOStrength -> Multiplier
+
+Hero materials (procedural shader graphs):
+
+  MAT_metal_dark_blued        Visual target: dark blued steel.
+                              metallic 1.0, rough_base 0.55, rough_var 0.12,
+                              edge wear 0.40 (Crisp 0.55..0.72),
+                              base (0.025,0.028,0.040) -> exposed
+                              (0.35,0.34,0.32), grime (0.12,0.11,0.10) at
+                              factor 0.12, bump 0.15.
+                              Edge wear rule: Pointiness-driven, only on
+                              sharp exterior edges (not flat faces).
+                              Used on AK_receiver_main, AK_dustcover_main,
+                              AK_barrel_exterior_main, sling loops, and
+                              every member of AK_metal_parts_grp.
+
+  MAT_metal_black_magazine    Visual target: matte blackened steel.
+                              metallic 1.0, rough_base 0.70, rough_var 0.08,
+                              edge wear 0.30 (Crisp 0.55..0.72),
+                              base (0.018,0.018,0.018) -> exposed
+                              (0.40,0.39,0.37), grime (0.10,0.09,0.09) at
+                              factor 0.15, bump 0.12.
+                              Roughness 0.70 vs receiver 0.55 -> verifiably
+                              more matte than receiver. Applied to
+                              magazine body + grooves + spines + baseplate
+                              seam.
+
+  MAT_wood_dark_reddish       Visual target: dark reddish-brown worn
+                              varnished wood with lengthwise grain.
+                              metallic 0.0, rough_base 0.60, rough_var 0.08,
+                              edge wear 0.25 (Crisp 0.55..0.72),
+                              Wave Bands along U axis (=+X model space),
+                              base dark (0.085,0.030,0.012) ->
+                              base light (0.155,0.060,0.025) ->
+                              exposed (0.28,0.16,0.10),
+                              grime (0.10,0.06,0.04) at factor 0.10,
+                              bump 0.08. Applied to stock, hg lower/upper,
+                              AK_contour_*. Grain runs lengthwise because
+                              UV +X = +U was locked in Section 5.
+
+  MAT_grip_dark_bakelite      Visual target: dark reddish-brown bakelite /
+                              aged polymer (distinct from wood: no grain).
+                              metallic 0.0 (forced), rough_base 0.55,
+                              rough_var 0.05, edge wear 0.20 (Crisp
+                              0.58..0.74), Noise scale 80 (fine surface
+                              mottle), base (0.105,0.040,0.022) ->
+                              exposed (0.20,0.10,0.07),
+                              grime (0.08,0.05,0.03) at factor 0.10,
+                              bump 0.10. Applied to grip body + grooves +
+                              basecap.
+
+Edge wear rules (shared across all 4 hero materials):
+  - Pointiness-driven via EdgeWearMask node group
+  - CrispnessLow/High set so flat faces have 0 wear, only sharp edges
+    receive any wear mix
+  - WearStrength scaled per material: 0.40 (metal), 0.30 (magazine),
+    0.25 (wood), 0.20 (grip)
+  - Wear lifts base color toward an exposed-material color (lighter
+    metal / lighter wood / lighter bakelite); never toward pure white
+
+Fallback materials (simple Principled, no procedurals):
+  MAT_shadow_seam_dark, MAT_detail_dark_metal,
+  MAT_edge_wear_light_metal, MAT_edge_wear_worn_wood,
+  MAT_reference_hidden, MAT_clay_neutral_preview.

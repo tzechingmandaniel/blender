@@ -1,0 +1,120 @@
+Section 4 Minor Exterior Details — Plan + Density Budget
+=========================================================
+
+Section 4 adds decorative exterior surface details to the AK_ major parts
+from Section 3. Strictly exterior, strictly decorative, strictly non-
+functional. No internal mechanism, no working trigger, no chamber, bolt,
+spring, firing system, functional magazine system, bore, rifling, threaded
+muzzle, real screw holes, real openings, manufacturing dimensions, or
+real assembly. Rivets, panel lines, ribs, grooves, contours, sling loops,
+and edge-wear placeholders are all surface visuals only.
+
+§4.1 Source / output
+--------------------
+Input:  01_blender/v03_major_parts.blend
+Output: 01_blender/v04_minor_details.blend
+
+§4.2 Sub-collections under 04_MINOR_PARTS
+-----------------------------------------
+04A_receiver_details
+04B_dustcover_details
+04C_magazine_details
+04D_wood_details
+04E_grip_details
+04F_sight_front_details
+04G_sling_loop_visuals
+04H_seams_and_edge_wear_placeholders
+04Z_detail_tests_archive
+
+§4.3 New placeholder materials
+------------------------------
+MAT_placeholder_shadow_seam  — very dark grey, slightly rough, for visual
+                               seam markers (boundary lines, baseplate seam).
+MAT_placeholder_edge_wear    — light scuffed grey, for edge-wear placeholder
+                               strips on exposed metal/wood edges.
+
+(These join the existing dark_metal / dark_wood / bakelite_grip / black_metal
+placeholders from Section 1.)
+
+§4.4 Density budget (hard caps)
+-------------------------------
+Receiver rivets:                  6 max
+Receiver panel lines:             2 max
+Receiver top/boundary seams:      3 max
+Dust cover ribs:                  3 max  (per plan §4.9: 1–3)
+Dust cover seam markers:          2 max
+Magazine decorative grooves:      4 max  (per plan §4.11: 3–5)
+Magazine spines:                  2 (front + rear, 1 each)
+Magazine baseplate seam:          1
+Wood contour placeholders:        6 max  (2 per wood part × 3 wood parts)
+Wood edge-wear placeholders:      3 max
+Grip grooves:                     3 max  (per plan §4.15: 2–4)
+Grip basecap seam:                1
+Front/sight details:              3 max
+Sling loop visuals:               2 (rear + front)
+General seam markers:             5 max
+General metal edge-wear:          3 max
+General wood edge-wear:           2 max
+---------------------------------------
+Section 4 total object count:    ≤ 51 (sum of per-collection caps)
+
+§4.5 Per-detail geometry rules
+------------------------------
+Rivet:           cylinder, radius 0.0015 m, depth 0.003 m, sitting on +Y or
+                 +Z surface so the dome pops out ~0.002 m.
+Panel line:      thin elongated box ~(0.040 × 0.0010 × 0.012) raised
+                 against +Y face of the receiver.
+Seam marker:     very thin elongated box (~0.0008 m on its short axis),
+                 hugging a boundary between two parts.
+Magazine groove: a thin horizontal band wrapping across the +X (front)
+                 face of the magazine (dims ~(0.0015 × 0.030 × 0.005)).
+Magazine spine: a thin vertical ridge running along the front or rear
+                 face (dims ~(0.003 × 0.012 × 0.090)).
+Wood contour:    raised band along the length of the wood part
+                 (~(L × 0.0008 × 0.002) lifted against +Z or -Z surface).
+Edge wear:       a thin scuff strip following an exposed edge (~(L × 0.002
+                 × 0.0006)).
+Grip groove:     a thin horizontal band on the front face of the grip
+                 (~(0.0015 × 0.020 × 0.004)).
+Sling loop:      torus, major radius ~0.008, minor radius ~0.0015.
+Front sight cap: a small box ~(0.008 × 0.004 × 0.003) on top of the front
+                 sight block.
+
+§4.6 Placement principles
+-------------------------
+1. Every detail is placed in WORLD coordinates relative to a known surface
+   on its host AK_ part. Origin is the geometric centre of the detail.
+2. Details sit ON the surface — never floating, never deeply embedded.
+   Acceptable embed depth ≤ 0.0005 m so the bevel modifier on the host
+   does not visually fight them.
+3. Repeated details (rivets, grooves) are evenly spaced along a single
+   axis. No random scatter.
+4. No detail is wider than its host face. No detail makes a visible
+   "cut" or "hole".
+5. All detail objects are parented to AK47_MASTER_ASSET so the whole
+   model transforms as one unit.
+6. All detail objects have a Bevel modifier (small width 0.0005 m, 1 seg,
+   angle 30°) — keep the bevel cheap because these are tiny.
+
+§4.7 Out of scope for Section 4
+-------------------------------
+- Final textures, UV layouts, wood grain (Section 5).
+- Final scratches, dirt maps, baked AO (Section 5–6).
+- Real openings, working catches, working sights (never — exterior prop).
+- Real screws (only seam markers and rivets, both decorative).
+- Internal exposure of any kind.
+
+§4.8 Verify checklist (matches §4.29)
+-------------------------------------
+- 9 sub-collections under 04_MINOR_PARTS exist.
+- Each detail object has its name starting with AK_ and one of the
+  detail keywords (rivet, panel, rib, seam, groove, spine, contour, loop,
+  wear).
+- Each detail is in the correct sub-collection.
+- Each detail has the expected placeholder material.
+- The two new shadow_seam / edge_wear materials exist.
+- AK_ major parts in 03_MAJOR_PARTS are still present and unchanged.
+- BLK_ blockout objects from Section 2 are still present (preserved).
+- Total detail count ≤ 50.
+- AK47_MASTER_ASSET still exists and every detail is parented to it.
+- v04_minor_details.blend saved at the expected path.

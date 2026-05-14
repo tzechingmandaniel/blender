@@ -1,0 +1,142 @@
+Section 5 UV Planning + Material Setup + Texture Workflow Prep
+================================================================
+
+Section 5 turns the Section 4 model into a textur-ready model. It does NOT
+paint final textures — that is Phase 6. It only:
+  - groups objects by material type under 07_ASSEMBLY,
+  - renames placeholder materials into the final MAT_* set (10 mats),
+  - assigns final placeholder materials to every AK_ object,
+  - unwraps every AK_ object so that texture direction is correct,
+  - documents texel density, seam logic, and texture-map naming,
+  - sets up the texture folder structure under 03_textures/.
+
+Strictly exterior, strictly non-functional, no bore, chamber, working
+trigger, manufacturing detail.
+
+§5.1 Source / output
+--------------------
+Input:  01_blender/v04_minor_details.blend
+Output: 01_blender/v05_uv_materials.blend
+
+§5.2 New collections (top-level)
+--------------------------------
+06_MATERIAL_TESTS
+  06A_material_preview_objects   — sphere/cube preview objects per material
+  06B_uv_test_objects            — temporary checker-mapped tests
+  06C_texture_map_notes          — empty objects whose names are reminders
+07_ASSEMBLY
+  AK47_MASTER_ASSEMBLY           — empty, mirrors AK47_MASTER_ASSET role
+  AK_metal_parts_grp             — all dark-blued-metal AK_ parts
+  AK_wood_parts_grp              — all dark-wood AK_ parts
+  AK_magazine_parts_grp          — all black-metal magazine AK_ parts
+  AK_grip_parts_grp              — all bakelite grip AK_ parts
+  AK_detail_parts_grp            — small decorative metal details
+  AK_seam_wear_parts_grp         — seam markers + edge wear placeholders
+09_EXPORT_READY                  — prepared, kept empty for later export copies
+
+§5.3 Final material names (replace Section-4 placeholders)
+----------------------------------------------------------
+MAT_metal_dark_blued        — receiver, dust cover, barrel, gas tube, sights,
+                              trigger guard, sling loops, front ring, gas block,
+                              muzzle front, small dark metal details
+MAT_metal_black_magazine    — magazine body + magazine grooves/spines + baseplate
+MAT_wood_dark_reddish       — stock, lower hg, upper hg, wood contour bands
+MAT_grip_dark_bakelite      — grip body, grip grooves, grip basecap seam
+MAT_shadow_seam_dark        — all *_seam_* visual markers (replaces shadow_seam)
+MAT_edge_wear_light_metal   — metal edge-wear placeholder strips
+MAT_edge_wear_worn_wood     — wood edge-wear placeholder strips
+MAT_detail_dark_metal       — receiver rivets/panel-lines, dust-cover ribs
+MAT_reference_hidden        — material slot reserved for hidden/reference geo
+MAT_clay_neutral_preview    — neutral clay material for render preview
+
+§5.4 Object -> final material assignment (per §5.9 / §5.10)
+-----------------------------------------------------------
+Receiver, dust cover, barrel, gas tube, sights, trigger guard, front ring,
+gas block, muzzle front, sling loops front/rear:    MAT_metal_dark_blued
+Magazine body + groove/spine/baseplate:             MAT_metal_black_magazine
+Stock + lower/upper handguards + wood contours:     MAT_wood_dark_reddish
+Grip body + grip grooves + grip basecap seam:       MAT_grip_dark_bakelite
+All *_seam_* markers and panel lines:               MAT_shadow_seam_dark
+Receiver rivets + dust-cover ribs + magazine spines: MAT_detail_dark_metal
+Metal edge-wear placeholders:                       MAT_edge_wear_light_metal
+Wood edge-wear placeholders:                        MAT_edge_wear_worn_wood
+
+§5.5 UV groups (per §5.11)
+--------------------------
+UV_receiver_metal           AK_receiver_main, AK_dustcover_main, receiver rivets,
+                            panel lines, receiver seams, dust-cover ribs
+UV_stock_wood               AK_stock_main, stock contour bands, stock edge wear
+UV_handguards_wood          AK_handguard_lower_main, AK_handguard_upper_main,
+                            handguard contour bands, hg edge wear
+UV_magazine_black_metal     AK_magazine_main, magazine grooves, spines, baseplate
+UV_grip_bakelite            AK_grip_main, grip grooves, basecap seam
+UV_barrel_front_metal       AK_barrel_exterior_main, all 04F sight/front details,
+                            sling-loop visuals
+UV_small_details            04H seam/wear placeholders + everything else small
+
+§5.6 UV seam logic
+------------------
+Receiver (box): seams along the bottom edges so the visible side panels read
+as a single island. Top strip + bottom strip + L/R side islands +
+front/rear caps.
+Dust cover: single top island (front-to-back), seam at the lower edge.
+Stock + handguards: cylinder/extrusion-style unwrap along +X (the long axis),
+so grain runs lengthwise. Seam on the bottom (-Z).
+Magazine (banana, curls along X-Z): seam on the rear spine, single curved
+side island left/right, plus baseplate cap.
+Grip (tilted -18°): seam along the front edge (least visible from side).
+Barrel (cylinder along +X): seam on the bottom (-Z), single side island.
+Small details: smart-projection at 66°, very small UV space share.
+
+§5.7 Wood grain direction
+-------------------------
+Stock + lower hg + upper hg: U-axis must run along +X so painted/procedural
+wood grain travels from butt to receiver / front to rear. UVs are rotated
+accordingly after unwrap.
+
+§5.8 Texel density target
+-------------------------
+Reference 1024 px per metre. Big surfaces (receiver sides, stock sides,
+magazine sides, hg sides, grip sides, barrel cylinder) must be within
+0.7×–1.3× of that density. Small details are allowed lower density.
+
+§5.9 Texture folder structure (under 03_textures/)
+--------------------------------------------------
+03_textures/
+  metal/        metal_dark_blued_basecolor.png + roughness + metallic + normal + ao
+  wood/         wood_dark_reddish_basecolor.png + roughness + normal + ao
+  magazine/     magazine_black_basecolor.png + roughness + metallic + normal + ao
+  grip/         grip_dark_bakelite_basecolor.png + roughness + normal + ao
+  shared/       shared_edge_wear_mask.png + dirt_mask + cavity_ao + seam_shadow_mask
+
+Each folder gets a README.txt with the planned map names so Phase 6 has a
+deterministic place to drop final textures.
+
+§5.10 Simple material node prep (per §5.27)
+-------------------------------------------
+Each MAT_* gets a Principled BSDF with placeholder values:
+  metal_dark_blued       base (0.05, 0.05, 0.07) metallic 1.0 roughness 0.40
+  metal_black_magazine   base (0.04, 0.04, 0.04) metallic 1.0 roughness 0.55
+  wood_dark_reddish      base (0.18, 0.07, 0.04) metallic 0.0 roughness 0.55
+  grip_dark_bakelite     base (0.10, 0.05, 0.04) metallic 0.0 roughness 0.50
+  shadow_seam_dark       base (0.02, 0.02, 0.025) metallic 0.0 roughness 0.85
+  edge_wear_light_metal  base (0.55, 0.53, 0.50) metallic 0.6 roughness 0.40
+  edge_wear_worn_wood    base (0.42, 0.30, 0.22) metallic 0.0 roughness 0.55
+  detail_dark_metal      base (0.07, 0.07, 0.08) metallic 1.0 roughness 0.50
+  reference_hidden       base (0.50, 0.50, 0.50) metallic 0.0 roughness 0.80
+  clay_neutral_preview   base (0.62, 0.60, 0.57) metallic 0.0 roughness 0.70
+
+No real texture nodes are connected — they will be added in Phase 6.
+
+§5.11 Render outputs
+--------------------
+04_renders/clay_renders/v05_uv_materials_3quarter.png  (final-mat clay)
+04_renders/clay_renders/v05_uv_materials_side.png      (final-mat clay)
+04_renders/uv_checker/v05_uv_checker_3quarter.png      (checker viewport render)
+
+§5.12 Documentation files (under 06_documentation/)
+---------------------------------------------------
+phase_notes.txt
+material_notes.txt
+uv_notes.txt
+texture_workflow_notes.txt

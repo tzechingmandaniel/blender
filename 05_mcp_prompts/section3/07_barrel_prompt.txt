@@ -1,0 +1,27 @@
+MCP Prompt §3.7 — AK_barrel_exterior_main
+==========================================
+
+Refine the barrel from BLK_barrel_outer_closed into AK_barrel_exterior_main.
+Exterior visual only — no working bore, no threading, no real muzzle device,
+no chamber. The muzzle face is a closed decorative disc.
+
+Geometry:
+- Cylinder along X axis: radius 0.0090, depth 0.320, 32 segments.
+- Centre at ~(0.250, 0, 0.020).
+- Apply a slight taper: at the muzzle end (+X end), shrink the radius to
+  ~0.0080 (≈ 89% of base). Use a per-vertex scale based on X position.
+- Decorative collar: a thin ring near the muzzle end. Radius 0.0125,
+  depth 0.010, located at X ≈ +0.150 (object-local). Joined into the same
+  mesh as the barrel.
+- Muzzle cap: a closed disc face at the +X end (already part of the
+  cylinder cap — keep it closed). Do NOT model a bore hole.
+
+Modifiers:
+- Bevel (Angle limit 30°, width 0.0015, segments 2).
+- Weighted Normal (weight 50, threshold 0.01, keep sharp).
+
+Material: MAT_placeholder_dark_metal
+Collection: 03_MAJOR_PARTS
+Parent: AK47_MASTER_ASSET
+Origin: geometric center, transform applied.
+Naming: AK_barrel_exterior_main.

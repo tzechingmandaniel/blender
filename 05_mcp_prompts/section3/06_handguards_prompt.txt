@@ -1,0 +1,47 @@
+MCP Prompt §3.6 — AK_handguard_lower_main + AK_handguard_upper_main
+====================================================================
+
+Refine both handguards. Exterior wooden visuals only — no working heat
+shield, no real vent slots, no real retainer screws.
+
+3.6.1 AK_handguard_lower_main
+-----------------------------
+Geometry:
+- Start from a box 0.130 × 0.040 × 0.030. Centre at ~(0.135, 0, 0.005).
+- Add 2 loop cuts along X.
+- Front taller than rear: lift the front-top edge by ~0.005 in Z.
+- Lower-face finger grooves: two shallow recesses on the -Z face. For each
+  groove, push a row of verts inward (+Z) by ~0.0025 across a ~0.025 X-range.
+  Grooves centred at X ≈ -0.035 and X ≈ +0.035 (object-local).
+- Front collar: small box 0.014 × 0.038 × 0.028 joined at the +X end as a
+  raised band that meets the barrel area.
+
+Modifiers:
+- Bevel (Angle limit 30°, width 0.002, segments 2).
+- Weighted Normal (weight 50, threshold 0.01, keep sharp).
+
+Material: MAT_placeholder_dark_wood
+Collection: 03_MAJOR_PARTS
+Parent: AK47_MASTER_ASSET
+Origin: geometric center, transform applied.
+Naming: AK_handguard_lower_main.
+
+3.6.2 AK_handguard_upper_main
+-----------------------------
+Geometry:
+- Start from a box 0.150 × 0.030 × 0.022. Centre at ~(0.140, 0, 0.050).
+- Add 2 loop cuts along X.
+- Slightly rounded top: lift the top-centre edge by ~0.003 in Z, taper
+  toward the ends.
+- Rear thumb-shelf: a small raised box ~0.018 × 0.024 × 0.006 joined to the
+  rear-top of the handguard (object-local X ≈ -0.066, Z ≈ +0.013).
+
+Modifiers:
+- Bevel (Angle limit 30°, width 0.0018, segments 2).
+- Weighted Normal (weight 50, threshold 0.01, keep sharp).
+
+Material: MAT_placeholder_dark_wood
+Collection: 03_MAJOR_PARTS
+Parent: AK47_MASTER_ASSET
+Origin: geometric center, transform applied.
+Naming: AK_handguard_upper_main.

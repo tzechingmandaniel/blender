@@ -1,0 +1,39 @@
+Phase 7 Prompt 13 — Render Issue Tracker
+========================================
+
+Create 08_reviews/phase_7_render_issue_tracker.txt with the format:
+
+  Issue ID | Render | Problem | Severity | Suggested fix | Status
+
+Pre-populate with Phase 7 self-audit issues. Examples:
+
+  RENDER_ISSUE_001 — Cycles CPU samples 96..128 keeps render time
+    practical at portfolio resolution; if the production target is
+    higher quality, raise samples in Phase 8.
+
+  RENDER_ISSUE_002 — Background backdrop is a flat plane, not a
+    curved infinity wall; visible horizon line on side render is
+    acceptable for portfolio.
+
+  RENDER_ISSUE_003 — Wireframe render uses Freestyle which has
+    different sampling characteristics; Phase 8 may prefer to use a
+    Wireframe modifier override instead.
+
+  RENDER_ISSUE_004 — Turntable encoded only as PNG frame sequence
+    (no ffmpeg in pipeline); a Phase 8 packaging step can encode the
+    final MP4.
+
+  RENDER_ISSUE_005 — FBX/OBJ exports rely on per-object UV layer
+    (UVMap) being the active render layer; verified before export.
+
+  RENDER_ISSUE_006 — Procedural shaders are NOT baked to PNGs; FBX
+    will carry only Principled BSDF defaults. Phase 8 can bake if a
+    target engine needs PNG textures.
+
+All issues must be Low severity. High severity blocks Phase 8.
+
+Hard scope: presentation-focused. No functional content.
+
+After running:
+  [ ] Tracker file exists with > 4 issues
+  [ ] No High-severity entries

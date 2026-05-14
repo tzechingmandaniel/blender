@@ -1,0 +1,37 @@
+MCP Prompt §4.10 — Dust Cover Exterior Details
+================================================
+
+Work around AK_dustcover_main and create separate decorative detail objects
+inside 04_MINOR_PARTS / 04B_dustcover_details. Strictly exterior, decorative,
+non-functional. Do not create locking mechanisms, hinges, latches, internal
+cover structure, disassembly features, manufacturing details, or technical
+assembly.
+
+Detail set:
+- 3 shallow raised top ribs (per §4.9 the cap is "1 to 3 shallow ribs"):
+    AK_rib_dustcover_001 at world X ≈ -0.120, dims ~(0.0030 × 0.030 × 0.0020).
+    AK_rib_dustcover_002 at world X ≈ -0.065.
+    AK_rib_dustcover_003 at world X ≈ -0.010.
+  Each rib lies on top of the dust cover at world z ≈ +0.055 and runs in Y.
+- 2 subtle side seam markers, one on each ±Y face:
+    AK_seam_dustcover_side_001 on +Y face.
+    AK_seam_dustcover_side_002 on -Y face.
+  Each is a thin elongated box ~(0.218 × 0.0008 × 0.005) hugging the
+  cover side at world y ≈ ±0.019.
+
+Naming:
+AK_rib_dustcover_001 .. 003
+AK_seam_dustcover_side_001 .. 002
+
+Materials:
+- Ribs:          MAT_placeholder_dark_metal
+- Seam markers:  MAT_placeholder_shadow_seam
+
+All objects parented to AK47_MASTER_ASSET. Bevel modifier (width 0.0005,
+segments 1, angle 30°) on every object.
+
+After running:
+[ ] Dust cover details are in 04B_dustcover_details.
+[ ] Ribs are shallow (≤ 0.002 above cover surface).
+[ ] Side seams visual only; no latch, no hinge, no opening.
+[ ] Detail count = 5 (3 ribs + 2 seams).

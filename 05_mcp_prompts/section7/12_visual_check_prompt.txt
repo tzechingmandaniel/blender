@@ -1,0 +1,24 @@
+Phase 7 Prompt 12 — Final Visual Check
+======================================
+
+Before rendering, programmatically verify:
+  - All 13 cameras exist in 08_LIGHTING_CAMERA
+  - All 4 LIGHT_final_* exist in 08_LIGHTING_CAMERA
+  - 12_PRESENTATION_STAGE exists with FLOOR + BG planes
+  - 09_EXPORT_READY exists with EXPORT_AK47_EXTERIOR_PROP_MASTER empty
+  - EMPTY_turntable_center exists with z-rotation keyframes (1, 180)
+  - AK47_MASTER_ASSET.parent == EMPTY_turntable_center
+  - hide_render = True on REF_ak47_side_view, 01_GUIDES, 02_BLOCKOUT,
+    06_MATERIAL_TESTS, 04Z_detail_tests_archive, 07_ASSEMBLY
+  - Scene engine = CYCLES, view transform = Filmic
+  - Every AK_ object still uses a final MAT_* material
+  - No AK_ object has a Boolean modifier or forbidden token in its name
+
+Output the report into 06_documentation/render_notes.txt under
+"Phase 7 visual check".
+
+Hard scope: no model edits.
+
+After running:
+  [ ] Report saved into render_notes.txt
+  [ ] All checks logged with [X]/[ ] markers

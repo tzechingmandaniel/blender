@@ -13,10 +13,12 @@ scripts driven by an LLM/MCP workflow.
 
 - ✅ **Section 1 — Project Setup** complete (`v01_project_setup.blend`)
 - ✅ **Section 2 — Blockout** complete (`v02_blockout.blend`)
-- ⬜ Section 3 — Major parts (planned)
-- ⬜ Section 4 — Detail pass (planned)
-- ⬜ Section 5 — Materials (planned)
-- ⬜ Section 6 — Final assembly (planned)
+- ✅ **Section 3 — Major parts** complete (`v03_major_parts.blend`)
+- ✅ **Section 4 — Minor details** complete (`v04_minor_details.blend`)
+- ✅ **Section 5 — UV / Materials** complete (`v05_uv_materials.blend`)
+- ✅ **Section 6 — Final texture / lookdev** complete (`v06_final_textures_lookdev.blend`)
+- ✅ **Section 7 — Final scene / renders / turntable / export** complete (`v07_final_scene_export.blend`)
+- ✅ **Section 8 — Final review / packaging / handover** complete (`final_delivery/` + archive zip)
 
 ## Directory layout
 
@@ -54,6 +56,47 @@ Each section is a single Blender Python script you can run headless:
 # Section 2 — blockout (loads v01, saves v02)
 "C:/Program Files/Blender Foundation/Blender 5.1/blender.exe" --background \
   --python 05_mcp_prompts/section2/section2_executor.py
+
+# Section 3 — major parts (loads v02, saves v03)
+"C:/Program Files/Blender Foundation/Blender 5.1/blender.exe" --background \
+  --python 05_mcp_prompts/section3/section3_executor.py
+
+# Section 4 — minor exterior details (loads v03, saves v04)
+"C:/Program Files/Blender Foundation/Blender 5.1/blender.exe" --background \
+  --python 05_mcp_prompts/section4/section4_executor.py
+
+# Section 5 — UV / materials / texture-workflow prep (loads v04, saves v05)
+AK47_PROJECT_ROOT="$(pwd)" \
+"C:/Program Files/Blender Foundation/Blender 5.1/blender.exe" --background \
+  --python 05_mcp_prompts/section5/section5_executor.py
+
+# Section 6 — final texture / lookdev (loads v05, saves v06)
+AK47_PROJECT_ROOT="$(pwd)" \
+"C:/Program Files/Blender Foundation/Blender 5.1/blender.exe" --background \
+  --python 05_mcp_prompts/section6/section6_executor.py
+
+# Section 7 — final scene / renders / turntable / export (loads v06, saves v07)
+AK47_PROJECT_ROOT="$(pwd)" \
+"C:/Program Files/Blender Foundation/Blender 5.1/blender.exe" --background \
+  --python 05_mcp_prompts/section7/section7_executor.py
+# Then render finals + turntable + exports against the saved v07:
+AK47_PROJECT_ROOT="$(pwd)" \
+"C:/Program Files/Blender Foundation/Blender 5.1/blender.exe" --background \
+  01_blender/v07_final_scene_export.blend \
+  --python 05_mcp_prompts/section7/section7_render_finals.py
+AK47_PROJECT_ROOT="$(pwd)" \
+"C:/Program Files/Blender Foundation/Blender 5.1/blender.exe" --background \
+  01_blender/v07_final_scene_export.blend \
+  --python 05_mcp_prompts/section7/section7_render_turntable.py
+AK47_PROJECT_ROOT="$(pwd)" \
+"C:/Program Files/Blender Foundation/Blender 5.1/blender.exe" --background \
+  01_blender/v07_final_scene_export.blend \
+  --python 05_mcp_prompts/section7/section7_export.py
+
+# Section 8 — final delivery packaging + archive (no Blender needed)
+AK47_PROJECT_ROOT="$(pwd)" python 05_mcp_prompts/section8/section8_executor.py
+AK47_PROJECT_ROOT="$(pwd)" python 05_mcp_prompts/section8/section8_archive.py
+AK47_PROJECT_ROOT="$(pwd)" python 05_mcp_prompts/section8/section8_verify.py
 ```
 
 Each section also has a `section*_verify.py` that asserts the deliverables

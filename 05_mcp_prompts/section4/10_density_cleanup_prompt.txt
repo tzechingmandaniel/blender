@@ -1,0 +1,34 @@
+MCP Prompt §4.24 — Detail Density Cleanup
+===========================================
+
+Review and clean the minor exterior details of the non-functional AK-style
+visual prop. Work only on objects inside 04_MINOR_PARTS and its sub-
+collections.
+
+Cleanup actions:
+1. If any sub-collection has more objects than its §4.4 cap, move the
+   surplus to 04Z_detail_tests_archive (do not delete unless visually
+   broken — the archive lets you keep history).
+2. Move any object with a default name (Cube.001, Cylinder.002, etc.) to
+   04Z_detail_tests_archive or rename it properly.
+3. Confirm every detail object's name starts with AK_ and contains one of
+   the detail keywords:
+     rivet, panel, rib, seam, groove, spine, contour, loop, wear, cap, ring
+4. Confirm every detail object is parented to AK47_MASTER_ASSET.
+5. Confirm every detail object has a Bevel modifier.
+6. Confirm every detail object has exactly one material assigned.
+7. Hide the 04Z_detail_tests_archive sub-collection in viewport and
+   render (it's for history only).
+
+Do not add new major parts. Do not change AK_ major parts. Do not change
+BLK_ blockout objects. Do not create internal mechanisms, working parts,
+functional openings, bore, rifling, chamber, working trigger, functional
+magazine detail, manufacturing dimensions, or technical assembly details.
+
+After running:
+[ ] Each sub-collection meets its §4.4 cap.
+[ ] No default object names.
+[ ] All detail objects parented + bevelled + materialed.
+[ ] 04Z_detail_tests_archive hidden in viewport and render.
+[ ] Major parts untouched.
+[ ] Blockout untouched.

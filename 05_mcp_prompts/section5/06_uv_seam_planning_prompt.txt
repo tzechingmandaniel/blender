@@ -1,0 +1,47 @@
+Phase 5 Prompt 6 — UV Seam Planning Notes
+=========================================
+
+For every major AK_ object, mark UV seams according to this plan, then write
+the seam logic into 06_documentation/uv_notes.txt.
+
+AK_receiver_main:
+  seam loop around the bottom +Y/-Y/-Z edges so the L+R side panels each
+  read as one island. Top strip + bottom strip + front cap + rear cap +
+  L side panel + R side panel. Seams on the bottom-front and bottom-rear
+  edges (least visible).
+
+AK_dustcover_main:
+  one long seam around the lower perimeter so the top reads as a single
+  curved island.
+
+AK_stock_main:
+  seam runs along the bottom (-Z) edge from rear butt to wrist. Cylinder-
+  style unwrap; UV islands rotated so +X = U axis.
+
+AK_handguard_lower_main / AK_handguard_upper_main:
+  seam on the bottom edge (lower hg) / top edge (upper hg) so the visible
+  side is a single island. Long axis = U.
+
+AK_magazine_main:
+  seam along the rear spine plus a horizontal cut around the baseplate.
+  Side panels unwrap as two banana-shaped islands.
+
+AK_grip_main:
+  seam down the front face (least visible from side). Grip is tilted -18°
+  but the seam is computed in object space.
+
+AK_barrel_exterior_main:
+  cylinder seam along -Z edge of the cylinder. Two caps + one wrapped
+  rectangle.
+
+Small details (rivets, ribs, grooves, contours, sling loops, seams, wear
+placeholders): use Smart UV Project at angle limit 66° with island margin
+0.02. They take a small share of UV space.
+
+Hard scope: no internal cutouts, no real openings — just seam marking on
+existing exterior geometry.
+
+After running, verify:
+  [ ] All major AK_ objects have at least one UV seam edge marked
+  [ ] No new geometry was created
+  [ ] Seam strategy is documented in uv_notes.txt

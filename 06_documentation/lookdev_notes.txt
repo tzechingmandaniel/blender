@@ -1,0 +1,74 @@
+Lookdev Notes — Section 6
+=========================
+Scope reminder: non-functional exterior prop only.
+
+Lookdev readiness check — Section 6
+-----------------------------------
+  AK_ objects scanned: 59
+  Booleans found     : 0
+  No UV layer        : 0
+  No material assigned: 0
+
+Cameras (08_LIGHTING_CAMERA):
+  CAM_lookdev_full_model            lens=50mm  loc=(0.45, -0.5, 0.2)  rot_deg=(75, 0, 40)
+  CAM_lookdev_metal_closeup         lens=60mm  loc=(0.0, -0.32, 0.02)  rot_deg=(90, 0, 0)
+  CAM_lookdev_wood_closeup          lens=60mm  loc=(-0.3, -0.32, 0.0)  rot_deg=(90, 0, 0)
+  CAM_lookdev_magazine_closeup      lens=60mm  loc=(-0.04, -0.32, -0.07)  rot_deg=(90, 0, 0)
+  CAM_lookdev_grip_closeup          lens=60mm  loc=(-0.05, -0.3, -0.04)  rot_deg=(90, 0, 0)
+  CAM_lookdev_handguard_closeup     lens=60mm  loc=(0.18, -0.3, 0.02)  rot_deg=(90, 0, 0)
+
+Lights (08_LIGHTING_CAMERA):
+  LIGHT_lookdev_key_soft            size=0.60m  energy=30W  color=(1.0, 0.96, 0.88)
+  LIGHT_lookdev_fill_soft           size=1.00m  energy=12W  color=(1.0, 1.0, 1.0)
+  LIGHT_lookdev_rim_subtle          size=0.40m  energy=15W  color=(0.88, 0.92, 1.0)
+
+Render outputs (04_renders/lookdev/):
+  lookdev_full_model_side.png                -> VIEW_side_modeling (ortho)
+  lookdev_full_model_3quarter.png            -> CAM_lookdev_full_model
+  lookdev_closeup_metal_receiver.png         -> CAM_lookdev_metal_closeup
+  lookdev_closeup_wood_stock.png             -> CAM_lookdev_wood_closeup
+  lookdev_closeup_handguard.png              -> CAM_lookdev_handguard_closeup
+  lookdev_closeup_magazine.png               -> CAM_lookdev_magazine_closeup
+  lookdev_closeup_grip.png                   -> CAM_lookdev_grip_closeup
+  lookdev_clay_material_check.png            -> full model under MAT_clay_neutral_preview
+
+Lookdev findings (Phase 6 self-audit):
+  - Metal receiver reads as worn blued steel; edge wear visible on
+    selector pad + magazine well boundary.
+  - Magazine body reads matte black; spines on the same atlas.
+  - Stock + handguards show lengthwise wood grain (Wave Bands along +X).
+  - Grip distinct from wood (fine bakelite noise, no grain pattern).
+  - Cavity AO darkens seams without exposing internal geometry.
+  - Grime tint subtle on all 4 hero materials (grime factor <= 0.15).
+  - Close-up renders at extreme zoom still show some key-light
+    reflection on broad flat magazine/grip faces; identity reads
+    correctly at full + 3/4 view.
+
+Fixes applied during Section 6 tuning iterations:
+  - Reduced lookdev light energies (key 150W->30W, fill 60W->12W,
+    rim 80W->15W) so dark blued metal reads dark, not chrome.
+  - Reduced world background strength (0.45 -> 0.20) to stop bright
+    environment reflections on metallic surfaces.
+  - Raised EdgeWearMask CrispnessLow (0.40 -> 0.55) so Pointiness only
+    fires on sharp edges; flat faces stay at base color.
+  - Attenuated Noise/Wave influence on Base Color via multiplier
+    (0.25 for metals/grip, 0.55 for wood) so flat surfaces dominate.
+  - Darkened hero base colors and lowered grime factors so dirt tint
+    no longer pushes materials toward neutral grey.
+  - Pulled close-up cameras back (y=-0.18 -> -0.30/-0.32) and dropped
+    lens (70mm -> 60mm) so each closeup frames its target object
+    instead of zooming past it.
+  - Forced grip metallic = 0 after build (grip uses metal builder for
+    convenience but must NOT be metallic).
+
+Phase 7 readiness:
+  - Materials balanced (verified by Phase 6 verify script: 31/31 PASS)
+  - 8 lookdev renders saved in 04_renders/lookdev/
+  - Wood grain direction lengthwise (Wave Bands along +X = +U)
+  - Texture folder paths organised (03_textures/{metal,wood,magazine,
+    grip,shared}/README.txt all present)
+  - Issue tracker: 0 high-severity, 6 low-severity (all deferred)
+  - v06_final_textures_lookdev.blend saved + backed up
+  - No unsafe functional details exist
+
+Issues -> see 08_reviews/phase_6_material_issue_tracker.txt

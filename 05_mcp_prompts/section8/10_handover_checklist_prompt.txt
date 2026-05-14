@@ -1,0 +1,23 @@
+Phase 8 Prompt 10 — Handover Checklist
+=======================================
+
+Write final_delivery/06_documentation/handover_checklist.txt with the
+§8.25 A..F sections. Each line is auto-checked against the actual file
+state and marked [X] / [ ]:
+
+  A. Final files       — does each expected delivery file exist on disk
+  B. Blender file      — opens / cameras / lights / turntable / 09_EXPORT_READY
+  C. Renders           — full/closeups/portfolio counts match plan
+  D. Exports           — FBX/GLB/OBJ counts + size > 1 KB
+  E. Documentation     — 9 required docs present
+  F. Safety/scope      — no forbidden tokens in any text in the package
+
+Conclude with a "Phase 8 quality gate: PASS / FAIL / PASS WITH DEFERRED"
+line based on which boxes are checked.
+
+Hard scope: text only.
+
+After running:
+  [ ] handover_checklist.txt exists
+  [ ] Every section A..F is filled in
+  [ ] Final gate line is present

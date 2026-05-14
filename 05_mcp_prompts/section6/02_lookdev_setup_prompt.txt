@@ -1,0 +1,27 @@
+Phase 6 Prompt 2 — Create Lookdev Test Setup
+============================================
+
+Create the 08_LIGHTING_CAMERA top-level collection. Inside it, create:
+
+Cameras (Perspective unless noted; lens 50mm for full, 70mm for close-ups):
+  CAM_lookdev_full_model        (0.45, -0.50, 0.20)  rot (75°, 0°, 40°)
+  CAM_lookdev_metal_closeup     (0.00, -0.18, 0.05)  rot (88°, 0°, 0°)
+  CAM_lookdev_wood_closeup      (-0.36,-0.18, 0.05)  rot (88°, 0°, 0°)
+  CAM_lookdev_magazine_closeup  (-0.04,-0.18,-0.07)  rot (88°, 0°, 0°)
+  CAM_lookdev_grip_closeup      (-0.05,-0.18,-0.05)  rot (88°, 0°, 0°)
+  CAM_lookdev_handguard_closeup (0.18, -0.18, 0.05)  rot (88°, 0°, 0°)
+
+Lights (all AREA, square):
+  LIGHT_lookdev_key_soft        (0.6, -0.6,  0.5)  size 0.60, energy 150 W, color (1.0, 0.96, 0.88)
+  LIGHT_lookdev_fill_soft       (-0.6,-0.4,  0.3)  size 1.00, energy  60 W, color (1.0, 1.00, 1.00)
+  LIGHT_lookdev_rim_subtle      (0.0,  0.6,  0.4)  size 0.40, energy  80 W, color (0.88, 0.92, 1.00)
+
+Keep the lookdev lighting neutral and studio-style. Do not add combat or
+weapon-use scene props. Do not add any aggressive context.
+
+Hard scope: no internal mechanism, working part, functional geometry.
+
+After running, verify:
+  [ ] 6 lookdev cameras exist in 08_LIGHTING_CAMERA
+  [ ] 3 lookdev lights exist in 08_LIGHTING_CAMERA
+  [ ] No combat / weapon-use props added

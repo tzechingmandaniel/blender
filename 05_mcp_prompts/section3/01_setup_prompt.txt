@@ -1,0 +1,26 @@
+MCP Prompt §3.1 — Section 3 Setup
+==================================
+
+Open the existing v02_blockout.blend (Section 2 result). Section 3 refines the
+BLK_ blockout into AK_ major parts. The work is exterior-only — no internal
+firearm mechanism, no functional barrel, chamber, bolt, spring, firing system,
+detachable magazine mechanism, or manufacturing-grade detail.
+
+Setup tasks before modelling any AK_ part:
+1. Confirm the 03_MAJOR_PARTS collection exists. If not, create it under the
+   scene collection.
+2. Confirm AK47_MASTER_ASSET (empty) exists in 07_ASSEMBLY. If not, create it
+   at the world origin with empty_display_size = 0.30.
+3. Set the 02_BLOCKOUT collection's viewport visibility to OFF and render
+   visibility to OFF — keep the file intact, but Section 3 should display only
+   the new AK_ parts during work.
+4. Keep REF_ak47_side_view loaded and locked. Keep all 01_GUIDES objects
+   present (they help with proportion checks).
+5. Re-use the existing placeholder materials from Section 1:
+     MAT_placeholder_dark_metal     -> receiver, barrel, dust cover
+     MAT_placeholder_dark_wood      -> stock, lower + upper handguard
+     MAT_placeholder_bakelite_grip  -> grip
+     MAT_placeholder_black_metal    -> magazine
+6. Save as v03_major_parts.blend at the same path as the v02 file.
+
+Do not start modelling any part yet — this prompt only covers Section 3 setup.

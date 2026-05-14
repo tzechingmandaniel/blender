@@ -1,0 +1,55 @@
+MCP Prompt §4.14 — Wood Exterior Details
+==========================================
+
+Work around AK_stock_main, AK_handguard_lower_main, AK_handguard_upper_main
+and create separate decorative detail objects inside
+04_MINOR_PARTS / 04D_wood_details. Strictly exterior, decorative, non-
+functional. Do not create wood grain textures, fine scratches, real screw
+holes, functional mounting channels, internal stock cavities, retaining
+hardware, disassembly features, manufacturing details, or technical
+assembly.
+
+Detail set:
+Stock contours (2):
+- AK_contour_stock_001  — raised band along stock top edge, dims
+  ~(0.280 × 0.001 × 0.002), centred around world (-0.340, 0, +0.030).
+- AK_contour_stock_002  — raised band along stock bottom edge, dims
+  ~(0.280 × 0.001 × 0.002), centred around world (-0.340, 0, -0.040).
+
+Lower handguard contours (2):
+- AK_contour_handguard_lower_001 — band on +Y side edge, dims
+  ~(0.120 × 0.0008 × 0.002), centred around world (+0.135, +0.018, +0.005).
+- AK_contour_handguard_lower_002 — band on -Y side edge (mirror).
+
+Upper handguard contours (2):
+- AK_contour_handguard_upper_001 — band along the top centre edge, dims
+  ~(0.140 × 0.001 × 0.0008), centred around world (+0.140, 0, +0.062).
+- AK_contour_handguard_upper_002 — band along the bottom centre edge,
+  dims ~(0.140 × 0.001 × 0.0008), centred around world (+0.140, 0, +0.038).
+
+Wood edge-wear placeholders (3):
+- AK_wear_placeholder_wood_edge_001 — thin scuff strip along stock rear
+  edge, dims ~(0.005 × 0.040 × 0.0006), centred at world (-0.500, 0, 0).
+- AK_wear_placeholder_wood_edge_002 — scuff strip along lower handguard
+  front edge, dims ~(0.005 × 0.040 × 0.0006), centred at world (+0.200, 0, +0.005).
+- AK_wear_placeholder_wood_edge_003 — scuff strip along upper handguard
+  rear edge, dims ~(0.005 × 0.030 × 0.0006), centred at world (+0.065, 0, +0.050).
+
+Naming:
+AK_contour_stock_001 .. 002
+AK_contour_handguard_lower_001 .. 002
+AK_contour_handguard_upper_001 .. 002
+AK_wear_placeholder_wood_edge_001 .. 003
+
+Materials:
+- Contour bands:               MAT_placeholder_dark_wood
+- Wood edge-wear placeholders: MAT_placeholder_edge_wear
+
+All objects parented to AK47_MASTER_ASSET. Bevel modifier (width 0.0005,
+segments 1, angle 30°) on every object.
+
+After running:
+[ ] Wood details are in 04D_wood_details.
+[ ] Detail count = 9 (6 contour bands + 3 edge-wear placeholders).
+[ ] Contours are broad and subtle.
+[ ] No screw, no mounting channel, no wood grain geometry.

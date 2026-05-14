@@ -1,0 +1,50 @@
+Phase 7 Render Issue Tracker
+============================
+Scope reminder: non-functional exterior prop only.
+
+Format:
+  Issue ID | Render | Problem | Severity | Suggested fix | Status
+
+----------------------------------------------------------------------------
+
+RENDER_ISSUE_001 | (all stills) | Cycles CPU at samples=96 keeps render
+time practical at portfolio resolution; noise may be visible in dark
+shadow regions. | Low | Phase 8 can raise samples to 256-512 for final
+deliverables, or enable Cycles denoise. | Open (deferred to Phase 8)
+
+RENDER_ISSUE_002 | render_01_side_profile.png | Background backdrop is
+a flat plane at y=+0.40; visible horizon line may show in some side
+angles. | Low | Phase 8 can replace with a curved infinity backdrop if
+needed. | Open (deferred)
+
+RENDER_ISSUE_003 | render_13_wireframe_full_model.png | Freestyle has
+different sampling characteristics than the main render. | Low | Phase 8
+may use a Wireframe modifier override on duplicated objects instead. |
+Open (deferred)
+
+RENDER_ISSUE_004 | turntable_frames/ | Turntable encoded only as PNG
+frame sequence (no ffmpeg available in this headless pipeline). | Low |
+Phase 8 packaging step can encode the final MP4 with ffmpeg. | Open
+(deferred to Phase 8)
+
+RENDER_ISSUE_005 | (FBX/OBJ exports) | Procedural shaders cannot be
+serialised by FBX/OBJ; exports carry only Principled BSDF defaults. |
+Low | Phase 8 can bake procedurals to PNG maps if target engine needs
+real textures. | Open (deferred)
+
+RENDER_ISSUE_006 | (close-up renders) | At extreme close-up, broad flat
+metallic faces still pick up some key-light specular highlight. | Low |
+Phase 8 can add a tiny noise to roughness to break up specular streaks
+further. | Open (deferred)
+
+RENDER_ISSUE_007 | turntable | Preview rendered at 960x540 / 12 frames;
+full 180-frame 1920x1080 turntable render is deferred to Phase 8
+packaging (will take ~90 min at samples=96). | Low | Phase 8 batch
+job. | Open (deferred)
+
+----------------------------------------------------------------------------
+Summary:
+  High severity     : 0
+  Medium severity   : 0
+  Low severity      : 7 (all deferred to Phase 8 or no-fix-needed)
+  Blocking Phase 8  : NO

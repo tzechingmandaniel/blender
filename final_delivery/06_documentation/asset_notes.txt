@@ -1,0 +1,30 @@
+Asset Notes — Final Delivery
+=============================
+Scope reminder: non-functional exterior visual prop only.
+
+Object & collection summary:
+  03_MAJOR_PARTS              8 AK_ major exterior parts
+  04_MINOR_PARTS              51 decorative detail objects (rivets, ribs,
+                              grooves, contours, spines, sling loops,
+                              seam markers, edge-wear placeholders)
+  07_ASSEMBLY                 cross-link mirror of AK_ objects by material
+                              group (hidden from render in final scene)
+  08_LIGHTING_CAMERA          13 cameras + 4 area lights + 1 turntable
+                              empty
+  09_EXPORT_READY             cross-linked AK_ objects for export
+  12_PRESENTATION_STAGE       FLOOR_final_studio_plane +
+                              BG_final_neutral_backdrop
+
+Master parent: AK47_MASTER_ASSET (parented to EMPTY_turntable_center).
+
+Final hero materials (procedural shaders, fully self-contained):
+  MAT_metal_dark_blued, MAT_metal_black_magazine,
+  MAT_wood_dark_reddish, MAT_grip_dark_bakelite
+
+Fallback materials (simple Principled BSDF):
+  MAT_shadow_seam_dark, MAT_detail_dark_metal,
+  MAT_edge_wear_light_metal, MAT_edge_wear_worn_wood,
+  MAT_reference_hidden, MAT_clay_neutral_preview,
+  MAT_background_neutral_dark, MAT_wireframe_breakdown
+
+Reusable shader NodeGroups: EdgeWearMask, CavityAO.

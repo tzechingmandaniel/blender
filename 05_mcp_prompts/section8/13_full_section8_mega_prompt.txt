@@ -1,0 +1,33 @@
+Phase 8 Mega Prompt — Final Review / Packaging / Handover
+==========================================================
+
+Runs Phase 8 end-to-end. Input is v07_final_scene_export.blend + Phase 7
+outputs (stills, turntable frames, exports). Output is the assembled
+final_delivery/ folder + a zip archive.
+
+Steps:
+  1.  Create final_delivery/ folder tree.
+  2.  Programmatic scene review of v07 (Prompt 2).
+  3.  Copy v07 -> 01_blender/AK47_exterior_prop_final.blend
+      + final_delivery/01_blender_final/AK47_exterior_prop_final.blend.
+  4.  Copy + rename 14 stills into final_delivery/04_final_renders/.
+  5.  Copy 5 portfolio_selected stills.
+  6.  Copy turntable preview frames + write 05_turntable/README.txt.
+  7.  Copy FBX/GLB/OBJ + MTL into 02_exports/{fbx,glb,obj}/.
+  8.  Copy 5 texture-folder README files. Log Image-Texture-node scan
+      result into texture_notes.txt.
+  9.  Write 9 required docs + 5 history docs into 06_documentation/.
+ 10.  Write 5 public-pack files into 07_public_pack/.
+ 11.  Write handover_checklist.txt with auto-checked A..F sections.
+ 12.  Write package-review summary into 08_archive_notes/.
+ 13.  Create AK47_NonFunctional_Prop_final_delivery_YYYYMMDD.zip at the
+      project root + copy into 09_archive/.
+ 14.  Extract-test the zip into a temp folder; verify .blend + 14 stills
+      + 9 docs survive the round-trip.
+ 15.  Run section8_verify.py to confirm 100% pass on §8.34 quality gate.
+
+Hard scope:
+  - visual non-functional exterior prop only
+  - no model edits in this phase
+  - no internal mechanism, no functional anything
+  - no forbidden wording in any text file in the package

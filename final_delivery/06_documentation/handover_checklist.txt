@@ -1,0 +1,36 @@
+Final Handover Checklist
+========================
+Scope reminder: non-functional exterior visual prop only.
+
+A. Final files / B. Renders / C. Exports / D. Safety:
+  [X] AK47_exterior_prop_final.blend included
+  [X] Final renders included
+  [X] Turntable preview frames included
+  [X] Export files included
+  [X] Texture folder READMEs included
+  [X] Documentation included
+  [X] Public pack included
+  [X] Portfolio selected = 5 PNGs
+  [X] All exports > 1 KB
+  [X] No forbidden wording in delivery .txt files
+
+E. Documentation completeness:
+  [X] readme.txt
+  [X] asset_notes.txt
+  [X] material_notes.txt
+  [X] texture_notes.txt
+  [X] render_notes.txt
+  [X] export_notes.txt
+  [X] scope_and_safety_note.txt
+  [X] version_history.txt
+
+F. Safety/scope statement:
+  [X] Non-functional exterior scope stated in readme + scope note
+  [X] No internal mechanisms in any object name
+  [X] No working parts in any object name
+  [X] No functional magazine system
+  [X] No bore/rifling/chamber
+  [X] No manufacturing dimensions
+  [X] No real assembly instructions
+
+Phase 8 quality gate: PASS (deferred items tracked in phase_7_render_issue_tracker.txt)

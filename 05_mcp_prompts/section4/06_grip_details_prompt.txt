@@ -1,0 +1,39 @@
+MCP Prompt §4.16 — Grip Exterior Details
+=========================================
+
+Work around AK_grip_main and create separate decorative detail objects
+inside 04_MINOR_PARTS / 04E_grip_details. Strictly exterior, decorative,
+non-functional. Do not create internal grip mounting, screw holes, trigger
+connection, working trigger mechanism, pivot points, linkages, or
+manufacturing details.
+
+Detail set:
+- 3 horizontal grip grooves on the -X (front) face of the grip, evenly
+  spaced along Z:
+    AK_groove_grip_001 at world (-0.110, 0, -0.060)
+    AK_groove_grip_002 at world (-0.110, 0, -0.090)
+    AK_groove_grip_003 at world (-0.110, 0, -0.120)
+  Each is a thin raised band ~(0.0015 × 0.020 × 0.004). Note: the grip is
+  tilted -18° around Y, so the grooves should follow the tilted front
+  face — apply the same rotation as the parent grip (rotation_euler Y =
+  -18°) to keep them aligned.
+- 1 base cap seam marker:
+    AK_seam_grip_basecap_001, dims ~(0.052 × 0.036 × 0.0008), centred
+    at world (-0.090, 0, -0.150), also tilted to match the grip.
+
+Naming:
+AK_groove_grip_001 .. 003
+AK_seam_grip_basecap_001
+
+Materials:
+- Grooves:           MAT_placeholder_bakelite_grip
+- Base-cap seam:     MAT_placeholder_shadow_seam
+
+All objects parented to AK47_MASTER_ASSET. Bevel modifier (width 0.0005,
+segments 1, angle 30°) on every object.
+
+After running:
+[ ] Grip details are in 04E_grip_details.
+[ ] Detail count = 4 (3 grooves + 1 basecap seam).
+[ ] Grooves follow the tilted grip face.
+[ ] No screw, no trigger connection, no pivot, no linkage.

@@ -1,0 +1,24 @@
+Phase 6 Prompt 10 — Subtle Dirt + Weathering
+============================================
+
+Drive a "grime" tint by inverting the CavityAO output (cavities = more
+grime). Multiply the Base Color of the 4 hero materials toward a dark
+neutral (0.18, 0.16, 0.14) using `grime_factor` per material:
+
+  MAT_metal_dark_blued     0.30
+  MAT_metal_black_magazine 0.35
+  MAT_wood_dark_reddish    0.25
+  MAT_grip_dark_bakelite   0.30
+
+Effect:
+  - Cavities and grooves pick up subtle grime
+  - Flat faces stay clean (Pointiness near 0.5 returns no grime)
+  - No combat blood, no aggressive context
+
+Hard scope: no violent context, no exposed internal dirt, no functional
+wear marks. Keep dirt restrained — the prop should still read clearly.
+
+After running, verify:
+  [ ] Each hero material multiplies Base Color toward the grime tint
+  [ ] Grime factor is restrained (<= 0.35)
+  [ ] Materials remain readable, not muddy

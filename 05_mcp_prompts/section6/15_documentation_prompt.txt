@@ -1,0 +1,39 @@
+Phase 6 Prompt 15 — Phase 6 Documentation
+==========================================
+
+Append to / create the following docs in 06_documentation/:
+
+material_notes.txt
+  add a "Section 6 final lookdev materials" section that records, for each
+  hero material:
+    - procedural shader summary (Noise/Wave + Pointiness + AO)
+    - edge wear strength
+    - roughness variation strength
+    - grime factor
+    - assigned objects
+
+texture_workflow_notes.txt
+  add a "Section 6 procedural notes" section recording:
+    - no PNG textures authored yet — wear/scratch/dirt are procedural
+    - shared NodeGroups: EdgeWearMask, CavityAO
+    - Phase 7 plan: optionally bake procedural maps to PNG into
+      03_textures/ before final scene + render
+
+lookdev_notes.txt (new)
+  records:
+    - lookdev camera names + positions
+    - lookdev light names + energies + colors
+    - render output filenames + camera mapping
+    - lookdev readiness summary
+    - lookdev render findings (which views show stretching / wear issues)
+    - list of issues with reference to issue tracker IDs
+
+Phase notes (phase_notes.txt) — append a "Section 6" section summarising
+what was added and what is deferred to Phase 7.
+
+Hard scope: text only. No geometry edits.
+
+After running, verify:
+  [ ] All 4 docs updated / created
+  [ ] Each mentions the non-functional exterior scope
+  [ ] Phase 7 preparation explicit

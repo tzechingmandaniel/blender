@@ -1,0 +1,33 @@
+Portfolio Captions
+==================
+Use these captions alongside the matching portfolio renders.
+
+Hero render (02_front_3quarter_hero.png):
+  Non-functional exterior 3D prop — final studio render showing
+  hard-surface modelling, dark metal material, reddish-brown wood,
+  blackened magazine finish, and controlled edge wear.
+
+Side profile (01_side_profile.png):
+  Side profile render showing exterior silhouette, modular part
+  separation, and overall prop proportions.
+
+Receiver close-up (05_closeup_receiver_metal.png):
+  Exterior receiver close-up showing dark blued metal material, subtle
+  roughness variation, decorative surface details, and restrained edge
+  wear.
+
+Wood close-up (06_closeup_wood_stock.png):
+  Wood component close-up showing reddish-brown varnished material,
+  lengthwise grain direction, and controlled worn edges.
+
+Magazine close-up (08_closeup_magazine.png):
+  Exterior magazine close-up showing blackened metal material, broad
+  decorative grooves, and subtle surface wear.
+
+Grip close-up (10_closeup_grip.png):
+  Grip close-up showing dark bakelite-style material, shallow exterior
+  grooves, and subtle surface variation.
+
+Turntable:
+  360-degree turntable presentation of the completed non-functional
+  exterior visual prop.

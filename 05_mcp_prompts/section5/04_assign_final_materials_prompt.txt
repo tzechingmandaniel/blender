@@ -1,0 +1,47 @@
+Phase 5 Prompt 4 — Assign Final Material Placeholders
+=====================================================
+
+For each AK_ object, replace its first material slot with the final MAT_*
+material below. If the object has more than one slot, also replace the
+others, so the object reads consistently in the viewport.
+
+MAT_metal_dark_blued:
+  AK_receiver_main, AK_dustcover_main, AK_barrel_exterior_main,
+  AK_gas_tube_outer (if present), AK_front_sight_block_visual,
+  AK_rear_sight_visual, AK_trigger_guard_visual, AK_front_ring_visual,
+  AK_gas_block_visual, AK_muzzle_front_visual_closed,
+  AK_loop_sling_rear_visual, AK_loop_sling_front_visual
+
+MAT_metal_black_magazine:
+  AK_magazine_main, AK_groove_magazine_*, AK_seam_magazine_baseplate_*
+
+MAT_detail_dark_metal:
+  AK_rivet_receiver_*, AK_panel_receiver_*, AK_rib_dustcover_*,
+  AK_spine_magazine_*, AK_cap_*, AK_ring_*
+
+MAT_wood_dark_reddish:
+  AK_stock_main, AK_handguard_lower_main, AK_handguard_upper_main,
+  AK_contour_*
+
+MAT_grip_dark_bakelite:
+  AK_grip_main, AK_groove_grip_*, AK_seam_grip_basecap_*
+
+MAT_shadow_seam_dark:
+  all AK_seam_* objects except AK_seam_magazine_baseplate_* and
+  AK_seam_grip_basecap_*
+
+MAT_edge_wear_light_metal:
+  AK_wear_placeholder_metal_*
+
+MAT_edge_wear_worn_wood:
+  AK_wear_placeholder_wood_*
+
+Do not delete the old MAT_placeholder_* materials. Do not add image-texture
+or procedural texture nodes. Do not change object geometry.
+
+After running, verify:
+  [ ] No AK_ object still uses an old MAT_placeholder_* material
+  [ ] Magazine body uses MAT_metal_black_magazine (not the same as receiver)
+  [ ] Wood vs grip materials are distinct
+  [ ] Seam markers are MAT_shadow_seam_dark
+  [ ] Edge-wear placeholders use the matching wear material

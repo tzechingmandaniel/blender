@@ -1,0 +1,25 @@
+Phase 6 Prompt 11 — Global Material Balance
+===========================================
+
+Review the 4 hero materials together under the lookdev lighting from
+Prompt 2. Compare results from each lookdev camera. Verify:
+
+  [ ] Metal is dark blued, not chrome
+  [ ] Magazine is visibly more matte than the receiver
+  [ ] Wood is reddish brown with lengthwise grain, not glossy plastic
+  [ ] Grip is bakelite reddish-brown, not wood, not metallic
+  [ ] Seam markers remain dark and shallow
+  [ ] Edge wear hits exposed edges only — not flat faces
+  [ ] Cavity AO darkens grooves subtly
+  [ ] Dirt/grime adds depth without muddying the model
+  [ ] Roughness variation reads at close-up but doesn't pop at full view
+
+Adjust mix factors / variation strengths conservatively. Log any
+unresolved issues into 06_documentation/lookdev_notes.txt and into the
+phase 6 issue tracker.
+
+Hard scope: no functional content, no internal mechanism.
+
+After running, verify:
+  [ ] Notes / issues documented
+  [ ] No material exceeds tuning bounds in §6.3

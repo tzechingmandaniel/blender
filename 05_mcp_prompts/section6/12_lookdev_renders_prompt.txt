@@ -1,0 +1,34 @@
+Phase 6 Prompt 12 — Lookdev Test Renders
+========================================
+
+Render the following Cycles previews into 04_renders/lookdev/:
+
+  lookdev_full_model_side.png         VIEW_side_modeling (orthographic)
+  lookdev_full_model_3quarter.png     CAM_lookdev_full_model
+  lookdev_closeup_metal_receiver.png  CAM_lookdev_metal_closeup
+  lookdev_closeup_wood_stock.png      CAM_lookdev_wood_closeup
+  lookdev_closeup_handguard.png       CAM_lookdev_handguard_closeup
+  lookdev_closeup_magazine.png        CAM_lookdev_magazine_closeup
+  lookdev_closeup_grip.png            CAM_lookdev_grip_closeup
+  lookdev_clay_material_check.png     full model under MAT_clay_neutral_preview
+
+Render settings:
+  engine     : Cycles
+  device     : CPU
+  samples    : 64 (full views), 96 (close-ups), 48 (clay)
+  resolution : 1400x700 full / 1000x1000 close-ups
+  view xform : Filmic, Medium Contrast
+
+Hide before rendering:
+  REF_ak47_side_view
+  01_GUIDES, 02_BLOCKOUT, 04Z_detail_tests_archive,
+  06_MATERIAL_TESTS, 07_ASSEMBLY (assembly mirrors are duplicates)
+
+Restore visibility after each render.
+
+Hard scope: no violent / combat scenery; no exposed internal mechanism.
+
+After running, verify:
+  [ ] 8 render files written into 04_renders/lookdev/
+  [ ] No guide/reference objects visible in any render
+  [ ] Clay render uses MAT_clay_neutral_preview

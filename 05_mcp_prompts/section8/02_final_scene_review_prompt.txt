@@ -1,0 +1,23 @@
+Phase 8 Prompt 2 — Final Scene Review
+=====================================
+
+Programmatically verify v07_final_scene_export.blend before any copy:
+  - reference / guides / blockout / material tests / archive collections
+    are all hide_render=True
+  - REF_ak47_side_view hide_render=True
+  - All 13 final cameras + 4 LIGHT_final_* present
+  - 12_PRESENTATION_STAGE collection exists
+  - EMPTY_turntable_center keyframed (frames 1, 180, LINEAR)
+  - 09_EXPORT_READY exists with 59 AK_ objects + 1 master empty
+  - Every AK_ object uses a final MAT_* material
+  - No AK_ object has a Boolean modifier
+  - No forbidden token in any AK_ name
+
+Log the result into a temp scene-review section that the executor uses
+to gate the rest of the pipeline (abort if any check fails).
+
+Hard scope: no model edits.
+
+After running:
+  [ ] All checks above PASS
+  [ ] Executor pipeline proceeds

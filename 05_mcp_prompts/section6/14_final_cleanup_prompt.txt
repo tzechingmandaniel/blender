@@ -1,0 +1,21 @@
+Phase 6 Prompt 14 — Final Material Cleanup
+==========================================
+
+Perform light cleanup before saving v06:
+  - Confirm all 10 MAT_* finals exist and remain assigned
+  - Old MAT_placeholder_* materials (Section 4 placeholders) can be left
+    with use_fake_user=False so they're purged on save automatically.
+  - Confirm 06_MATERIAL_TESTS is still hidden in viewport + render
+  - Confirm 08_LIGHTING_CAMERA collection exists with 6 cameras + 3 lights
+  - Confirm no AK_ object has a Boolean modifier
+  - Confirm there is no MAT_uv_checker_review on any AK_ object (Phase 5
+    checker render restored final materials, but double-check)
+
+Hard scope: do not delete final materials, do not break shader graphs,
+do not change geometry.
+
+After running, verify:
+  [ ] 10 final MAT_* materials still present
+  [ ] No checker / Phase-5 leftover material assigned to AK_ objects
+  [ ] 06_MATERIAL_TESTS still hidden
+  [ ] No boolean modifiers

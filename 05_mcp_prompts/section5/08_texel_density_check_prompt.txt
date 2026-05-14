@@ -1,0 +1,26 @@
+Phase 5 Prompt 8 — Texel Density Check
+======================================
+
+Target texel density: 1024 px per metre.
+
+For every major AK_ object, compute the ratio of (UV area in 0..1²) /
+(world surface area). The expected ratio at the target density and 1024 px
+maps is ~1.0 — but values 0.5..2.0 are acceptable for now.
+
+Visible large surfaces (must hit 0.7×–1.3× target):
+  AK_receiver_main, AK_stock_main, AK_handguard_lower_main,
+  AK_handguard_upper_main, AK_magazine_main, AK_grip_main,
+  AK_barrel_exterior_main, AK_dustcover_main
+
+Small details may use any density.
+
+Do not edit UVs in this prompt — only measure and report. Write the
+findings into 06_documentation/uv_notes.txt under the heading "Texel
+density check".
+
+Hard scope: report-only. Do not modify geometry or UVs.
+
+After running, verify:
+  [ ] Report saved into uv_notes.txt
+  [ ] All 8 major parts listed with measured ratios
+  [ ] Any object outside 0.5..2.0 is flagged

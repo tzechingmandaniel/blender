@@ -1,0 +1,142 @@
+Section 8 Final Review / Packaging / Handover
+==============================================
+
+Section 8 takes the Phase 7 outputs (v07 + 14 stills + turntable frames +
+3 exports + docs) and assembles a clean, self-contained final_delivery
+package + final archive zip.
+
+This is not a modelling phase — no geometry edits. The executor only
+copies files, generates documentation, and (optionally) writes a final
+.blend with relative texture paths.
+
+§8.1 Source / output
+--------------------
+Input:  01_blender/v07_final_scene_export.blend +
+        02_exports/*  +  03_textures/*  +  04_renders/final/*  +
+        06_documentation/*  +  08_reviews/*
+
+Output: final_delivery/ + AK47_NonFunctional_Prop_final_delivery_YYYYMMDD.zip
+
+§8.2 Final Blender file (copy step)
+-----------------------------------
+01_blender/AK47_exterior_prop_final.blend  ←  copy of v07
+final_delivery/01_blender_final/AK47_exterior_prop_final.blend
+
+§8.3 final_delivery/ directory layout
+-------------------------------------
+final_delivery/
+  01_blender_final/AK47_exterior_prop_final.blend
+  02_exports/
+    fbx/AK47_exterior_prop_visual.fbx
+    glb/AK47_exterior_prop_visual.glb
+    obj/AK47_exterior_prop_visual.obj
+    obj/AK47_exterior_prop_visual.mtl
+  03_textures/
+    metal/README.txt
+    wood/README.txt
+    magazine/README.txt
+    grip/README.txt
+    shared/README.txt
+    (no painted PNGs yet — procedural shaders inside the .blend)
+  04_final_renders/
+    full_model/
+      01_side_profile.png
+      02_front_3quarter_hero.png
+      03_rear_3quarter.png
+      04_top_angle.png
+    closeups/
+      05_closeup_receiver_metal.png
+      06_closeup_wood_stock.png
+      07_closeup_handguard_wood.png
+      08_closeup_magazine.png
+      09_closeup_front_sight_visual.png
+      10_closeup_grip.png
+      11_closeup_edgewear.png
+    clay_wireframe_optional/
+      12_clay_full_model.png
+      13_wireframe_full_model.png
+      14_material_breakdown.png
+    portfolio_selected/
+      02_front_3quarter_hero.png
+      01_side_profile.png
+      05_closeup_receiver_metal.png
+      06_closeup_wood_stock.png
+      08_closeup_magazine.png
+  05_turntable/
+    turntable_frames/frame_####.png  (12-frame preview from §7.22)
+    README.txt explaining that the MP4 encode is deferred to a Phase 9
+    post-delivery step (ffmpeg not in this pipeline)
+  06_documentation/
+    readme.txt
+    asset_notes.txt
+    material_notes.txt        (copied from 06_documentation/)
+    texture_notes.txt
+    render_notes.txt          (copied)
+    export_notes.txt          (copied)
+    scope_and_safety_note.txt
+    handover_checklist.txt
+    version_history.txt
+    phase_notes.txt           (copied as project history)
+    uv_notes.txt              (copied)
+    lookdev_notes.txt         (copied)
+    phase_6_material_issue_tracker.txt  (copied)
+    phase_7_render_issue_tracker.txt    (copied)
+  07_public_pack/
+    public_description.txt
+    portfolio_captions.txt
+    selected_render_list.txt
+    project_summary_short.txt
+    project_summary_long.txt
+  08_archive_notes/
+    archive_contents.txt
+    excluded_from_archive.txt
+
+§8.4 Final archive
+------------------
+AK47_NonFunctional_Prop_final_delivery_YYYYMMDD.zip
+  - root entry: final_delivery/
+  - contains everything under final_delivery/ at deflate level 6
+  - YYYYMMDD comes from the executor run date
+  - extra copy preserved in 09_archive/ (no rename) so we can re-test
+    without re-zipping
+
+§8.5 Documents we write (under final_delivery/06_documentation/)
+-----------------------------------------------------------------
+readme.txt              — project, purpose, file list, how-to-open, scope
+asset_notes.txt         — object/collection summary
+material_notes.txt      — already-generated, copied
+texture_notes.txt       — folder structure + procedural-vs-PNG explanation
+render_notes.txt        — already-generated, copied
+export_notes.txt        — already-generated, copied
+scope_and_safety_note.txt — single paragraph, public-safe wording
+handover_checklist.txt  — A..F sections, all PASS marks (filled by executor)
+version_history.txt     — v01..v07 + AK47_exterior_prop_final.blend mapping
+uv_notes.txt            — already-generated, copied
+lookdev_notes.txt       — already-generated, copied
+phase_notes.txt         — already-generated, copied
+phase_6_material_issue_tracker.txt — copied from 08_reviews/
+phase_7_render_issue_tracker.txt  — copied from 08_reviews/
+
+§8.6 Public pack (under final_delivery/07_public_pack/)
+-------------------------------------------------------
+public_description.txt   — short + long descriptions per §8.22
+portfolio_captions.txt   — captions per §8.24
+selected_render_list.txt — list of the 5 portfolio_selected renders
+project_summary_short.txt — 1-paragraph version
+project_summary_long.txt  — multi-paragraph version
+
+§8.7 Safety / scope reminders
+-----------------------------
+Every doc opens with the non-functional exterior visual prop scope.
+No internal mechanism, working trigger, chamber, bolt, spring, firing
+component, functional magazine, bore, rifling, manufacturing dimensions,
+or real assembly instructions are referenced anywhere in the package.
+
+§8.8 Texture path strategy
+--------------------------
+The Phase 6 shader graphs are fully procedural (Noise, Wave, Pointiness,
+AmbientOcclusion, Wireframe shader node). They do not depend on external
+PNG files. The 03_textures/<group>/README.txt files document the planned
+PNG names so a future bake step (deferred to Phase 9) can drop maps into
+the expected location. The final .blend opens with no missing-texture
+warnings.

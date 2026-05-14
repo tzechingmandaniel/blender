@@ -1,0 +1,52 @@
+Export Notes — Section 7
+========================
+Scope reminder: non-functional exterior prop only. Exports contain
+exterior visual prop geometry + materials + UVs ONLY. No internal
+mechanism, no functional anything, no manufacturing dimensions.
+
+Export-ready collection: 09_EXPORT_READY
+  - Empty:    EXPORT_AK47_EXTERIOR_PROP_MASTER
+  - Members:  every AK_ object cross-linked from 03_MAJOR_PARTS /
+              04_MINOR_PARTS (originals not unlinked)
+
+Excluded from export:
+  - 00_REFERENCE, 01_GUIDES, 02_BLOCKOUT, 04Z_detail_tests_archive,
+    06_MATERIAL_TESTS, 07_ASSEMBLY, 11_ARCHIVE_BACKUP
+  - REF_ak47_side_view image plane
+  - 08_LIGHTING_CAMERA (cameras + lights + turntable empty)
+  - 12_PRESENTATION_STAGE (floor + backdrop)
+  - PREVIEW_* spheres (Phase 5 material previews)
+
+Output folder: 02_exports/
+
+Export files:
+  AK47_exterior_prop_visual.fbx      Autodesk FBX
+  AK47_exterior_prop_visual.glb      glTF 2.0 binary
+  AK47_exterior_prop_visual.obj      Wavefront OBJ + MTL
+
+Export settings (per section7_export.py):
+  FBX  use_selection=True, apply_unit_scale=True,
+       bake_space_transform=True, mesh_smooth_type='FACE',
+       use_mesh_modifiers=True, add_leaf_bones=False,
+       path_mode='COPY', embed_textures=False, global_scale=1.0
+  GLB  export_format='GLB', use_selection=True,
+       export_materials='EXPORT', export_apply=True,
+       export_yup=True
+  OBJ  use_selection=True, export_uv=True, export_normals=True,
+       export_materials=True, export_triangulated_mesh=True
+
+Texture / material notes:
+  - Procedural shader graphs (Noise/Wave + EdgeWearMask + CavityAO +
+    grime mix) live inside the .blend.
+  - FBX/GLB/OBJ exporters cannot serialise procedural Cycles shaders
+    fully — they will carry Principled BSDF defaults (base color,
+    metallic, roughness) per material, plus UV layers.
+  - Phase 8 may bake the procedural results into PNG maps and
+    re-export if a target engine needs real textures.
+
+Safe-prop scope:
+  - Export contains exterior visual prop only
+  - No internal/functional parts
+  - No manufacturing dimensions
+  - No technical assembly notes
+  - No ammunition or functional components

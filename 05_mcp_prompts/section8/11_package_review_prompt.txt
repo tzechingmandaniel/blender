@@ -1,0 +1,33 @@
+Phase 8 Prompt 11 — Final Package Review
+=========================================
+
+Programmatically check final_delivery/ for §8.28 issues:
+
+  Folder check:
+    [ ] 01_blender_final contains AK47_exterior_prop_final.blend
+    [ ] 02_exports contains FBX + GLB + OBJ (+ MTL)
+    [ ] 03_textures contains 5 README.txt files
+    [ ] 04_final_renders has full_model (4 PNGs) + closeups (7 PNGs) +
+        clay_wireframe_optional (3 PNGs) + portfolio_selected (5 PNGs)
+    [ ] 05_turntable/turntable_frames has >= 12 PNGs
+    [ ] 06_documentation has all 9 required docs + 5 history docs
+    [ ] 07_public_pack has 5 files
+    [ ] 08_archive_notes has 2 files
+
+  File naming check:
+    [ ] No "final_final" / "test" / "tmp" / ".old" file names
+    [ ] No empty (0-byte) files
+    [ ] No file extension missing
+
+  Safety check:
+    [ ] No forbidden token in any .txt file in the package
+    [ ] No `working firearm` / `functional firearm` / `ammunition` / etc.
+
+Log the package review summary into 08_archive_notes/archive_contents.txt.
+
+Hard scope: read-only checks + log writes.
+
+After running:
+  [ ] All folder/file counts match plan
+  [ ] No forbidden tokens
+  [ ] archive_contents.txt written

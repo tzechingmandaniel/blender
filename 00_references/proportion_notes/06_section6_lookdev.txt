@@ -1,0 +1,151 @@
+Section 6 Final Texture / Material Refinement + Lookdev
+========================================================
+
+Section 6 takes the Phase 5 UV-prepared model and turns it into a visually
+finished, lookdev-tested exterior prop. No real image texture files are
+required — all wear/scratches/dirt/grain are done procedurally inside the
+shader graph (Principled BSDF + Noise/Wave/Pointiness/ColorRamp nodes).
+This keeps the file portable and deterministic.
+
+Strictly exterior, strictly non-functional. No bore, chamber, working
+trigger, functional magazine, real openings, manufacturing detail.
+
+§6.1 Source / output
+--------------------
+Input:  01_blender/v05_uv_materials.blend
+Output: 01_blender/v06_final_textures_lookdev.blend
+
+§6.2 New collection — 08_LIGHTING_CAMERA
+----------------------------------------
+Top-level collection that holds Phase 6 lookdev objects:
+  CAM_lookdev_full_model         persp 50mm, looks at origin from 3/4
+  CAM_lookdev_metal_closeup      persp 70mm, frames receiver +Y face
+  CAM_lookdev_wood_closeup       persp 70mm, frames stock +Y face
+  CAM_lookdev_magazine_closeup   persp 70mm, frames magazine +Y face
+  CAM_lookdev_grip_closeup       persp 70mm, frames grip +Y face
+  CAM_lookdev_handguard_closeup  persp 70mm, frames hg upper +Y face
+  LIGHT_lookdev_key_soft         AREA 0.6m, energy ~150 W, warm 5500K
+  LIGHT_lookdev_fill_soft        AREA 1.0m, energy ~60 W,  neutral 5500K
+  LIGHT_lookdev_rim_subtle       AREA 0.4m, energy ~80 W,  cool 6500K
+
+§6.3 Procedural shader graph per final material
+-----------------------------------------------
+Each MAT_* gets rebuilt with this generic structure:
+
+  TextureCoordinate -> Mapping -> [primary procedural texture] -> ColorRamp -> Base Color
+                                                              -> ColorRamp -> Roughness
+  Geometry.Pointiness -> ColorRamp                                          -> mix to edge wear color
+  Noise (fine scale) -> ColorRamp                                           -> bump strength
+  AO node (inverted) or Pointiness inverted                                  -> darken cavities
+
+Per material specifics:
+
+  MAT_metal_dark_blued
+    primary: Noise scale 25, detail 6, distortion 0.2 (fine scratch noise)
+    base color base = (0.05, 0.05, 0.07)
+    base color +tinted by Pointiness ramp -> exposed edges lighten toward
+        (0.45, 0.43, 0.40) (steel) at the brightest end of edge-wear ramp
+    metallic = 1.0, roughness = 0.40 base, +/- 0.15 via noise ramp
+    bump = small (strength 0.15) driven by the same noise
+
+  MAT_metal_black_magazine
+    primary: Noise scale 20, slightly more matte
+    base color base = (0.04, 0.04, 0.04)
+    edge-wear lifts to (0.55, 0.53, 0.50) (lighter than receiver)
+    metallic = 1.0, roughness = 0.55 base, +/- 0.10 via noise
+    bump strength 0.12
+
+  MAT_wood_dark_reddish
+    primary: Wave Bands along U axis (so grain follows +X = +U as planned)
+    wave scale 8, distortion 1.0, detail 2, detail_scale 1.0
+    base color: lerp between (0.14, 0.06, 0.03) and (0.22, 0.10, 0.05)
+        modulated by wave -> gives lengthwise grain bands
+    edge-wear lifts color toward (0.42, 0.30, 0.22)
+    metallic = 0, roughness = 0.55 base, varies +/- 0.10 from wave
+    bump strength 0.08 from wave + noise
+
+  MAT_grip_dark_bakelite
+    primary: Noise scale 80, detail 2 (very fine surface noise)
+    base color base = (0.10, 0.05, 0.04)
+    edge-wear lifts to (0.20, 0.10, 0.07) (subtle, not metallic)
+    metallic = 0, roughness = 0.50 base, +/- 0.05 via noise
+    bump strength 0.10
+
+  MAT_shadow_seam_dark, MAT_detail_dark_metal,
+  MAT_edge_wear_light_metal, MAT_edge_wear_worn_wood,
+  MAT_reference_hidden, MAT_clay_neutral_preview
+    keep simple Principled placeholder values from Section 5 (no procedural
+    refinement needed — they are tiny details / fallback).
+
+§6.4 Edge-wear node group
+-------------------------
+A reusable NodeGroup "EdgeWearMask" exposes:
+  inputs:  WearStrength (default 0.4), CrispnessLow (0.4), CrispnessHigh (0.6)
+  output:  Mask (0..1)
+
+  Internals: Geometry node -> Pointiness -> ColorRamp(Constant) with the
+  two crispness handles -> multiplied by WearStrength.
+
+This is reused inside MAT_metal_dark_blued, MAT_metal_black_magazine,
+MAT_wood_dark_reddish, MAT_grip_dark_bakelite.
+
+§6.5 Cavity / AO node group
+---------------------------
+NodeGroup "CavityAO":
+  inputs:  AOStrength (0.5), AODistance (0.04)
+  output:  Multiplier (~0..1, lower in cavities)
+
+  Internals: AmbientOcclusion(samples=8, inside=False) -> color -> ColorRamp
+  -> Mix Multiply with white.
+
+Used to multiply Base Color in seam/cavity areas — driven entirely by
+geometry, no texture map required.
+
+§6.6 Lookdev cameras and lights
+-------------------------------
+Camera placements (in world coordinates, model rests around origin):
+  CAM_lookdev_full_model        (0.45, -0.50, 0.20)  rot (75°, 0°, 40°)
+  CAM_lookdev_metal_closeup     (0.00, -0.18, 0.05)  rot (88°, 0°, 0°)
+  CAM_lookdev_wood_closeup      (-0.36,-0.18, 0.05)  rot (88°, 0°, 0°)
+  CAM_lookdev_magazine_closeup  (-0.04,-0.18, -0.07) rot (88°, 0°, 0°)
+  CAM_lookdev_grip_closeup      (-0.05,-0.18, -0.05) rot (88°, 0°, 0°)
+  CAM_lookdev_handguard_closeup (0.18, -0.18, 0.05)  rot (88°, 0°, 0°)
+
+Light placements:
+  LIGHT_lookdev_key_soft        ( 0.6, -0.6,  0.5)   area 0.6m, ~150 W
+  LIGHT_lookdev_fill_soft       (-0.6, -0.4,  0.3)   area 1.0m,  ~60 W
+  LIGHT_lookdev_rim_subtle      ( 0.0,  0.6,  0.4)   area 0.4m,  ~80 W
+
+§6.7 Render outputs (04_renders/lookdev/)
+-----------------------------------------
+lookdev_full_model_side.png         orthographic side using VIEW_side_modeling
+lookdev_full_model_3quarter.png     perspective using CAM_lookdev_full_model
+lookdev_closeup_metal_receiver.png  CAM_lookdev_metal_closeup
+lookdev_closeup_wood_stock.png      CAM_lookdev_wood_closeup
+lookdev_closeup_handguard.png       CAM_lookdev_handguard_closeup
+lookdev_closeup_magazine.png        CAM_lookdev_magazine_closeup
+lookdev_closeup_grip.png            CAM_lookdev_grip_closeup
+lookdev_clay_material_check.png     full model under flat clay material
+
+All renders: Cycles, CPU, samples 64, resolution 1400×700 (1000×1000 for
+close-ups), filmic + medium contrast.
+
+§6.8 Documentation files (06_documentation/)
+--------------------------------------------
+material_notes.txt          append "Section 6 final lookdev" section
+texture_workflow_notes.txt  append "Section 6 procedural notes"
+lookdev_notes.txt           new — lighting + cameras + render outputs + issues
+
+§6.9 Issue tracker (08_reviews/)
+--------------------------------
+phase_6_material_issue_tracker.txt
+  - structured table with Issue ID, Material, Problem, View, Severity,
+    Suggested fix, Status.
+  - Pre-populated with the known caveat about per-group atlas density
+    (deferred to Phase 7) and any Phase-6 self-audit issues.
+
+§6.10 Safety scope reminders embedded in shaders
+------------------------------------------------
+The shader graph contains no internal mechanism, no real bore detail, no
+working magazine geometry. All wear/scratches/AO are procedurally derived
+from object geometry and surface normals only.

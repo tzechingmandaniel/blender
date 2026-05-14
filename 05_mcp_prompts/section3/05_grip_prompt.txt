@@ -1,0 +1,27 @@
+MCP Prompt §3.5 — AK_grip_main
+===============================
+
+Refine the grip from BLK_grip_main into AK_grip_main. Exterior visual only —
+no working screw, no real takedown, no real magazine release.
+
+Geometry:
+- Start from a box 0.045 (X) × 0.030 (Y) × 0.115 (Z). Centre at
+  ~(-0.090, 0, -0.090) and tilt -18° around the Y axis (rear lean).
+- Subdivide 2 times along Z.
+- Top half (Z > 0): narrow X by ~45% (taper from base up).
+- Front face (-X): subtle concave finger relief. Push the central-front
+  vertical strip inward (+X) by ~0.003.
+- Rear face (+X): subtle convex palm swell. Push the central-rear vertical
+  strip outward (+X) by ~0.003.
+- Base cap (flat flange): box 0.050 × 0.034 × 0.008 at the bottom
+  (local Z ≈ -0.062), joined into the same object.
+
+Modifiers:
+- Bevel (Angle limit 30°, width 0.002, segments 2).
+- Weighted Normal (weight 50, threshold 0.01, keep sharp).
+
+Material: MAT_placeholder_bakelite_grip
+Collection: 03_MAJOR_PARTS
+Parent: AK47_MASTER_ASSET
+Origin: geometric center, transform applied.
+Naming: AK_grip_main.

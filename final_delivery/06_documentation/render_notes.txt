@@ -1,0 +1,67 @@
+Render Notes — Section 7
+========================
+Scope reminder: non-functional exterior prop only.
+
+Final cameras (08_LIGHTING_CAMERA):
+  Full-model:
+    CAM_final_side_profile        ORTHO scale 1.10
+    CAM_final_front_3quarter      PERSP 50mm
+    CAM_final_rear_3quarter       PERSP 50mm
+    CAM_final_top_angle           PERSP 50mm
+    CAM_final_low_angle_optional  PERSP 50mm
+  Close-up:
+    CAM_closeup_receiver
+    CAM_closeup_wood_stock
+    CAM_closeup_handguard
+    CAM_closeup_magazine
+    CAM_closeup_front_sight
+    CAM_closeup_grip
+    CAM_closeup_material_edgewear
+  Turntable:
+    CAM_turntable_main            (static)
+
+Final lights (08_LIGHTING_CAMERA):
+  LIGHT_final_key_soft          AREA 0.70m  50 W  warm
+  LIGHT_final_fill_soft         AREA 1.20m  20 W  neutral
+  LIGHT_final_rim_subtle        AREA 0.45m  25 W  cool
+  LIGHT_final_top_soft_optional AREA 1.50m  18 W  neutral
+
+Background / stage (12_PRESENTATION_STAGE):
+  FLOOR_final_studio_plane    25 m x 25 m at z = -0.10
+  BG_final_neutral_backdrop   3 m x 3 m vertical at y = +0.40
+  MAT_background_neutral_dark base (0.085, 0.090, 0.100), rough 0.85
+
+Render resolution:
+  Full-model stills : 1920 x 1080
+  Close-up stills   : 1080 x 1080
+  Turntable preview : 960 x 540
+
+Render output folder: 04_renders/final/
+Turntable frame folder: 04_renders/final/turntable_frames/
+
+Render output naming (14 stills):
+  render_01_side_profile.png
+  render_02_front_3quarter_hero.png
+  render_03_rear_3quarter.png
+  render_04_top_angle.png
+  render_05_closeup_receiver_metal.png
+  render_06_closeup_wood_stock.png
+  render_07_closeup_handguard_wood.png
+  render_08_closeup_magazine.png
+  render_09_closeup_front_sight_visual.png
+  render_10_closeup_grip.png
+  render_11_closeup_edgewear.png
+  render_12_clay_full_model.png
+  render_13_wireframe_full_model.png
+  render_14_material_breakdown.png
+
+Turntable animation:
+  scene.frame_start = 1
+  scene.frame_end   = 180
+  scene.render.fps  = 24
+  EMPTY_turntable_center rotation_euler.z keyframed 0 .. 2π (LINEAR)
+  Camera CAM_turntable_main is static.
+  Output: 04_renders/final/turntable_frames/frame_####.png
+          (Optional MP4 encode in Phase 8 via ffmpeg.)
+
+Known visual issues -> see 08_reviews/phase_7_render_issue_tracker.txt

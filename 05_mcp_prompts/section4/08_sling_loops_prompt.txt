@@ -1,0 +1,34 @@
+MCP Prompt §4.20 — Sling Loop Visual Placeholders
+===================================================
+
+Create simple decorative sling loop visual placeholders for the non-
+functional AK-style exterior prop, inside
+04_MINOR_PARTS / 04G_sling_loop_visuals. Strictly exterior, decorative,
+non-functional, NOT load-bearing. Do not create real sling mounting
+hardware, screw systems, pins, functional attachment mechanisms, or
+manufacturing dimensions.
+
+Detail set:
+- AK_loop_sling_rear_visual — torus, major radius 0.008, minor radius
+  0.0015, lying flat in the Y-Z plane, centred at world (-0.490, 0,
+  -0.020) so it sits on the stock rear lower edge.
+- AK_loop_sling_front_visual — torus, major radius 0.008, minor radius
+  0.0015, lying flat in the Y-Z plane, centred at world (+0.195, 0,
+  -0.010) so it sits on the lower handguard front edge.
+
+Naming:
+AK_loop_sling_rear_visual
+AK_loop_sling_front_visual
+
+Material:
+MAT_placeholder_dark_metal
+
+All objects parented to AK47_MASTER_ASSET. Bevel modifier (width 0.0005,
+segments 1, angle 30°) on every object.
+
+After running:
+[ ] Sling loop visuals are in 04G_sling_loop_visuals.
+[ ] Both are simple decorative shapes.
+[ ] No real mounting hardware, no screws, no pins, no functional
+    attachment.
+[ ] They do not dominate the model.

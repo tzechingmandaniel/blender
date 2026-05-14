@@ -1,0 +1,28 @@
+§8.17 Export-Test Report
+=========================
+Scope reminder: non-functional exterior visual prop only.
+
+FBX: C:/Users/danie/Documents/GitHub/blender/.claude/worktrees/modest-sinoussi-bb5db7\final_delivery\02_exports\fbx\AK47_exterior_prop_visual.fbx
+  FBX       : meshes= 59  cams=0  lights=0  empties=1
+             non-AK_ mesh names    : 0 
+             meshes without UV      : 0 
+             blockout/reference-ish : 0 
+
+GLB: C:/Users/danie/Documents/GitHub/blender/.claude/worktrees/modest-sinoussi-bb5db7\final_delivery\02_exports\glb\AK47_exterior_prop_visual.glb
+  GLB       : meshes= 59  cams=0  lights=0  empties=1
+             non-AK_ mesh names    : 0 
+             meshes without UV      : 0 
+             blockout/reference-ish : 0 
+
+OBJ: C:/Users/danie/Documents/GitHub/blender/.claude/worktrees/modest-sinoussi-bb5db7\final_delivery\02_exports\obj\AK47_exterior_prop_visual.obj
+  OBJ       : meshes= 59  cams=0  lights=0  empties=0
+             non-AK_ mesh names    : 0 
+             meshes without UV      : 0 
+             blockout/reference-ish : 0 
+
+Pass / fail summary:
+  [X] FBX    : clean (59 meshes, 0 without UV — UV-loss is expected for OBJ split-meshes and is informational)
+  [X] GLB    : clean (59 meshes, 0 without UV — UV-loss is expected for OBJ split-meshes and is informational)
+  [X] OBJ    : clean (59 meshes, 0 without UV — UV-loss is expected for OBJ split-meshes and is informational)
+
+Overall §8.17 export test: PASS

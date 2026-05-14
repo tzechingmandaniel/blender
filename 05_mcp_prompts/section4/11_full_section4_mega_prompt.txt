@@ -1,0 +1,65 @@
+MCP Mega Prompt §4.31 — Full Section 4 (Ready-to-Use)
+=======================================================
+
+Open the existing v03_major_parts.blend (Section 3 result) and immediately
+save the file as v04_minor_details.blend at the same path.
+
+Important safety and scope:
+- This is only a visual exterior prop.
+- Do not create internal firearm mechanisms.
+- Do not create functional barrel, chamber, bolt, spring, firing system,
+  detachable magazine system, working trigger, bore, rifling, threaded
+  muzzle, real screw holes, real openings, or manufacturing details.
+- All Section 4 objects must be solid decorative exterior placeholders
+  only.
+
+Task:
+Add ~50 minor exterior detail objects across 8 functional sub-collections
+under 04_MINOR_PARTS. Detail counts (hard caps) and placements come from
+§4.4–§4.22. No object beyond the cap is added in the primary pass; if
+extras appear, they go into 04Z_detail_tests_archive.
+
+Run order:
+ 1. Setup    — create the 9 sub-collections inside 04_MINOR_PARTS and the
+              two new placeholder materials MAT_placeholder_shadow_seam
+              and MAT_placeholder_edge_wear (§4.4).
+ 2. Receiver — 6 rivets, 2 panel lines, 3 seam markers in 04A
+              (§4.8).
+ 3. Dust cover — 3 ribs, 2 side seams in 04B (§4.10).
+ 4. Magazine — 4 grooves, 2 spines, 1 baseplate seam in 04C (§4.12).
+ 5. Wood    — 2 stock + 2 lower-hg + 2 upper-hg contour bands, 3 wood
+              edge-wear placeholders in 04D (§4.14).
+ 6. Grip    — 3 grooves, 1 base-cap seam in 04E, all rotated -18° to
+              follow the tilted grip front (§4.16).
+ 7. Sights  — 1 front-sight cap, 1 gas-block seam, 1 front ring in 04F
+              (§4.18).
+ 8. Sling loops — 2 torus visuals in 04G (§4.20).
+ 9. Seam + edge-wear placeholders — 5 seam markers, 3 metal-edge wear,
+              2 wood-edge wear in 04H (§4.22).
+10. Density cleanup — confirm caps, parenting, materials, bevels;
+              archive any surplus into 04Z (§4.24).
+
+Naming rules:
+- All detail objects start with AK_.
+- Each contains one of the detail keywords: rivet, panel, rib, seam,
+  groove, spine, contour, loop, wear, cap, ring.
+- No default Cube.001 / Cylinder.002 names.
+
+Material rules:
+- Metal details:     MAT_placeholder_dark_metal
+- Magazine details:  MAT_placeholder_black_metal
+- Wood details:      MAT_placeholder_dark_wood
+- Grip grooves:      MAT_placeholder_bakelite_grip
+- Seam markers:      MAT_placeholder_shadow_seam (NEW in Section 4)
+- Edge-wear placeholders: MAT_placeholder_edge_wear (NEW in Section 4)
+
+Assembly rules:
+- All detail objects parented to AK47_MASTER_ASSET.
+- All detail objects have a Bevel modifier (width 0.0005, segments 1,
+  angle 30°).
+- The 04Z_detail_tests_archive sub-collection is hidden in viewport
+  and render.
+
+Section 4 finishes when the §4.29 final review checklist passes (see
+section4_verify.py). Save as v04_minor_details.blend at the same path
+as the v03 file.

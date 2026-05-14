@@ -1,0 +1,6 @@
+Project Summary (short)
+=========================
+Non-functional AK-style exterior 3D prop — Blender hard-surface
+modelling and material workflow exercise. Visual rendering, portfolio
+presentation, and game-asset display only. No internal firearm
+mechanism, no functional components, no manufacturing details.

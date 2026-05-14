@@ -1,0 +1,24 @@
+Phase 5 Prompt 11 — UV Checker Review
+=====================================
+
+Create a temporary material MAT_uv_checker_review that uses a generated
+checker texture (1024×1024 procedural Checker, color1 black, color2 white,
+scale ~24) mapped through a UV input to the Base Color of a Principled
+BSDF. Roughness 0.5, Metallic 0.0.
+
+Temporarily swap this material onto every AK_ object (preserving the
+original material assignment via a stored mapping in 06C_texture_map_notes
+empty-object names).
+
+Render two checker previews into 04_renders/uv_checker/:
+  v05_uv_checker_3quarter.png
+  v05_uv_checker_side.png
+
+After rendering, restore each AK_ object's original final MAT_* material.
+
+Hard scope: no geometry changes, no functional internal detail.
+
+After running, verify:
+  [ ] 2 UV checker renders saved into 04_renders/uv_checker/
+  [ ] All AK_ objects are back on their final MAT_* materials
+  [ ] MAT_uv_checker_review still exists in the file but is unused

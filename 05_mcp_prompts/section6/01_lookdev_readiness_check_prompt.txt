@@ -1,0 +1,25 @@
+Phase 6 Prompt 1 — Lookdev Readiness Check
+==========================================
+
+Open AK47_NonFunctional_Prop/01_blender/v05_uv_materials.blend and save as
+AK47_NonFunctional_Prop/01_blender/v06_final_textures_lookdev.blend. Do not
+overwrite v01..v05.
+
+Review the model for lookdev readiness and report (do not edit geometry):
+  - every AK_ object has a final MAT_* material (no leftover MAT_placeholder_*)
+  - every AK_ object has a UVMap
+  - per-material atlases have consistent texel density (within ~1.5x)
+  - 03_textures/{metal,wood,magazine,grip,shared}/README.txt all exist
+  - no AK_ object has Boolean modifiers
+  - no AK_ object name contains forbidden functional tokens
+
+Write the report into 06_documentation/lookdev_notes.txt under heading
+"Lookdev readiness check — Section 6".
+
+Hard scope: no internal mechanism, no working trigger, no bore, no rifling,
+no chamber, no functional magazine, no manufacturing detail.
+
+After running, verify:
+  [ ] Report saved into 06_documentation/lookdev_notes.txt
+  [ ] No object was edited
+  [ ] File saved as v06_final_textures_lookdev.blend

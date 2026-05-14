@@ -1,0 +1,34 @@
+Phase 6 Prompt 4 — Refine MAT_metal_black_magazine
+==================================================
+
+Rebuild MAT_metal_black_magazine as a procedural shader matching the
+magazine's matte-blackened look (more matte than the receiver):
+
+  TextureCoordinate (Generated) -> Mapping -> Noise (scale 20, detail 5,
+    distortion 0.1) -> ColorRamp -> drives:
+      - Base Color   : mix from (0.04, 0.04, 0.04) to (0.075, 0.075, 0.075)
+                       at factor 0.25
+      - Roughness    : 0.55 +/- 0.10
+      - Bump strength: 0.12
+  Geometry.Pointiness -> ColorRamp(0.45, 0.62) -> EdgeWear lifts Base
+    Color toward (0.55, 0.53, 0.50) (lighter exposed metal)
+  CavityAO (shared NodeGroup) darkens base color slightly inside grooves
+    (magazine grooves and baseplate seam are slightly darker)
+
+  Principled BSDF: Metallic = 1.0, Roughness = above, +slight Bump noise.
+
+Material identity:
+  - Blackened, slightly more matte than receiver
+  - Clear visual distinction from MAT_metal_dark_blued
+  - Subtle groove highlights via Pointiness
+  - No bright scratches
+
+Apply to AK_magazine_main, AK_groove_magazine_*, AK_spine_magazine_*,
+AK_seam_magazine_baseplate_*.
+
+Hard scope: no feed lips, no follower, no spring, no ammunition.
+
+After running, verify:
+  [ ] MAT_metal_black_magazine now uses a procedural graph
+  [ ] Magazine objects still assigned
+  [ ] Magazine reads visibly darker/more matte than receiver

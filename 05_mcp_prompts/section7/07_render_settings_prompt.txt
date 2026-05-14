@@ -1,0 +1,24 @@
+Phase 7 Prompt 7 — Set Final Render Settings
+============================================
+
+Configure the scene render settings (Cycles, CPU for portability):
+  scene.render.engine                = "CYCLES"
+  scene.cycles.device                = "CPU"
+  scene.cycles.samples               = 96 for full-model, 128 for close-ups
+  scene.render.resolution_x          = 1920 (full) / 1080 (close-up)
+  scene.render.resolution_y          = 1080 (full) / 1080 (close-up)
+  scene.render.resolution_percentage = 100
+  scene.render.image_settings.file_format = "PNG"
+  scene.view_settings.view_transform  = "Filmic"
+  scene.view_settings.look            = "Medium Contrast"
+
+  scene.render.film_transparent = False  (use opaque neutral world)
+
+World background: keep the Phase 6 neutral grey, strength ~0.20.
+
+Hard scope: practical render time; no functional geometry changes.
+
+After running:
+  [ ] Engine = Cycles
+  [ ] Filmic + Medium Contrast view transform
+  [ ] Output path under 04_renders/final/

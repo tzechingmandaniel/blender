@@ -1,0 +1,48 @@
+Phase 6 Material Issue Tracker
+==============================
+Scope reminder: non-functional exterior prop only.
+
+Format:
+  Issue ID | Material | Problem | View | Severity | Suggested fix | Status
+
+----------------------------------------------------------------------------
+
+MAT_ISSUE_001 | MAT_metal_dark_blued | Texel density absolute value differs
+across material groups (atlases were normalised per group in Phase 5 but the
+group-to-group ratio is up to ~2.5x). | lookdev_closeup_metal_receiver.png |
+Low | Phase 7 will choose per-group texture resolutions (e.g. metal=2K,
+wood=2K, magazine=1K, grip=1K) so absolute texel density matches the
+rendered map size. | Open (deferred to Phase 7)
+
+MAT_ISSUE_002 | MAT_metal_black_magazine | Banana magazine grooves use
+Smart UV Project; at extreme close-up the texture continuity across grooves
+may show subtle seam lines. | lookdev_closeup_magazine.png | Low | Phase 7
+can re-pack grooves with manual seams, or accept current Smart-UV layout
+since grime/AO mostly hide it. | Open (deferred)
+
+MAT_ISSUE_003 | MAT_wood_dark_reddish | Wave Bands grain runs along U; on
+the upper handguard rounded surface the grain reads correctly but on very
+narrow contour bands it can appear coarse. | lookdev_closeup_handguard.png |
+Low | Phase 7 can lower wave scale for narrow contour bands if needed. |
+Open (deferred)
+
+MAT_ISSUE_004 | MAT_grip_dark_bakelite | Edge wear via Pointiness produces
+less wear on heavily-subdivided grip groove geometry (Pointiness signal is
+diluted on rounded edges). | lookdev_closeup_grip.png | Low | Phase 7 can
+boost WearStrength selectively for grip if desired. | Open (deferred)
+
+MAT_ISSUE_005 | (all hero materials) | Grime tint uses inverted AO; on
+extremely flat large surfaces grime is near zero. | lookdev_full_model_*.png |
+Low | Accept for placeholder lookdev. Phase 7 may add a shared dirt mask
+PNG painted in Substance / Krita if richer dirt is desired. | Open (deferred)
+
+MAT_ISSUE_006 | (lookdev) | Clay render uses a single neutral material on
+the whole model — useful for silhouette/shape checks. | lookdev_clay_material_check.png |
+Low | Informational only. | Open (no fix needed)
+
+----------------------------------------------------------------------------
+Summary:
+  High severity     : 0
+  Medium severity   : 0
+  Low severity      : 6 (all deferred to Phase 7 or informational)
+  Blocking Phase 7  : NO

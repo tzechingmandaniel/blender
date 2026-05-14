@@ -1,0 +1,17 @@
+Phase 8 Prompt 6 — Copy Visual Prop Exports
+============================================
+
+Copy the FBX / GLB / OBJ from 02_exports/ into format-segregated folders:
+
+  02_exports/AK47_exterior_prop_visual.fbx -> final_delivery/02_exports/fbx/AK47_exterior_prop_visual.fbx
+  02_exports/AK47_exterior_prop_visual.glb -> final_delivery/02_exports/glb/AK47_exterior_prop_visual.glb
+  02_exports/AK47_exterior_prop_visual.obj -> final_delivery/02_exports/obj/AK47_exterior_prop_visual.obj
+  02_exports/AK47_exterior_prop_visual.mtl -> final_delivery/02_exports/obj/AK47_exterior_prop_visual.mtl
+
+Verify each copied file has size > 1 KB (catches truncated copies).
+
+Hard scope: no re-export — these are the Phase 7 exports.
+
+After running:
+  [ ] All 3 export files + OBJ MTL copied
+  [ ] All sizes > 1 KB

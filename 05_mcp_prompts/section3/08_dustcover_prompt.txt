@@ -1,0 +1,28 @@
+MCP Prompt §3.8 — AK_dustcover_main
+====================================
+
+Refine the dust cover from BLK_dustcover_main into AK_dustcover_main.
+Exterior visual only — no working catch, no real openings, no internal parts
+visible. The cover sits flush on top of the receiver.
+
+Geometry:
+- Start from a box 0.220 × 0.036 × 0.014. Centre at ~(-0.065, 0, 0.046).
+- Add 3 loop cuts along X for a smooth top profile.
+- Rounded top: lift the top-centre verts so the +Z face is convex. Use a
+  cosine falloff so the lift is ~0.004 at centre and tapers to 0 at the
+  rear/front ends.
+- Rear edge dip: at X = -0.175 (rear of the cover), lower the rear-bottom
+  edge by ~0.003 in Z so it flows into the stock wrist.
+- Front lip toward the rear sight: at X = +0.040, raise the top by ~0.002
+  in Z so a small lip silhouette appears.
+- Side panels are flat — no real venting or magazine guides.
+
+Modifiers:
+- Bevel (Angle limit 30°, width 0.0018, segments 2).
+- Weighted Normal (weight 50, threshold 0.01, keep sharp).
+
+Material: MAT_placeholder_dark_metal
+Collection: 03_MAJOR_PARTS
+Parent: AK47_MASTER_ASSET
+Origin: geometric center, transform applied.
+Naming: AK_dustcover_main.

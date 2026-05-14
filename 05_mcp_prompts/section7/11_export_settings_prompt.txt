@@ -1,0 +1,31 @@
+Phase 7 Prompt 11 — Export Settings
+====================================
+
+Export only objects in 09_EXPORT_READY (use selection-only). Output
+folder: AK47_NonFunctional_Prop/02_exports/
+
+FBX (Autodesk):
+  AK47_exterior_prop_visual.fbx
+  - use_selection=True, apply_unit_scale=True, bake_space_transform=True
+  - mesh_smooth_type='FACE', use_mesh_modifiers=True, add_leaf_bones=False
+  - path_mode='COPY', embed_textures=False (texture paths preserved)
+  - global_scale=1.0
+
+glTF binary (.glb):
+  AK47_exterior_prop_visual.glb
+  - export_format='GLB', use_selection=True,
+    export_materials='EXPORT', export_apply=True,
+    export_yup=True
+
+OBJ (legacy Wavefront):
+  AK47_exterior_prop_visual.obj
+  - use_selection=True, export_uv=True, export_normals=True,
+    export_materials=True, export_triangulated_mesh=True
+
+Hard scope: visual prop only. No internal mechanism. No manufacturing
+dimensions. No real assembly instructions.
+
+After running:
+  [ ] All 3 export files exist under 02_exports/
+  [ ] Files contain only AK_ objects (verifiable by file size > 0)
+  [ ] No camera/light/stage objects exported

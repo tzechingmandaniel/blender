@@ -1,0 +1,21 @@
+Phase 8 Prompt 5 — Copy Final Turntable
+========================================
+
+Copy 04_renders/final/turntable_frames/*.png into
+final_delivery/05_turntable/turntable_frames/. The 12-frame preview is
+the deliverable artifact; final MP4 encoding via ffmpeg is deferred to a
+post-delivery step (logged in 05_turntable/README.txt).
+
+Write final_delivery/05_turntable/README.txt explaining:
+  - frame format (PNG sequence at 24 fps preview)
+  - intended target: 180-frame 1920x1080 turntable @ 24 fps (encoded with
+    ffmpeg in a follow-up step)
+  - example ffmpeg command:
+      ffmpeg -framerate 24 -i frame_%04d.png -c:v libx264 -pix_fmt yuv420p \
+             turntable_ak_style_exterior_prop.mp4
+
+Hard scope: no model animation edits, no functional part animation.
+
+After running:
+  [ ] All preview frames copied
+  [ ] 05_turntable/README.txt present + non-empty

@@ -1,0 +1,21 @@
+Phase 7 Prompt 5 — Neutral Presentation Background
+==================================================
+
+Create new collection 12_PRESENTATION_STAGE. Inside it:
+
+  FLOOR_final_studio_plane    Plane, 25m x 25m, at z = -0.10
+  BG_final_neutral_backdrop   Plane, 3m x 3m, vertical, behind model
+                              (y = +0.40, z = 0..1, slightly tilted)
+
+Create material MAT_background_neutral_dark:
+  Principled BSDF, base color (0.085, 0.090, 0.100),
+  metallic 0.0, roughness 0.85.
+
+Assign MAT_background_neutral_dark to both stage planes.
+
+Hard scope: no decorative props, no ammunition, no combat scenery.
+
+After running:
+  [ ] 12_PRESENTATION_STAGE collection exists
+  [ ] FLOOR_final_studio_plane + BG_final_neutral_backdrop exist
+  [ ] MAT_background_neutral_dark created and assigned

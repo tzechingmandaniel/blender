@@ -1,0 +1,31 @@
+Excluded from Final Archive
+============================
+Scope reminder: non-functional exterior visual prop only.
+
+The following project artifacts are intentionally NOT included in the
+final_delivery archive (they are preserved in the project workspace for
+reproducibility but are not delivery payload):
+
+  01_blender/v01_project_setup.blend
+  01_blender/v02_blockout.blend
+  01_blender/v03_major_parts.blend
+  01_blender/v04_minor_details.blend
+  01_blender/v05_uv_materials.blend
+  01_blender/v06_final_textures_lookdev.blend
+  01_blender/v07_final_scene_export.blend
+  01_blender/*_backup_001.blend  (per-phase backups)
+
+  04_renders/clay_renders/      (Phase 2..5 clay previews)
+  04_renders/viewport_tests/    (Phase 1 viewport sanity checks)
+  04_renders/uv_checker/        (Phase 5 UV checker validation)
+  04_renders/lookdev/           (Phase 6 lookdev previews)
+
+  05_mcp_prompts/               (MCP prompt + executor source files)
+
+  00_references/cropped_parts/, paintover_guides/, original_image/
+
+  09_archive/  (backup vault; the delivery zip is copied here separately)
+
+Reason: the final_delivery folder is the customer-facing deliverable. The
+above items are workflow byproducts, working backups, or source-only
+files. Source recovery is possible via the project Git repository.

@@ -1,0 +1,34 @@
+Phase 6 Prompt 6 — Refine MAT_grip_dark_bakelite
+=================================================
+
+Rebuild MAT_grip_dark_bakelite as a procedural bakelite/polymer shader:
+
+  TextureCoordinate (Generated) -> Mapping -> Noise (scale 80, detail 2,
+    distortion 0.0) -> ColorRamp -> drives:
+      - Base Color   : mix from (0.10, 0.05, 0.04) to (0.135, 0.07, 0.06)
+                       at factor 0.20 (very subtle mottle)
+      - Roughness    : 0.50 +/- 0.05
+      - Bump strength: 0.10 (fine micro-surface noise)
+  Geometry.Pointiness -> ColorRamp(0.5, 0.62) -> EdgeWear lifts toward
+    (0.20, 0.10, 0.07) (subtle, NOT metallic) on exposed edges
+  CavityAO darkens base color in grip grooves
+
+  Principled BSDF: Metallic = 0.0, Roughness as above.
+
+Material identity:
+  - Dark reddish-brown bakelite / aged polymer
+  - Distinct from wood (no wave/grain pattern; only fine noise mottle)
+  - Low-medium specular response
+  - Darker groove shading
+  - Subtle edge dulling
+
+Apply to AK_grip_main, AK_groove_grip_*, AK_seam_grip_basecap_*.
+
+Hard scope: no real screw holes, no trigger connection, no internal grip
+mount, no working pivot.
+
+After running, verify:
+  [ ] MAT_grip_dark_bakelite uses a procedural graph
+  [ ] No wave/grain pattern
+  [ ] Grip body + grooves + basecap seam still assigned
+  [ ] Grip reads visibly different from wood

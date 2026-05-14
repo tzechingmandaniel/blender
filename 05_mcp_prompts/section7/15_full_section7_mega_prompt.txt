@@ -1,0 +1,38 @@
+Phase 7 Mega Prompt — Final Scene / Renders / Turntable / Export
+================================================================
+
+Runs Phase 7 end-to-end on top of v06_final_textures_lookdev.blend.
+Output: v07_final_scene_export.blend + final renders + turntable PNG
+sequence + FBX/GLB/OBJ exports.
+
+Deliverables:
+  1.  Save v06 as v07.
+  2.  Hide 00_REFERENCE / 01_GUIDES / 02_BLOCKOUT / 06_MATERIAL_TESTS /
+      04Z_detail_tests_archive / 07_ASSEMBLY + REF_ak47_side_view from
+      render and viewport.
+  3.  Create EMPTY_turntable_center at origin. Re-parent
+      AK47_MASTER_ASSET to it (preserving world transforms).
+  4.  Create 13 final cameras in 08_LIGHTING_CAMERA (§7.4).
+  5.  Create 4 LIGHT_final_* studio lights in 08_LIGHTING_CAMERA (§7.5).
+  6.  Hide LIGHT_lookdev_* from render.
+  7.  Create 12_PRESENTATION_STAGE with FLOOR_final_studio_plane +
+      BG_final_neutral_backdrop using MAT_background_neutral_dark.
+  8.  Create 09_EXPORT_READY with EXPORT_AK47_EXTERIOR_PROP_MASTER
+      empty; cross-link every AK_ object into it.
+  9.  Animate EMPTY_turntable_center 0 -> 2π over frames 1..180 at
+      24 fps, linear interpolation.
+  10. Render 14 final stills into 04_renders/final/.
+  11. Render 12-frame low-res turntable preview into
+      04_renders/final/turntable_frames/.
+  12. Export AK_ prop to FBX / GLB / OBJ in 02_exports/.
+  13. Write render_notes.txt + export_notes.txt + append phase_notes
+      Section 7.
+  14. Write 08_reviews/phase_7_render_issue_tracker.txt.
+  15. Save v07_final_scene_export.blend + 2 backups.
+
+Hard scope:
+  - non-functional, exterior-only
+  - no internal mechanism, no working trigger, no chamber/bolt/spring
+  - no functional magazine, no bore, no rifling
+  - no real openings, no booleans, no manufacturing dimensions
+  - no aggressive scene context, no combat props, no ammunition

@@ -1,0 +1,31 @@
+MCP Prompt §3.2 — AK_receiver_main
+===================================
+
+Refine the receiver from BLK_receiver_main into AK_receiver_main. Exterior-only,
+no internal mechanism, no real magazine well opening, no working ejection port.
+
+Geometry:
+- Start from a box that fills the §2.7.2 receiver zone (X = -0.18 .. +0.05,
+  Y ±0.020, Z ±0.040). Centre the object at the geometric midpoint
+  (~(-0.065, 0, 0)).
+- Add two loop cuts along X for shaping.
+- Top-rear corner: chamfer slightly downward to flow into the dust cover
+  joint at the rear-top edge.
+- Bottom face: shallow magazine-well silhouette — push a small region of
+  bottom verts inward (upward) by ~0.005 in the magazine area
+  (X around -0.07, half-width 0.045). Surface deformation only, no hole.
+- Side panel (+Y face): shallow ejection-port silhouette — push a small
+  rectangular region inward (-Y) by ~0.003 (X around -0.03, half-width 0.025,
+  Z half-height 0.012). Visual indent only.
+- Selector lever silhouette (+Y face): add a small raised pad
+  (~0.020 x 0.004 x 0.020 in X/Y/Z, sitting on +Y face at X=-0.04, Z=+0.015).
+
+Modifiers:
+- Bevel (Angle limit 30°, width 0.002, segments 2).
+- Weighted Normal (weight 50, threshold 0.01, keep sharp).
+
+Material: MAT_placeholder_dark_metal
+Collection: 03_MAJOR_PARTS
+Parent: AK47_MASTER_ASSET
+Origin: geometric center, transform applied.
+Naming: AK_receiver_main.

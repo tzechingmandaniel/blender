@@ -1,0 +1,38 @@
+Phase 5 Prompt 12 — Update Phase 5 Documentation
+=================================================
+
+Create or update these documentation files (do not require any model
+edits):
+
+  06_documentation/phase_notes.txt
+  06_documentation/material_notes.txt
+  06_documentation/uv_notes.txt
+  06_documentation/texture_workflow_notes.txt
+
+phase_notes.txt — append a "Section 5" section summarising:
+  - what was added in Phase 5
+  - what is deferred to Phase 6
+  - the safety scope reminder
+
+material_notes.txt — list all 10 final MAT_* materials, their target look,
+their object assignments, and the placeholder values.
+
+uv_notes.txt — record:
+  - UV groups (from §5.5)
+  - seam strategy per major part (from §5.6)
+  - wood grain direction notes (from §5.7)
+  - texel density measurements (from Prompt 8)
+  - any known issues / deferred fixes
+
+texture_workflow_notes.txt — record the folder structure under 03_textures/
+and the planned map names per group (from Prompt 9).
+
+Add a clear "non-functional exterior prop only" reminder at the top of
+each file.
+
+Hard scope: text only. No model edits.
+
+After running, verify:
+  [ ] All 4 documentation files exist
+  [ ] Each file mentions the non-functional exterior scope
+  [ ] phase_notes.txt mentions Phase 5 explicitly

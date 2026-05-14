@@ -1,0 +1,31 @@
+Phase 5 Prompt 10 — Prepare Simple Material Nodes
+==================================================
+
+For each of the 10 final MAT_* materials, confirm its Principled BSDF has
+the values from Prompt 3 set on these inputs:
+  - Base Color
+  - Metallic
+  - Roughness
+
+No other input is touched. No image-texture nodes, no procedural texture
+nodes, no scratches, no dirt, no wood grain.
+
+Also create 4 small preview spheres named PREVIEW_<material> inside
+06A_material_preview_objects, located in a row at y = +0.5, evenly spaced
+at x = -0.4, -0.2, 0, +0.2 etc, each assigned one of the four "hero"
+materials so we can sanity-check the look:
+  PREVIEW_metal_dark_blued
+  PREVIEW_metal_black_magazine
+  PREVIEW_wood_dark_reddish
+  PREVIEW_grip_dark_bakelite
+
+Hide 06_MATERIAL_TESTS in viewport + render so it does not appear in the
+clay render.
+
+Hard scope: no final textures, no procedural scratches, no real wood grain.
+
+After running, verify:
+  [ ] All 10 final materials have a Principled BSDF with correct values
+  [ ] No image-texture or procedural texture nodes
+  [ ] 4 PREVIEW_ spheres exist in 06A_material_preview_objects
+  [ ] 06_MATERIAL_TESTS is hidden in viewport + render

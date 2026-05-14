@@ -1,0 +1,39 @@
+Version History
+================
+Scope reminder: non-functional exterior visual prop only.
+
+  v01_project_setup.blend          Initial project setup. Collections,
+                                   guides, reference image, placeholder
+                                   materials.
+
+  v02_blockout.blend               Rough exterior blockout using simple
+                                   BLK_ objects (14 objects).
+
+  v03_major_parts.blend            Refined major exterior AK_ parts
+                                   (8 objects). Bevel + WeightedNormal
+                                   modifiers added.
+
+  v04_minor_details.blend          Decorative exterior surface details
+                                   (51 objects across 9 sub-collections).
+                                   No functional geometry.
+
+  v05_uv_materials.blend           UV planning + material atlasing.
+                                   Per-material atlas density via
+                                   average_islands_scale + pack_islands.
+                                   10 final MAT_* placeholders created.
+
+  v06_final_textures_lookdev.blend Procedural shader graphs for the 4
+                                   hero materials. Reusable NodeGroups:
+                                   EdgeWearMask, CavityAO. Lookdev test
+                                   renders (8). Material issue tracker.
+
+  v07_final_scene_export.blend     Final scene: 13 cameras, 4 LIGHT_final_*
+                                   lights, neutral presentation stage,
+                                   EMPTY_turntable_center keyframed
+                                   1..180 (linear), 09_EXPORT_READY.
+                                   14 final stills + 12-frame turntable
+                                   preview + FBX/GLB/OBJ exports.
+
+  AK47_exterior_prop_final.blend   FINAL DELIVERY FILE — binary identical
+                                   to v07. Living in 01_blender/ and
+                                   final_delivery/01_blender_final/.

@@ -1,0 +1,25 @@
+Phase 6 Prompt 13 — Create Material Issue Tracker
+=================================================
+
+Create AK47_NonFunctional_Prop/08_reviews/phase_6_material_issue_tracker.txt
+with a structured table:
+
+  Issue ID | Material | Problem | View | Severity | Suggested fix | Status
+
+Pre-populate with known caveats from Phase 6 self-audit:
+  - per-material atlas absolute density varies across groups (will
+    normalise in Phase 7 when atlas resolutions are fixed)
+  - banana magazine grooves use Smart UV Project; texture continuity
+    across grooves may show seams at extreme close-up
+  - Geometry.Pointiness produces less wear on heavily-subdivided meshes
+    (banana magazine); tune WearStrength if needed in Phase 7
+
+All issues must be Low or Medium severity; High-severity issues block
+Phase 7.
+
+Hard scope: no functional internal detail; tracker is visual-only.
+
+After running, verify:
+  [ ] 08_reviews/phase_6_material_issue_tracker.txt exists
+  [ ] At least one entry per hero material category
+  [ ] No High-severity entries

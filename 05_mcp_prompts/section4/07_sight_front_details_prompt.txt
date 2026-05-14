@@ -1,0 +1,39 @@
+MCP Prompt §4.18 — Front + Sight Exterior Details
+===================================================
+
+Work around the existing BLK_front_sight_block_visual, BLK_rear_sight_visual,
+BLK_front_ring_visual, BLK_gas_block_visual (still present from Section 2).
+Create separate decorative detail objects inside
+04_MINOR_PARTS / 04F_sight_front_details. Strictly exterior, decorative,
+non-functional. Do not create working sight adjustment, measurement
+markings, fine mechanical screws, pivots, gas ports, bore, rifling,
+chamber, threaded muzzle, functional muzzle device, manufacturing
+details, or technical assembly.
+
+Detail set (3 max):
+- AK_cap_front_sight_001 — small box cap on top of the front sight
+  block, dims ~(0.008 × 0.004 × 0.003), centred at world
+  (+0.405, 0, +0.075).
+- AK_seam_gas_block_001 — thin seam marker around the gas block / barrel
+  junction, dims ~(0.026 × 0.034 × 0.0008), centred at world
+  (+0.275, 0, +0.040).
+- AK_ring_front_001 — visual ring separator just behind the muzzle
+  decorative collar; a thin torus (major radius ≈ 0.013, minor radius
+  ≈ 0.0015) centred at world (+0.395, 0, +0.020).
+
+Naming:
+AK_cap_front_sight_001
+AK_seam_gas_block_001
+AK_ring_front_001
+
+Materials:
+- Cap, ring:  MAT_placeholder_dark_metal
+- Seam:       MAT_placeholder_shadow_seam
+
+All objects parented to AK47_MASTER_ASSET. Bevel modifier (width 0.0005,
+segments 1, angle 30°) on every object.
+
+After running:
+[ ] Front/sight details are in 04F_sight_front_details.
+[ ] Detail count = 3.
+[ ] No working sight, no gas port, no bore, no thread, no muzzle device.

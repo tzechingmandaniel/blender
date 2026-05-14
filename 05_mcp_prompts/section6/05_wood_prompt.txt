@@ -1,0 +1,39 @@
+Phase 6 Prompt 5 — Refine MAT_wood_dark_reddish
+================================================
+
+Rebuild MAT_wood_dark_reddish as a procedural wood-grain shader:
+
+  TextureCoordinate (UV) -> Mapping (scale x=8, y=2) ->
+    Wave Texture (Bands, distortion 1.0, detail 2, detail scale 1.0) ->
+    ColorRamp("grain") -> drives:
+      - Base Color  : mix from (0.14, 0.06, 0.03) (dark wood) to
+                      (0.22, 0.10, 0.05) (highlight band), wave-driven
+      - Roughness   : 0.55 +/- 0.10
+      - Bump strength: 0.08 (subtle lengthwise relief)
+  Geometry.Pointiness -> ColorRamp(0.42, 0.65) -> EdgeWear lifts color toward
+    (0.42, 0.30, 0.22) (worn wood) on exposed edges
+  CavityAO darkens base color in seam/cavity areas
+  Additional fine noise (scale 80, detail 2) mixed at 0.1 into Bump for
+    micro-surface variation (subtle, not deep)
+
+  Principled BSDF: Metallic = 0.0, Roughness as above.
+
+Because UV +X maps to +U (per Phase 5), the wave bands run along the X
+length of the stock/handguards/contour bands — grain runs lengthwise.
+
+Material identity:
+  - Dark reddish brown
+  - Visible lengthwise grain
+  - Mild varnish (medium roughness)
+  - Subtle edge wear toward warmer/lighter wood
+  - Slightly darker seam shading
+
+Apply to AK_stock_main, AK_handguard_lower_main, AK_handguard_upper_main,
+AK_contour_* objects.
+
+Hard scope: no real screw holes, no mounting channels, no internal cavity.
+
+After running, verify:
+  [ ] MAT_wood_dark_reddish uses a Wave-driven procedural graph
+  [ ] Stock + both handguards + contours still assigned
+  [ ] Grain visibly runs along +X (lengthwise)

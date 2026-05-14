@@ -1,0 +1,42 @@
+Phase 5 Prompt 2 — Organise AK_ Objects by Material Type
+========================================================
+
+Place membership references (not moves) into the 07_ASSEMBLY material
+groups. Each AK_ object must remain in its original collection
+(03_MAJOR_PARTS or one of the 04_MINOR_PARTS sub-collections) AND be linked
+into one of the 07_ASSEMBLY groups below. Do not unlink from the original
+collection. Do not merge objects.
+
+AK_metal_parts_grp (dark blued metal):
+  AK_receiver_main
+  AK_dustcover_main
+  AK_barrel_exterior_main
+  (if present) AK_gas_tube_outer, AK_front_sight_block_visual,
+  AK_rear_sight_visual, AK_trigger_guard_visual, AK_front_ring_visual,
+  AK_gas_block_visual, AK_muzzle_front_visual_closed,
+  AK_loop_sling_rear_visual, AK_loop_sling_front_visual
+
+AK_wood_parts_grp:
+  AK_stock_main, AK_handguard_lower_main, AK_handguard_upper_main,
+  all AK_contour_* objects
+
+AK_magazine_parts_grp:
+  AK_magazine_main, all AK_groove_magazine_*, AK_spine_magazine_*,
+  AK_seam_magazine_baseplate_*
+
+AK_grip_parts_grp:
+  AK_grip_main, AK_groove_grip_*, AK_seam_grip_basecap_*
+
+AK_detail_parts_grp:
+  AK_rivet_*, AK_panel_*, AK_rib_dustcover_*, AK_cap_*, AK_ring_*
+
+AK_seam_wear_parts_grp:
+  AK_seam_* (except magazine baseplate + grip basecap, which go with their
+  material group), AK_wear_placeholder_*
+
+Hard scope: no functional geometry, no internal openings, no working parts.
+
+After running, verify:
+  [ ] Every AK_ object is linked into exactly one 07_ASSEMBLY sub-collection
+  [ ] No AK_ object was unlinked from its original 03_/04_ collection
+  [ ] No object was merged or deleted

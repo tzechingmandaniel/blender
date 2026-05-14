@@ -1,0 +1,87 @@
+AK47 Non-Functional Exterior Prop — Phase Notes
+================================================
+Scope reminder: this project is a NON-FUNCTIONAL EXTERIOR VISUAL PROP only.
+No internal mechanism, no working trigger, no chamber/bolt/spring/firing
+system, no functional magazine, no bore, no rifling, no manufacturing
+dimensions, no real assembly.
+
+Section 1 — Project Setup    : v01_project_setup.blend
+Section 2 — Blockout         : v02_blockout.blend
+Section 3 — Major Parts      : v03_major_parts.blend
+Section 4 — Minor Details    : v04_minor_details.blend
+Section 5 — UV / Materials   : v05_uv_materials.blend  <-- this phase
+
+Section 5 deliverables:
+  - 06_MATERIAL_TESTS / 07_ASSEMBLY / 09_EXPORT_READY collections
+  - 10 final MAT_* materials (Principled BSDF placeholder values)
+  - every AK_ object reassigned to the matching MAT_*
+  - every AK_ object cross-linked into one 07_ASSEMBLY material group
+  - UV seams marked on the 8 major parts
+  - every AK_ object unwrapped (UVMap) with islands packed in 0..1
+  - wood/stock/handguard/barrel UVs rotated so +X = +U
+  - texel density measured for all 8 major parts at 1024 px/m target
+  - 03_textures/{metal,wood,magazine,grip,shared}/README.txt
+  - clay render + UV checker render
+
+Deferred to Phase 6:
+  - actual basecolor / roughness / metallic / normal / AO map painting
+  - dirt, edge wear, scratches, wood grain procedurals
+  - final lookdev lighting
+  - final render compositing
+
+
+Section 6 — Final Texture / Lookdev Refinement
+-----------------------------------------------
+File: v06_final_textures_lookdev.blend
+
+Section 6 deliverables:
+  - 08_LIGHTING_CAMERA collection (6 cameras + 3 area lights)
+  - Reusable node groups: EdgeWearMask, CavityAO
+  - 4 hero materials rebuilt as procedural shaders:
+      MAT_metal_dark_blued, MAT_metal_black_magazine,
+      MAT_wood_dark_reddish, MAT_grip_dark_bakelite
+  - Pointiness-driven edge wear (geometry-based, no painted mask)
+  - AO-driven cavity darkening + grime tint
+  - Lookdev test renders (8 views) in 04_renders/lookdev/
+  - Phase 6 material issue tracker (08_reviews/)
+
+Deferred to Phase 7:
+  - Final scene cameras + portfolio lighting
+  - Turntable animation
+  - Export (FBX/OBJ/GLB)
+  - Optional bake of procedural textures to PNG into 03_textures/
+
+Scope reminder: non-functional exterior prop only. No internal mechanism,
+no working trigger, no bore/rifling, no manufacturing detail.
+
+
+Section 7 — Final Scene / Cameras / Lights / Renders / Turntable / Export
+--------------------------------------------------------------------------
+Scope reminder: non-functional exterior prop only.
+File: v07_final_scene_export.blend
+
+Section 7 deliverables:
+  - 13 final cameras (5 full-model + 7 close-ups + 1 turntable) in
+    08_LIGHTING_CAMERA
+  - 4 LIGHT_final_* studio lights (key/fill/rim/optional-top)
+  - LIGHT_lookdev_* hidden from render
+  - 12_PRESENTATION_STAGE with FLOOR_final_studio_plane +
+    BG_final_neutral_backdrop, both on MAT_background_neutral_dark
+  - EMPTY_turntable_center at origin, parents AK47_MASTER_ASSET, with
+    z-rotation keyframed 0..2π over frames 1..180 (linear, 24 fps)
+  - 09_EXPORT_READY collection with EXPORT_AK47_EXTERIOR_PROP_MASTER
+    empty; every AK_ object cross-linked into it
+  - Hidden from final renders: 00_REFERENCE, 01_GUIDES, 02_BLOCKOUT,
+    06_MATERIAL_TESTS, 04Z_detail_tests_archive, 07_ASSEMBLY,
+    REF_ak47_side_view image plane
+  - 14 final still renders in 04_renders/final/ (rendered by
+    section7_render_finals.py)
+  - 12-frame low-res turntable preview in
+    04_renders/final/turntable_frames/ (section7_render_turntable.py)
+  - FBX / GLB / OBJ exports in 02_exports/ (section7_export.py)
+  - Phase 7 render issue tracker in 08_reviews/
+
+Deferred to Phase 8:
+  - Final MP4 encoding of the full 180-frame turntable (ffmpeg pipeline)
+  - Portfolio captions + delivery folder packaging
+  - Optional procedural-to-PNG texture bake

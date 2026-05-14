@@ -1,0 +1,37 @@
+Phase 8 Prompt 12 — Final Archive
+==================================
+
+Create the final archive:
+
+  AK47_NonFunctional_Prop/AK47_NonFunctional_Prop_final_delivery_YYYYMMDD.zip
+
+  YYYYMMDD = today (e.g. 20260513). DEFLATE level 6, compress entire
+  final_delivery/ tree.
+
+Also copy the zip into 09_archive/ (no rename) so a re-extraction test
+can run safely.
+
+Archive must include:
+  final_delivery/ (entire tree)
+
+Archive must NOT include:
+  - 01_blender/v0[1-7]_*.blend (working copies)
+  - 04_renders/clay_renders/, 04_renders/viewport_tests/, 04_renders/uv_checker/
+  - 05_mcp_prompts/ (prompts are project history, optional)
+  - 00_references/cropped_parts/, paintover_guides/, original_image/
+
+After zip creation, extract into a temp folder and verify:
+  - extracted root entry is final_delivery/
+  - extracted .blend file size matches original
+  - 14 stills extract correctly
+  - 9 docs extract correctly
+
+Write 08_archive_notes/archive_contents.txt + excluded_from_archive.txt.
+
+Hard scope: zip is visual prop only.
+
+After running:
+  [ ] Archive zip exists at project root
+  [ ] Archive copy in 09_archive/
+  [ ] Extraction test PASSED
+  [ ] No working files inside archive

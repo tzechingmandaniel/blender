@@ -1,0 +1,25 @@
+Texture Notes — Final Delivery
+===============================
+Scope reminder: non-functional exterior visual prop only.
+
+Folder layout under 03_textures/:
+  metal/    metal_dark_blued_basecolor + roughness + metallic + normal + ao
+  wood/     wood_dark_reddish_basecolor + roughness + normal + ao
+  magazine/ magazine_black_basecolor + roughness + metallic + normal + ao
+  grip/     grip_dark_bakelite_basecolor + roughness + normal + ao
+  shared/   shared_edge_wear_mask + dirt_mask + cavity_ao + seam_shadow_mask
+
+Each folder contains a README.txt listing the planned PNG names. No
+painted PNGs are shipped with this delivery — the hero materials in the
+final .blend are fully procedural (Noise, Wave, Pointiness,
+AmbientOcclusion, Wireframe shader nodes). Opening the .blend on a fresh
+machine will not produce any missing-texture warnings.
+
+Future bake plan (deferred, Phase 9 / post-delivery):
+  bake each material group's procedural shader to a 2048x2048 PNG set,
+  drop into the planned filenames, switch each MAT_* to Image Texture
+  nodes referencing the PNGs.
+
+Texture path check (Phase 8 result):
+  Image Texture nodes scanned in AK47_exterior_prop_final.blend: 0
+  (no external texture dependencies; .blend is portable)

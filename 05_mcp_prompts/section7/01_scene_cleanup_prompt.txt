@@ -1,0 +1,27 @@
+Phase 7 Prompt 1 — Final Scene Cleanup
+======================================
+
+Open v06_final_textures_lookdev.blend and save as
+v07_final_scene_export.blend. Do not overwrite v01..v06.
+
+Hide from final render (hide_render = True + hide_viewport = True on each
+collection and its layer):
+  00_REFERENCE
+  01_GUIDES
+  02_BLOCKOUT
+  06_MATERIAL_TESTS
+  04Z_detail_tests_archive (if present)
+  07_ASSEMBLY (it's a cross-link mirror; would double-count)
+  11_ARCHIVE_BACKUP (if present)
+
+Also explicitly hide REF_ak47_side_view (image reference plane).
+
+Keep visible: 03_MAJOR_PARTS, all 04_MINOR_PARTS sub-collections,
+08_LIGHTING_CAMERA, 12_PRESENTATION_STAGE (new).
+
+Hard scope: do not delete reference/blockout — only hide.
+
+After running:
+  [ ] Reference, guides, blockout, material tests, archive hidden
+  [ ] AK_ prop objects + final materials remain visible
+  [ ] No functional geometry was added

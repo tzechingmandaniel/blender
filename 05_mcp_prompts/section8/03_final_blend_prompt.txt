@@ -1,0 +1,18 @@
+Phase 8 Prompt 3 — Final Blender File
+=====================================
+
+Copy v07_final_scene_export.blend twice:
+
+  01_blender/AK47_exterior_prop_final.blend                 (working copy)
+  final_delivery/01_blender_final/AK47_exterior_prop_final.blend  (delivery copy)
+
+The final .blend is binary-identical to v07 — we do not re-save it from
+Blender unless a relative-path adjustment is required. Procedural shaders
+have no external texture dependencies, so no relink step is needed.
+
+Hard scope: no model edits.
+
+After running:
+  [ ] Both copies exist
+  [ ] File size matches v07_final_scene_export.blend
+  [ ] No earlier phase file overwritten (v01..v07 preserved)

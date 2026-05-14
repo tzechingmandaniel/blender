@@ -1,0 +1,33 @@
+Phase 7 Prompt 9 — Turntable Animation
+======================================
+
+Animate EMPTY_turntable_center around Z over a full 360° rotation:
+  frame 1    rotation_euler.z = 0
+  frame 180  rotation_euler.z = 2π (radians)
+  interpolation: LINEAR
+  scene.frame_start = 1
+  scene.frame_end   = 180
+  scene.render.fps  = 24
+
+Because AK47_MASTER_ASSET parents every AK_ object and is itself
+parented to EMPTY_turntable_center, rotating the empty rotates the whole
+prop as a single rigid object.
+
+Camera CAM_turntable_main stays static at (0, -0.95, 0.20), rotated to
+face the model. Background and floor are visible behind the model.
+
+Hard scope: only the parent empty animates. No AK_ object, no functional
+part, no trigger, no magazine, no bolt has any keyframes.
+
+Output:
+  04_renders/final/turntable_frames/frame_####.png
+  (Optional: encode to MP4 separately using FFmpeg after frames render.)
+
+A 12-frame preview at every 15° step + 960x540 resolution gets rendered
+first as a sanity check.
+
+After running:
+  [ ] EMPTY_turntable_center has 2 keyframes (frame 1 + 180)
+  [ ] Linear interpolation
+  [ ] CAM_turntable_main has NO keyframes (static)
+  [ ] No AK_ object has any keyframes

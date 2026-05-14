@@ -1,0 +1,29 @@
+Phase 5 Prompt 3 — Create Final Material Placeholders
+=====================================================
+
+Create the 10 final placeholder materials below, each with a Principled BSDF
+and these simple values (no textures connected yet):
+
+  MAT_metal_dark_blued        base (0.05, 0.05, 0.07)   metallic 1.0  rough 0.40
+  MAT_metal_black_magazine    base (0.04, 0.04, 0.04)   metallic 1.0  rough 0.55
+  MAT_wood_dark_reddish       base (0.18, 0.07, 0.04)   metallic 0.0  rough 0.55
+  MAT_grip_dark_bakelite      base (0.10, 0.05, 0.04)   metallic 0.0  rough 0.50
+  MAT_shadow_seam_dark        base (0.02, 0.02, 0.025)  metallic 0.0  rough 0.85
+  MAT_edge_wear_light_metal   base (0.55, 0.53, 0.50)   metallic 0.6  rough 0.40
+  MAT_edge_wear_worn_wood     base (0.42, 0.30, 0.22)   metallic 0.0  rough 0.55
+  MAT_detail_dark_metal       base (0.07, 0.07, 0.08)   metallic 1.0  rough 0.50
+  MAT_reference_hidden        base (0.50, 0.50, 0.50)   metallic 0.0  rough 0.80
+  MAT_clay_neutral_preview    base (0.62, 0.60, 0.57)   metallic 0.0  rough 0.70
+
+Keep the older MAT_placeholder_* materials in the file for reference (do not
+delete) — assignment will switch to the new MAT_* set in the next prompt.
+
+Hard scope: simple placeholder values only. Do not add image-texture nodes,
+roughness maps, normal maps, scratch nodes, dirt nodes, or procedural wood
+grain. Phase 6 will do that.
+
+After running, verify:
+  [ ] All 10 final MAT_* materials exist
+  [ ] Each uses a Principled BSDF
+  [ ] No image-texture or procedural texture nodes are connected
+  [ ] Old MAT_placeholder_* materials are still in the file

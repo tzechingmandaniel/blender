@@ -1,0 +1,55 @@
+MCP Prompt §4.22 — General Seam + Edge Wear Placeholders
+==========================================================
+
+Create subtle exterior seam and edge-wear placeholder objects inside
+04_MINOR_PARTS / 04H_seams_and_edge_wear_placeholders. These are visual
+guides only — they help later Phase 5/6 texture work decide where to add
+shadow seams and edge wear. Strictly exterior, decorative, non-functional,
+no cut-through geometry, no internal exposure.
+
+Detail set (10 max):
+General seam markers (5):
+- AK_seam_visual_001 — receiver/stock boundary (extends what
+  AK_seam_receiver_stock_001 already starts; this one wraps around the
+  underside). Dims ~(0.001 × 0.044 × 0.010), world (-0.180, 0, -0.040).
+- AK_seam_visual_002 — receiver/grip boundary. Dims ~(0.030 × 0.034 ×
+  0.001), world (-0.080, 0, -0.040).
+- AK_seam_visual_003 — receiver/magazine boundary. Dims ~(0.110 × 0.042
+  × 0.001), world (-0.050, 0, -0.040).
+- AK_seam_visual_004 — handguard lower/handguard upper rear boundary.
+  Dims ~(0.001 × 0.030 × 0.044), world (+0.075, 0, +0.030).
+- AK_seam_visual_005 — barrel/front-sight junction. Dims ~(0.001 ×
+  0.018 × 0.018), world (+0.392, 0, +0.020).
+
+Metal edge-wear placeholders (3):
+- AK_wear_placeholder_metal_edge_001 — receiver +Y top edge corner.
+  Dims ~(0.220 × 0.0006 × 0.0020), world (-0.065, +0.021, +0.038).
+- AK_wear_placeholder_metal_edge_002 — receiver -Y top edge corner.
+  Mirror of 001 across Y.
+- AK_wear_placeholder_metal_edge_003 — dust cover front edge corner.
+  Dims ~(0.001 × 0.034 × 0.002), world (+0.044, 0, +0.050).
+
+Wood edge-wear placeholders (2):
+- AK_wear_placeholder_wood_edge_004 — stock comb top edge.
+  Dims ~(0.260 × 0.001 × 0.002), world (-0.350, 0, +0.040).
+- AK_wear_placeholder_wood_edge_005 — handguard lower front-bottom edge.
+  Dims ~(0.020 × 0.040 × 0.001), world (+0.200, 0, -0.013).
+
+Naming:
+AK_seam_visual_001 .. 005
+AK_wear_placeholder_metal_edge_001 .. 003
+AK_wear_placeholder_wood_edge_004 .. 005
+
+Materials:
+- Seam markers:                        MAT_placeholder_shadow_seam
+- Metal/wood edge-wear placeholders:   MAT_placeholder_edge_wear
+
+All objects parented to AK47_MASTER_ASSET. Bevel modifier (width 0.0005,
+segments 1, angle 30°) on every object.
+
+After running:
+[ ] Seam/wear placeholders are in 04H.
+[ ] Markers are subtle (no detail wider/deeper than ~0.002 m).
+[ ] No cut-through geometry.
+[ ] No internal exposure.
+[ ] Detail count = 10 (5 seams + 3 metal wear + 2 wood wear).

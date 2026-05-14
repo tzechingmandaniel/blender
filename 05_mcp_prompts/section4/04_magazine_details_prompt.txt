@@ -1,0 +1,52 @@
+MCP Prompt §4.12 — Magazine Exterior Details
+=============================================
+
+Work around AK_magazine_main and create separate decorative detail objects
+inside 04_MINOR_PARTS / 04C_magazine_details. Strictly exterior, decorative,
+non-functional. Do not create feed lips, internal cartridge space, spring,
+follower, locking tabs, ammunition, functional magazine interface, magazine
+release mechanism, manufacturing details, or technical assembly.
+
+Detail set:
+- 4 broad horizontal grooves wrapping across the +X (front) face of the
+  magazine, following the banana curve:
+    AK_groove_magazine_001 at world Z ≈ -0.045.
+    AK_groove_magazine_002 at world Z ≈ -0.085.
+    AK_groove_magazine_003 at world Z ≈ -0.125.
+    AK_groove_magazine_004 at world Z ≈ -0.165.
+  Each groove is a thin raised band ~(0.0015 × 0.030 × 0.005). The X-world
+  position follows the banana curl (front face moves +X by ~+0.030 to
+  ~+0.080 as Z drops). Approximate placements:
+    001: world (-0.005, 0, -0.045)
+    002: world (+0.005, 0, -0.085)
+    003: world (+0.030, 0, -0.125)
+    004: world (+0.045, 0, -0.165)
+- 1 vertical front spine ridge along the +X face:
+    AK_spine_magazine_front_001, dims ~(0.003 × 0.012 × 0.090), centred
+    around world (+0.015, 0, -0.110).
+- 1 vertical rear spine ridge along the -X face:
+    AK_spine_magazine_rear_001, dims ~(0.003 × 0.012 × 0.090), centred
+    around world (-0.100, 0, -0.105).
+- 1 baseplate seam marker, a thin band at the join between magazine body
+  and the floorplate:
+    AK_seam_magazine_baseplate_001, dims ~(0.118 × 0.062 × 0.0008),
+    centred around world (+0.010, 0, -0.175).
+
+Naming:
+AK_groove_magazine_001 .. 004
+AK_spine_magazine_front_001
+AK_spine_magazine_rear_001
+AK_seam_magazine_baseplate_001
+
+Materials:
+- Grooves, spines:  MAT_placeholder_black_metal
+- Baseplate seam:   MAT_placeholder_shadow_seam
+
+All objects parented to AK47_MASTER_ASSET. Bevel modifier (width 0.0005,
+segments 1, angle 30°) on every object.
+
+After running:
+[ ] Magazine details are in 04C_magazine_details.
+[ ] Detail count = 7 (4 grooves + 2 spines + 1 baseplate seam).
+[ ] Grooves follow the banana curve roughly.
+[ ] No feed lip, no internal cartridge space, no functional element.

@@ -1,0 +1,24 @@
+Phase 5 Prompt 5 — UV Readiness Check
+=====================================
+
+For every object in 03_MAJOR_PARTS and 04_MINOR_PARTS, report on the
+following without modifying geometry:
+
+  [ ] AK_ prefix and descriptive name
+  [ ] Object has a final MAT_* material (see Prompt 4)
+  [ ] Object scale is (1, 1, 1) — if not, note non-uniform scale
+  [ ] Object has at least one face (no empty meshes)
+  [ ] No N-gon ratio above 5% of face count (flag instead of editing)
+  [ ] No duplicate mesh-data users for unrelated objects
+  [ ] Existing modifiers do not include Boolean (which would break UVs later)
+
+Do not modify geometry, do not create internal mechanism, working trigger,
+chamber, bolt, spring, firing system, functional magazine, bore, rifling,
+or manufacturing detail.
+
+Output a single text block in 06_documentation/uv_notes.txt under the
+heading "UV readiness check — Section 5".
+
+After running, verify:
+  [ ] Report saved to 06_documentation/uv_notes.txt
+  [ ] No object was edited

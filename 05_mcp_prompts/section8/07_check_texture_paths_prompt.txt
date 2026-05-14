@@ -1,0 +1,21 @@
+Phase 8 Prompt 7 — Texture Paths
+=================================
+
+Copy 03_textures/*/README.txt files (5 of them) into
+final_delivery/03_textures/{metal,wood,magazine,grip,shared}/README.txt.
+
+Because Phase 6 made the hero materials fully procedural (Noise, Wave,
+AmbientOcclusion, Pointiness, Wireframe shader nodes), there are no
+external PNG textures yet. The README files describe the planned PNG
+names so a follow-up bake can drop maps into the expected locations.
+
+Scan AK47_exterior_prop_final.blend for any Image Texture nodes — there
+should be zero (procedural-only). Log the scan result into
+06_documentation/texture_notes.txt under heading "Texture path check".
+
+Hard scope: no model / shader edits.
+
+After running:
+  [ ] 5 README.txt files copied
+  [ ] 0 Image Texture nodes referencing external paths
+  [ ] texture_notes.txt records the check result

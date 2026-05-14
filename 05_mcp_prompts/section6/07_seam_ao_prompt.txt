@@ -1,0 +1,24 @@
+Phase 6 Prompt 7 — Refine Seam Shadow + Cavity AO
+=================================================
+
+Create a reusable CavityAO NodeGroup with inputs (AOStrength=0.5,
+AODistance=0.04) and an output Multiplier in 0..1, internally driven by:
+
+  Ambient Occlusion (samples=8, distance=AODistance, inside=False) ->
+  ColorRamp("ao_curve", positions 0.3 / 0.85) -> Multiply 1.0 - (1-AO)*AOStrength.
+
+Use this NodeGroup inside MAT_metal_dark_blued, MAT_metal_black_magazine,
+MAT_wood_dark_reddish, MAT_grip_dark_bakelite — multiply Base Color by the
+CavityAO output so seams and cavities darken without painting any texture.
+
+Also rebuild MAT_shadow_seam_dark with a slightly darker, very rough
+Principled BSDF (base (0.02, 0.02, 0.025), metallic 0.0, rough 0.85) so
+visible AK_seam_* markers remain shallow dark lines.
+
+Hard scope: no cut-through openings, no internal exposure.
+
+After running, verify:
+  [ ] CavityAO node group exists
+  [ ] All 4 hero materials reference CavityAO
+  [ ] MAT_shadow_seam_dark stays dark + rough
+  [ ] No new geometry holes were created

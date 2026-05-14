@@ -1,0 +1,48 @@
+Texture Workflow Notes — Section 5
+===================================
+Scope reminder: non-functional exterior prop only.
+
+Folder structure (03_textures/):
+  metal/       metal_dark_blued_basecolor + roughness + metallic + normal + ao
+  wood/        wood_dark_reddish_basecolor + roughness + normal + ao
+  magazine/    magazine_black_basecolor + roughness + metallic + normal + ao
+  grip/        grip_dark_bakelite_basecolor + roughness + normal + ao
+  shared/      shared_edge_wear_mask + dirt_mask + cavity_ao + seam_shadow_mask
+
+Each folder has a README.txt listing the planned files. Phase 6 will fill
+the folders with actual PNGs (painted or baked).
+
+Map naming convention:
+  <material_id>_<channel>.png        per-material maps
+  shared_<feature>_<channel>.png     shared masks across materials
+
+Channels in use (placeholder, painted in Phase 6):
+  basecolor  — albedo, sRGB
+  roughness  — non-color
+  metallic   — non-color (metal/magazine only)
+  normal     — non-color, tangent space
+  ao         — non-color, multiplied into base color in Phase 6
+
+Phase 6 will:
+  - paint or bake basecolor for each material group
+  - paint roughness / metallic / normal / AO
+  - connect Image Texture nodes to each MAT_* Principled BSDF
+  - add edge-wear mask + dirt mask + cavity AO via shared masks
+
+
+Section 6 — Procedural texturing notes
+---------------------------------------
+No PNG textures have been authored yet. All wear / dirt / scratches /
+grain are procedural inside the shader graphs:
+
+  EdgeWearMask : geometry.Pointiness based (per-vertex)
+  CavityAO     : AmbientOcclusion node based (per-shade-call)
+  Noise / Wave : object-space procedural textures
+
+03_textures/{metal,wood,magazine,grip,shared}/README.txt still describes
+the planned PNG map names. Phase 7 may either:
+  (a) bake the procedurals into the planned PNG names and switch the
+      shader graphs to Image Texture nodes, OR
+  (b) keep the procedural setup as-is for portfolio/turntable renders.
+
+Both routes leave the model deterministic and reproducible.

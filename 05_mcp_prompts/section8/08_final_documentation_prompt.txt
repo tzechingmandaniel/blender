@@ -1,0 +1,31 @@
+Phase 8 Prompt 8 — Final Documentation Package
+==============================================
+
+Generate the 9 required documentation files inside
+final_delivery/06_documentation/:
+
+  readme.txt                — see §8.33 template
+  asset_notes.txt           — collection/object counts, materials list
+  material_notes.txt        — copy from 06_documentation/material_notes.txt
+  texture_notes.txt         — folder layout + procedural-shader note
+  render_notes.txt          — copy from 06_documentation/render_notes.txt
+  export_notes.txt          — copy from 06_documentation/export_notes.txt
+  scope_and_safety_note.txt — single paragraph public-safe wording
+  handover_checklist.txt    — §8.25 A..F sections with [X] marks
+  version_history.txt       — §8.27 v01..v07 + AK47_exterior_prop_final.blend
+
+Also copy alongside:
+  phase_notes.txt
+  uv_notes.txt
+  lookdev_notes.txt
+  phase_6_material_issue_tracker.txt  (from 08_reviews/)
+  phase_7_render_issue_tracker.txt    (from 08_reviews/)
+
+Every file opens with the non-functional exterior visual prop scope.
+
+Hard scope: text only, no model edits.
+
+After running:
+  [ ] All 9 required docs exist in 06_documentation/
+  [ ] 5 additional history docs copied
+  [ ] Every doc mentions non-functional exterior scope

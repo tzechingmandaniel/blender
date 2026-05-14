@@ -1,0 +1,32 @@
+Phase 8 Prompt 9 — Safe Public Pack
+====================================
+
+Generate 5 files under final_delivery/07_public_pack/:
+
+  public_description.txt    — §8.22 short + long descriptions
+  portfolio_captions.txt    — §8.24 captions (7 captions: hero, side,
+                              receiver, wood, magazine, grip, turntable)
+  selected_render_list.txt  — bullet list of the 5 portfolio_selected files
+                              with one-line description each
+  project_summary_short.txt — 1-paragraph summary, public-safe wording
+  project_summary_long.txt  — multi-paragraph summary, public-safe wording
+
+Required safe wording (use):
+  non-functional exterior 3D prop
+  visual rendering / portfolio presentation / game-asset display
+  hard-surface exterior modelling
+  material/lookdev practice
+
+Forbidden wording (must not appear):
+  working AK / working firearm / functional firearm / weapon model
+  manufacturable / manufacturing-ready / blueprint
+  real assembly / real assembly instructions
+  technical firearm reconstruction
+  ammunition / combat / tactical
+
+Hard scope: text only.
+
+After running:
+  [ ] All 5 files exist
+  [ ] None contain forbidden wording
+  [ ] Each contains at least one safe-wording phrase

@@ -35,3 +35,22 @@ __pycache__/
 
 # Large binary that's better fetched separately if you want it (uncomment if it grows)
 # 02_exports/glb/*.glb
+
+# --- Phase 8 delivery artifacts (regeneratable, exceed GitHub's 100 MB single-file limit) ---
+# Final delivery archive zip (234 MB) — rebuild from section8_archive.py
+AK47_NonFunctional_Prop_final_delivery_*.zip
+09_archive/*.zip
+
+# 180-frame turntable source PNG sequence (174 MB) — rebuild from
+# section8_render_turntable_mp4.py. The encoded MP4 is committed.
+final_delivery/05_turntable/turntable_full_seq/
+
+# Per-phase .blend backup duplicates (the *_backup_001.blend files in
+# 01_blender/ and 09_archive/ are byte-identical copies of the versioned
+# .blend files in 01_blender/v0X_*.blend).
+01_blender/*_backup_001.blend
+09_archive/v0*_backup_001.blend
+09_archive/v0*.blend
+
+# Claude Code worktree state — local-only session metadata
+.claude/

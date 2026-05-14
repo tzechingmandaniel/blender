@@ -1,0 +1,26 @@
+Phase 7 Prompt 2 — Final Master Assembly + Turntable Empty
+==========================================================
+
+The existing AK47_MASTER_ASSET (Section 3) already parents every AK_
+object. Phase 7 adds:
+
+  EMPTY_turntable_center  — empty at world origin (0, 0, 0), display
+                            type PLAIN_AXES, size 0.04. Lives in
+                            08_LIGHTING_CAMERA.
+
+Re-parent AK47_MASTER_ASSET so its parent is EMPTY_turntable_center.
+This way rotating the empty rotates the entire prop, but no AK_ object
+transforms are modified. matrix_parent_inverse is set so the visual
+position is unchanged.
+
+AK47_MASTER_ASSEMBLY (the assembly mirror empty inside 07_ASSEMBLY) is
+left alone — Phase 5 created it for the assembly view; Phase 7 hides
+07_ASSEMBLY entirely.
+
+Hard scope: no internal mechanism, no functional working parts. Just
+parenting empties.
+
+After running:
+  [ ] EMPTY_turntable_center exists at origin
+  [ ] AK47_MASTER_ASSET.parent == EMPTY_turntable_center
+  [ ] No AK_ object world transform changed

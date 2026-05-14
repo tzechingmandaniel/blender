@@ -1,0 +1,56 @@
+Phase 5 Prompt 9 — Create Texture Workflow Notes
+=================================================
+
+Create the texture folder structure (no actual image files yet, only README
+placeholders):
+
+  AK47_NonFunctional_Prop/03_textures/
+    metal/README.txt
+    wood/README.txt
+    magazine/README.txt
+    grip/README.txt
+    shared/README.txt
+
+Each README.txt lists the planned map files for that group:
+
+metal/README.txt:
+  metal_dark_blued_basecolor.png
+  metal_dark_blued_roughness.png
+  metal_dark_blued_metallic.png
+  metal_dark_blued_normal.png
+  metal_dark_blued_ao.png
+
+wood/README.txt:
+  wood_dark_reddish_basecolor.png
+  wood_dark_reddish_roughness.png
+  wood_dark_reddish_normal.png
+  wood_dark_reddish_ao.png
+
+magazine/README.txt:
+  magazine_black_basecolor.png
+  magazine_black_roughness.png
+  magazine_black_metallic.png
+  magazine_black_normal.png
+  magazine_black_ao.png
+
+grip/README.txt:
+  grip_dark_bakelite_basecolor.png
+  grip_dark_bakelite_roughness.png
+  grip_dark_bakelite_normal.png
+  grip_dark_bakelite_ao.png
+
+shared/README.txt:
+  shared_edge_wear_mask.png
+  shared_dirt_mask.png
+  shared_cavity_ao.png
+  shared_seam_shadow_mask.png
+
+Also write 06_documentation/texture_workflow_notes.txt that summarises the
+folder structure, the planned map names, and that Phase 6 will fill these
+folders.
+
+Hard scope: text/README files only. No image generation.
+
+After running, verify:
+  [ ] 5 README.txt files exist under 03_textures/
+  [ ] texture_workflow_notes.txt exists in 06_documentation/

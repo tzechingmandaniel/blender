@@ -1,0 +1,37 @@
+MCP Prompt §4.4 — Section 4 Setup + Sub-Collections
+=====================================================
+
+Open the existing v03_major_parts.blend (Section 3 result). Save the file
+as v04_minor_details.blend at the same path BEFORE any other change.
+
+Then prepare the Section 4 scene:
+
+1. Ensure these sub-collections exist *inside* 04_MINOR_PARTS:
+   - 04A_receiver_details
+   - 04B_dustcover_details
+   - 04C_magazine_details
+   - 04D_wood_details
+   - 04E_grip_details
+   - 04F_sight_front_details
+   - 04G_sling_loop_visuals
+   - 04H_seams_and_edge_wear_placeholders
+   - 04Z_detail_tests_archive
+
+2. Ensure two new placeholder materials exist:
+   - MAT_placeholder_shadow_seam  (very dark grey, slightly rough)
+   - MAT_placeholder_edge_wear    (medium scuffed grey)
+
+3. Keep these unchanged:
+   - 03_MAJOR_PARTS collection and its AK_ objects
+   - 02_BLOCKOUT collection and its BLK_ objects (still hidden in
+     viewport/render but preserved)
+   - REF_ak47_side_view, 01_GUIDES, AK47_MASTER_ASSET
+
+4. Do not start modelling any detail yet — this prompt only covers the
+   sub-collection setup and material creation. No geometry should be
+   added at this stage.
+
+Safety scope: exterior decorative only. No internal mechanism, no working
+trigger, no chamber, bolt, spring, firing system, functional magazine
+system, bore, rifling, threaded muzzle, real screw holes, real openings,
+manufacturing dimensions, or assembly details.

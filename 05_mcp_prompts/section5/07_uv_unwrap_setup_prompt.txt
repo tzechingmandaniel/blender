@@ -1,0 +1,32 @@
+Phase 5 Prompt 7 — Basic UV Unwrap Setup
+========================================
+
+For every AK_ object, ensure a UV layer named "UVMap" exists and is set as
+the active render UV. Then unwrap as follows:
+
+Major parts (with marked seams from Prompt 6):
+  Use the standard Unwrap operator (Edge Length method) with margin 0.02.
+  After unwrap:
+    - rotate stock + handguard islands so +X corresponds to +U.
+    - rotate barrel cylinder island so the cylinder axis is horizontal.
+    - pack into 0..1 with margin 0.02.
+
+Small details (rivets, ribs, grooves, contours, sling loops, seams, wear
+placeholders) and any object that does not have a seam marked:
+  Use Smart UV Project with angle limit 66°, island margin 0.02, area
+  weight 0.5, then pack islands at margin 0.02.
+
+If an object has no faces, leave it alone.
+
+After unwrap, every AK_ object must:
+  [ ] have a non-empty "UVMap" layer
+  [ ] have at least one UV island in 0..1
+  [ ] keep its world transform unchanged
+
+Hard scope: no internal mechanism, no working part, no functional magazine,
+no bore, no rifling.
+
+After running, verify:
+  [ ] Every AK_ object has a UVMap
+  [ ] No UV island is empty (zero area)
+  [ ] No geometry was added or removed

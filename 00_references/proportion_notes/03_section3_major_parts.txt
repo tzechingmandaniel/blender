@@ -1,0 +1,134 @@
+Section 3 Major Parts — Proportion + Silhouette Notes
+======================================================
+
+Section 3 turns the BLK_ blockout primitives from Section 2 into refined AK_
+major parts. The goal is silhouette accuracy and clean topology, not surface
+detail. Detail work (rivets, panel lines, sling loops, screw heads, magazine
+ribs as real grooves, etc.) is deferred to Section 4.
+
+Still strictly exterior-only — no internal mechanism, no functional barrel,
+chamber, bolt, spring, trigger mechanism, firing system, detachable magazine
+locking, or real assembly. All AK_ objects are decorative exterior meshes.
+
+§3.1 Scope of "major part"
+--------------------------
+Per §2.4.2, the major parts that define overall proportion are:
+  Receiver, Stock, Magazine, Grip, Lower handguard, Barrel exterior
+
+Section 3 also refines the Upper handguard and Dust cover because they
+dominate the upper silhouette. The sight blocks, gas block, front ring, and
+trigger guard stay as BLK_ blockouts and are refined in Section 4.
+
+§3.2 AK_ object list (8 objects, all in 03_MAJOR_PARTS)
+-------------------------------------------------------
+   1. AK_receiver_main
+   2. AK_stock_main
+   3. AK_magazine_main
+   4. AK_grip_main
+   5. AK_handguard_lower_main
+   6. AK_handguard_upper_main
+   7. AK_barrel_exterior_main
+   8. AK_dustcover_main
+
+§3.3 Per-part refinement targets
+--------------------------------
+3.3.1 Receiver
+  - Length matches §2.7.2 receiver zone (X = -0.18 .. +0.05).
+  - Top-rear corner slightly rounded toward the dust cover joint.
+  - Bottom face has a shallow magazine-well silhouette (visual indentation
+    only, no opening, no functional cut).
+  - Side panel has a shallow ejection-port indentation (visual, surface
+    deformation only).
+  - Selector lever silhouette as a thin raised pad on the right side
+    (right = +Y in this scene).
+  - Trigger pocket on the underside is a shallow exterior recess.
+
+3.3.2 Stock
+  - Length matches §2.7.2 rear stock zone (X = -0.50 .. -0.18).
+  - Buttplate (rear face) curved inward slightly (concave) along Z so the
+    silhouette is the classic curved buttstock.
+  - Cheek rest taper: top of stock slopes down from rear to where it meets
+    the receiver.
+  - Wrist (front, near receiver) narrows in both Y and Z.
+  - One shallow sling slot silhouette on the lower-rear edge — visual
+    indentation only, NOT a real hole.
+
+3.3.3 Magazine
+  - Banana curve more pronounced than the BLK_ version, smooth across 4+
+    horizontal subdivisions.
+  - Two decorative side ribs as raised bands on the +Y / -Y faces (no real
+    grooves — purely raised silhouette).
+  - Floorplate at the bottom slightly larger than the body footprint.
+  - Top opening NOT modelled as an opening — it stays closed (this is a
+    non-functional prop).
+
+3.3.4 Grip
+  - Pistol-grip contour: front face slightly concave (finger relief),
+    rear face slightly convex (palm swell).
+  - Top narrower than the bottom (already true in BLK_), with the taper
+    smoother across 2 subdivisions.
+  - Tilted ~18° back, same as the BLK_ tilt.
+  - Flat cap at the bottom (no working screw, no working takedown).
+
+3.3.5 Lower handguard
+  - Classic AK lower handguard silhouette — front wider/taller than rear.
+  - Two shallow finger grooves on the lower face (raised ridges either side
+    of each groove, visual only).
+  - Front cap is a thin raised collar joining the lower handguard to the
+    barrel area.
+
+3.3.6 Upper handguard
+  - Slightly rounded top profile (already partially true in BLK_).
+  - Rear end terminates in a small thumb-shelf raise.
+  - No vent slots, no working heat shield (exterior visual only).
+
+3.3.7 Barrel exterior
+  - Straight cylinder along X, slightly tapered toward the muzzle.
+  - Decorative collar near the muzzle end (NOT a working muzzle device,
+    NOT a thread — just a visual collar).
+  - No chamber, no bore hole, no real opening: muzzle face is a closed
+    decorative disc.
+
+3.3.8 Dust cover
+  - Rounded top profile across the receiver length.
+  - Rear edge dips slightly to meet the stock wrist (visual continuity).
+  - Front edge has a small raised lip toward the rear sight area.
+  - No real opening, no working catch, no internal parts visible.
+
+§3.4 Topology + modifier rules
+------------------------------
+  - All AK_ objects have a Bevel modifier (Angle limit ~30°, width 0.002,
+    2 segments).
+  - All AK_ objects have a Weighted Normal modifier (weight 50, threshold
+    0.01, keep sharp).
+  - All AK_ objects start as a primitive then receive 1–3 loop cuts /
+    subdivisions before the silhouette deformations.
+  - No object-level booleans; all silhouette features are vertex moves or
+    additive geometry.
+  - Each AK_ object has its origin at its geometric center (apply
+    transform after build, then re-parent).
+
+§3.5 Collection + assembly rules
+--------------------------------
+  - All AK_ objects live in 03_MAJOR_PARTS.
+  - All AK_ objects are parented to AK47_MASTER_ASSET (the empty created in
+    the §2.5.1 step 14 supplement).
+  - Section 3 hides 02_BLOCKOUT in the viewport (but keeps it in the file
+    for reference); render visibility off as well.
+  - Section 3 does NOT touch the BLK_ minor parts (sights, gas block, front
+    ring, trigger guard) — those carry forward into Section 4.
+
+§3.6 Side-view proportion checks (run after every part)
+-------------------------------------------------------
+Same set as §2.7.3, plus:
+  - Does the AK_ part hide the BLK_ blockout completely when both are on?
+  - Does the AK_ part still respect the §2.7.2 proportion zone for X?
+  - Are origins at geometric centers (for clean later transforms)?
+
+§3.7 Out of scope for Section 3
+-------------------------------
+  - Rivets, screws, real openings (all Section 4).
+  - Sling loop, magazine catch, dust cover catch (all Section 4 visuals).
+  - Surface panel lines, magazine real grooves (all Section 4).
+  - Realistic materials (Section 5).
+  - Final lighting and renders (Section 6).

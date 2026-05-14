@@ -1,0 +1,35 @@
+Phase 7 Prompt 3 — Final Cameras
+================================
+
+Create 13 cameras inside 08_LIGHTING_CAMERA (see spec note §7.4 for
+exact positions, rotations, and lens). Replace any existing camera
+with the same name.
+
+Full-model (5):
+  CAM_final_side_profile       ORTHO  ortho_scale 1.10
+  CAM_final_front_3quarter     PERSP 50mm
+  CAM_final_rear_3quarter      PERSP 50mm
+  CAM_final_top_angle          PERSP 50mm
+  CAM_final_low_angle_optional PERSP 50mm
+
+Close-up (7), all PERSP 70mm, facing +Y at their target:
+  CAM_closeup_receiver
+  CAM_closeup_wood_stock
+  CAM_closeup_handguard
+  CAM_closeup_magazine
+  CAM_closeup_front_sight
+  CAM_closeup_grip
+  CAM_closeup_material_edgewear
+
+Turntable (1):
+  CAM_turntable_main          PERSP 50mm, static (not parented to
+                              EMPTY_turntable_center).
+
+Composition rules: product-style framing, no extreme wide-angle. No
+aggressive context. Cameras must NOT be parented to AK47_MASTER_ASSET
+or EMPTY_turntable_center.
+
+After running:
+  [ ] All 13 cameras exist in 08_LIGHTING_CAMERA
+  [ ] CAM_final_side_profile is ortho with scale 1.10
+  [ ] No camera is parented to the turntable or model master

@@ -1,0 +1,30 @@
+Phase 7 Prompt 6 — Final Render Output Plan
+============================================
+
+Plan the 14 still renders (see §7.7) — output names + camera + resolution:
+
+  render_01_side_profile.png              CAM_final_side_profile        1920x1080
+  render_02_front_3quarter_hero.png       CAM_final_front_3quarter      1920x1080
+  render_03_rear_3quarter.png             CAM_final_rear_3quarter       1920x1080
+  render_04_top_angle.png                 CAM_final_top_angle           1920x1080
+  render_05_closeup_receiver_metal.png    CAM_closeup_receiver          1080x1080
+  render_06_closeup_wood_stock.png        CAM_closeup_wood_stock        1080x1080
+  render_07_closeup_handguard_wood.png    CAM_closeup_handguard         1080x1080
+  render_08_closeup_magazine.png          CAM_closeup_magazine          1080x1080
+  render_09_closeup_front_sight_visual.png  CAM_closeup_front_sight     1080x1080
+  render_10_closeup_grip.png              CAM_closeup_grip              1080x1080
+  render_11_closeup_edgewear.png          CAM_closeup_material_edgewear 1080x1080
+  render_12_clay_full_model.png           CAM_final_front_3quarter      1920x1080 (clay swap)
+  render_13_wireframe_full_model.png      CAM_final_front_3quarter      1920x1080 (freestyle/wire)
+  render_14_material_breakdown.png        CAM_final_side_profile        1920x1080 (legend overlay)
+
+Folder: 04_renders/final/
+
+Hard scope: only final approved exterior objects + final materials + final
+lights + final cameras + presentation stage. Hide references/guides/
+blockouts/material tests. No combat context.
+
+After running:
+  [ ] Output folder ready
+  [ ] Camera-to-filename mapping documented
+  [ ] No non-final object visible in any planned shot

@@ -1,0 +1,47 @@
+MCP Prompt §4.8 — Receiver Exterior Details
+=============================================
+
+Work around AK_receiver_main and create separate decorative detail objects
+inside 04_MINOR_PARTS / 04A_receiver_details. Strictly exterior, decorative,
+non-functional. Do not create internal openings, bolt paths, chamber details,
+trigger mechanisms, functional selector mechanisms, real ejection port
+cutouts, internal rails, manufacturing dimensions, or technical assembly.
+
+Detail set (density budget caps from §4.4):
+- 6 decorative rivet domes on the +Y face of the receiver. Cylinders
+  ~0.0015 m radius × 0.003 m depth, dome facing +Y. Place along two
+  rows at z = +0.018 and z = -0.018, at receiver world-X positions
+  -0.155, -0.075, +0.005 (so 3 rivets per row × 2 rows = 6 rivets).
+- 2 broad shallow side panel lines on the +Y face:
+    AK_panel_receiver_side_001 around the ejection-port silhouette area.
+    AK_panel_receiver_side_002 ahead of the magazine well.
+  Each is a thin elongated box ~(0.040 × 0.0010 × 0.012) sitting on the
+  +Y face (y ≈ +0.021).
+- 1 receiver/dust-cover top seam marker (AK_seam_receiver_top_001), a
+  very thin box ~(0.220 × 0.034 × 0.0008) hugging the line where the
+  dust cover meets the receiver top (world z ≈ +0.039).
+- 2 boundary seam markers:
+    AK_seam_receiver_stock_001 (vertical line at receiver/stock joint,
+                                world X ≈ -0.180).
+    AK_seam_receiver_handguard_001 (vertical line at receiver/handguard
+                                joint, world X ≈ +0.050).
+
+Naming:
+AK_rivet_receiver_001 .. 006
+AK_panel_receiver_side_001 .. 002
+AK_seam_receiver_top_001
+AK_seam_receiver_stock_001
+AK_seam_receiver_handguard_001
+
+Materials:
+- Rivets, panel lines:  MAT_placeholder_dark_metal
+- Seam markers:         MAT_placeholder_shadow_seam
+
+All objects parented to AK47_MASTER_ASSET. Bevel modifier (width 0.0005,
+segments 1, angle 30°) on every object.
+
+After running:
+[ ] All receiver details are in 04A_receiver_details.
+[ ] Rivet count = 6, panel count = 2, seam count = 3.
+[ ] No detail floats — every detail sits on the receiver surface.
+[ ] No functional opening or internal exposure exists.

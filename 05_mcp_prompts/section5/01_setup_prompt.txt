@@ -1,0 +1,44 @@
+Phase 5 Prompt 1 — Create UV / Material Organisation Collections
+================================================================
+
+Open AK47_NonFunctional_Prop/01_blender/v04_minor_details.blend and save as
+AK47_NonFunctional_Prop/01_blender/v05_uv_materials.blend. Do not overwrite
+v01/v02/v03/v04.
+
+Inside the scene root, create or confirm these top-level collections:
+
+  06_MATERIAL_TESTS
+  07_ASSEMBLY
+  09_EXPORT_READY
+
+Inside 06_MATERIAL_TESTS, create:
+
+  06A_material_preview_objects
+  06B_uv_test_objects
+  06C_texture_map_notes
+
+Inside 07_ASSEMBLY, create these material-based assembly groups (each as a
+sub-collection):
+
+  AK_metal_parts_grp
+  AK_wood_parts_grp
+  AK_magazine_parts_grp
+  AK_grip_parts_grp
+  AK_detail_parts_grp
+  AK_seam_wear_parts_grp
+
+Also create an empty named AK47_MASTER_ASSEMBLY at world origin inside
+07_ASSEMBLY. It mirrors AK47_MASTER_ASSET but is used for assembly view only.
+
+Leave 09_EXPORT_READY empty.
+
+Hard scope: do not create internal mechanism, working trigger, chamber, bolt,
+spring, firing system, functional magazine, bore, rifling, manufacturing
+dimensions, or technical assembly details. Do not change any existing
+geometry.
+
+After running, verify:
+  [ ] 06_MATERIAL_TESTS exists with 3 sub-collections
+  [ ] 07_ASSEMBLY exists with 6 material-based sub-collections + master empty
+  [ ] 09_EXPORT_READY exists and is empty
+  [ ] No AK_ object was moved, deleted, or modified

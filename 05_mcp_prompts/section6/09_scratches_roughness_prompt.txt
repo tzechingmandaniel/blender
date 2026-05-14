@@ -1,0 +1,27 @@
+Phase 6 Prompt 9 — Subtle Scratches + Roughness Variation
+=========================================================
+
+Inside each of the 4 hero materials, blend a fine Noise texture into the
+Roughness input via a Mix node:
+
+  Roughness_base + Noise_fine * variation_strength
+
+variation_strength per material:
+  MAT_metal_dark_blued     0.18  (visible roughness variation)
+  MAT_metal_black_magazine 0.12  (slightly more uniform)
+  MAT_wood_dark_reddish    0.10  (mild varnish variation)
+  MAT_grip_dark_bakelite   0.06  (very subtle)
+
+Also drive the Bump node with the same Noise (strength as in §6.3) so the
+roughness variation reads as fine surface relief, not pure shader noise.
+
+Keep scratches subtle and material-based — do not carve geometry, do not
+generate deep dark scratches, do not cover the whole surface with bright
+streaks.
+
+Hard scope: no geometric scratches, no real damage.
+
+After running, verify:
+  [ ] Each hero material has a Noise -> Roughness mix
+  [ ] Each hero material's Bump uses the same Noise source
+  [ ] No new geometry edits

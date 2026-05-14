@@ -1,0 +1,31 @@
+Phase 6 Prompt 8 — Controlled Edge Wear
+=======================================
+
+Create a reusable EdgeWearMask NodeGroup with inputs:
+  WearStrength    (default 0.40)
+  CrispnessLow    (default 0.40)
+  CrispnessHigh   (default 0.60)
+
+Internals:
+  Geometry.Pointiness -> ColorRamp(Constant) with stops at
+    CrispnessLow / CrispnessHigh -> output 0..1 mask, multiplied by
+    WearStrength.
+
+Reuse EdgeWearMask inside MAT_metal_dark_blued, MAT_metal_black_magazine,
+MAT_wood_dark_reddish, MAT_grip_dark_bakelite.
+
+WearStrength tuning per material:
+  MAT_metal_dark_blued     0.40  (worn steel exposes lighter metal)
+  MAT_metal_black_magazine 0.30  (less wear)
+  MAT_wood_dark_reddish    0.25  (subtle wood edge dulling)
+  MAT_grip_dark_bakelite   0.20  (very subtle)
+
+The wear is geometry-driven (Pointiness), so it naturally hits exposed
+edges only. Do not paint a global wear mask.
+
+Hard scope: no functional cutaway, no exposed internal mechanism.
+
+After running, verify:
+  [ ] EdgeWearMask node group exists
+  [ ] All 4 hero materials reference it with correct WearStrength
+  [ ] Wear visible on edges, not on flat faces
