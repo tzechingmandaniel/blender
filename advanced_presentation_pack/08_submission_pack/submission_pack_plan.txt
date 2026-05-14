@@ -1,0 +1,63 @@
+Submission Pack Plan
+=====================
+Scope reminder: non-functional exterior visual prop only. No internal mechanism, no working trigger, no chamber/bolt/spring, no functional magazine, no bore, no rifling, no manufacturing dimensions, no real assembly instructions.
+
+PURPOSE
+-------
+Use this if you need to submit the project to a teacher, client,
+reviewer, or portfolio platform.
+
+SUBMISSION PACK CONTENTS (10 items)
+-----------------------------------
+  1. cover_image.png
+     -> final_delivery/04_final_renders/full_model/02_front_3quarter_hero.png
+
+  2. project_summary_short.txt
+     -> advanced_presentation_pack/04_public_social_pack/short_project_summary.txt
+
+  3. project_summary_long.txt
+     -> advanced_presentation_pack/02_website_case_study/long_project_summary.txt
+
+  4. selected_render_list.txt
+     -> post_delivery/06_selected_portfolio_renders/portfolio_selection_notes.txt
+
+  5. portfolio_captions.txt
+     -> final_delivery/07_public_pack/portfolio_captions.txt
+
+  6. final_turntable_link_or_file.txt
+     -> final_delivery/05_turntable/turntable_ak_style_exterior_prop.mp4
+
+  7. workflow_summary.txt
+     -> see process_breakdown_plan.txt in this folder
+        plus advanced_presentation_pack/02_website_case_study/website_case_study_plan.txt
+        section 5 (Workflow)
+
+  8. tools_used.txt
+     -> advanced_presentation_pack/08_submission_pack/tools_used.txt
+
+  9. scope_and_safety_note.txt
+     -> final_delivery/06_documentation/scope_and_safety_note.txt
+
+ 10. file_inventory.txt
+     -> advanced_presentation_pack/08_submission_pack/file_inventory.txt
+
+SUBMISSION PACK RULES
+---------------------
+  1. Include only final selected content.
+  2. Do not include all working files unless requested.
+  3. Keep public-safe wording.
+  4. Avoid technical-weapon language.
+  5. Include a clear scope note.
+
+CHECKLIST
+---------
+  [X] Cover image referenced
+  [X] Short summary referenced
+  [X] Long summary referenced
+  [X] Selected render list referenced
+  [X] Captions referenced
+  [X] Turntable file referenced
+  [X] Workflow summary referenced
+  [X] Tools used included
+  [X] Scope note referenced
+  [X] File inventory included

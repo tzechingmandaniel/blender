@@ -1,0 +1,19 @@
+Phase 10 Prompt 10 — Submission Pack Plan
+==========================================
+
+Write 3 files under 08_submission_pack/:
+
+  submission_pack_plan.txt   per §10.21 — 10-item submission pack
+                              contents list + rules + checklist.
+  tools_used.txt              per §10.23 — Blender, Blender MCP,
+                              references, texture/material workflow,
+                              documentation workflow + scope.
+  file_inventory.txt          per §10.24 — full path map into
+                              final_delivery/ and post_delivery/ for
+                              every deliverable category.
+
+Submission pack rules:
+  - Include only final selected content.
+  - Do not include all working files unless requested.
+  - Keep public-safe wording.
+  - Include clear scope note.

@@ -1,0 +1,20 @@
+Phase 10 Prompt 11 — Reusable Presentation Template
+====================================================
+
+Write 09_reusable_presentation_template/presentation_template.txt
+per §10.25.
+
+Generic template (replace AK47-specific values with placeholders):
+
+  Project Title:     [ProjectName] — Non-functional Exterior 3D Prop
+  One-line Summary:  <one sentence summary>
+  Hero Image:        [hero_image.png]
+  Project Focus:     7 bullets (silhouette / modelling / materials /
+                     details / UVs / renders / turntable)
+  Workflow:          8 phases
+  Final Outputs:     .blend / renders / close-ups / turntable / exports /
+                     textures / documentation
+  Safe Scope Note:   non-functional exterior visual prop only
+
+Rules: replace project name, replace images, keep scope note, remove
+object-specific wording, keep public wording concise.

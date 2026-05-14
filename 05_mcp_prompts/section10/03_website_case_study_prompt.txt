@@ -1,0 +1,19 @@
+Phase 10 Prompt 3 — Website Case Study
+=======================================
+
+Write 02_website_case_study/website_case_study_plan.txt per §10.6.
+
+10 sections:
+  1. Hero (title + hero image + one-line summary)
+  2. Project overview (paragraph)
+  3. Goals (5 bullets)
+  4. Reference and planning
+  5. Workflow (A..H steps)
+  6. Challenges (5 bullets)
+  7. Solutions (6 bullets)
+  8. Final result
+  9. Reflection
+ 10. Scope reminder
+
+Also write long_project_summary.txt per §10.15 — 3-paragraph
+public-safe summary of the project.

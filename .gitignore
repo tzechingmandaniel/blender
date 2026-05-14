@@ -42,6 +42,9 @@ AK47_NonFunctional_Prop_final_delivery_*.zip
 # Phase 9 post-delivery archive zip (~11 MB; small enough to commit but
 # kept out by default to match the Phase 8 pattern — uncomment to commit)
 AK47_NonFunctional_Prop_post_delivery_*.zip
+# Phase 10 advanced presentation pack archive zip (~19 KB; text-only,
+# kept out by default to match the same pattern — uncomment to commit)
+AK47_NonFunctional_Prop_advanced_presentation_pack_*.zip
 09_archive/*.zip
 
 # 180-frame turntable source PNG sequence (174 MB) — rebuild from

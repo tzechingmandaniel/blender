@@ -1,0 +1,24 @@
+Phase 10 Prompt 7 — Public Summaries
+=====================================
+
+Write two files:
+
+  04_public_social_pack/short_project_summary.txt per §10.14
+    Three options (A / B / C) — pick option A as the default.
+
+  02_website_case_study/long_project_summary.txt per §10.15
+    3 paragraphs covering workflow, focus, final outputs, scope.
+
+Required wording (must include):
+  - non-functional exterior visual prop
+  - Blender hard-surface modelling
+  - material lookdev (dark metal / wood / blackened magazine / bakelite)
+  - controlled edge wear
+  - final renders + turntable
+  - portfolio / game-asset display purpose
+
+Forbidden wording (must NOT appear except inside a "does not include" /
+"no" / "without" disclaimer):
+  - working firearm, functional firearm, manufacturing-ready,
+    technical firearm reconstruction, live ammunition, real assembly
+    instruction, blueprint-level

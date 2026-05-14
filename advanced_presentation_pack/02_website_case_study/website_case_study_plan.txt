@@ -1,0 +1,85 @@
+Website Case Study Plan
+========================
+Scope reminder: non-functional exterior visual prop only. No internal mechanism, no working trigger, no chamber/bolt/spring, no functional magazine, no bore, no rifling, no manufacturing dimensions, no real assembly instructions.
+
+1. HERO SECTION
+---------------
+Title       : Non-functional AK-style Exterior 3D Prop
+Hero image  : final_delivery/04_final_renders/full_model/02_front_3quarter_hero.png
+One-line    : A non-functional exterior 3D prop created for hard-surface
+              modelling, material lookdev, and portfolio presentation.
+
+2. PROJECT OVERVIEW
+-------------------
+This project is a non-functional exterior 3D prop built as a Blender
+hard-surface modelling and material lookdev exercise. The focus was on
+silhouette, modular asset organisation, dark worn metal, reddish-brown
+wood, blackened magazine material, bakelite-style grip, controlled edge
+wear, and clean studio presentation.
+
+3. GOALS
+--------
+  - Create a readable exterior silhouette.
+  - Use modular object organisation (collection per material group).
+  - Practise hard-surface modelling planning.
+  - Develop dark metal / wood / grip materials.
+  - Produce final studio renders and a turntable animation.
+
+4. REFERENCE AND PLANNING
+-------------------------
+  - Reference collection of exterior images only.
+  - Side / top / front view planning grid.
+  - Material reference planning (steel + wood + bakelite).
+  - Safe exterior-only scope from project setup onward.
+
+5. WORKFLOW
+-----------
+  A. Project setup
+  B. Blockout
+  C. Major exterior forms
+  D. Decorative exterior details
+  E. UV and material setup
+  F. Final texture / lookdev
+  G. Render and turntable
+  H. Packaging
+
+6. CHALLENGES
+-------------
+  - Controlling proportion across the 8-phase workflow.
+  - Avoiding over-detailing in Phase 4 (capped at 51 detail objects).
+  - Organising files across 7 versioned .blend checkpoints.
+  - Balancing materials so the 4 hero materials read distinct.
+  - Keeping public wording safe in every documentation file.
+
+7. SOLUTIONS
+------------
+  - Phase-based workflow with executor + verify scripts per phase.
+  - Versioned .blend files preserved every checkpoint.
+  - Named collections (00_REFERENCE..12_PRESENTATION_STAGE).
+  - Material groups (4 hero MAT_* + 6 fallback).
+  - Render and delivery checklists auto-gated by verify.py.
+  - Negation-aware safety-word scanner for all .txt outputs.
+
+8. FINAL RESULT
+---------------
+The final delivery package includes:
+  - AK47_exterior_prop_final.blend (procedural shaders, portable)
+  - 14 final still renders (4 full-model + 7 close-up + 3 breakdown)
+  - 1.65 MB H.264 MP4 turntable (180 frames, 1280x720, 24 fps)
+  - FBX + GLB + OBJ exports
+  - 16 documentation files + 5 public-pack files
+  - Handover checklist auto-gated to PASS
+  - 234 MB archive zip with 246 files
+
+9. REFLECTION
+-------------
+This project deepened workflow planning, hard-surface organisation,
+material separation, lookdev control, render presentation, and final
+packaging discipline. The reusable executor/verify/archive script trio
+per phase transfers directly to any future non-functional exterior prop.
+
+10. SCOPE NOTE
+--------------
+This is a non-functional exterior visual prop only. It does not include
+internal mechanisms, working firing components, manufacturing dimensions,
+or real assembly instructions.

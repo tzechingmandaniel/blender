@@ -1,0 +1,91 @@
+Reusable Presentation Template
+===============================
+Scope reminder: non-functional exterior visual prop only. No internal mechanism, no working trigger, no chamber/bolt/spring, no functional magazine, no bore, no rifling, no manufacturing dimensions, no real assembly instructions.
+
+This is a generic presentation template for any future non-functional
+exterior 3D prop project. Replace [ProjectName] with the actual project
+name and [hero_image.png] with the real hero render.
+
+PROJECT TITLE
+-------------
+[ProjectName] — Non-functional Exterior 3D Prop
+
+ONE-LINE SUMMARY
+----------------
+A non-functional exterior 3D prop created for hard-surface modelling,
+material lookdev, and portfolio/game-asset presentation.
+
+HERO IMAGE
+----------
+[hero_image.png]
+
+PROJECT FOCUS
+-------------
+  - exterior silhouette
+  - modular modelling
+  - material separation
+  - decorative exterior details
+  - UV/material workflow
+  - final renders
+  - turntable
+
+WORKFLOW (8 phases)
+-------------------
+  1. Project setup
+  2. Blockout
+  3. Major exterior forms
+  4. Decorative exterior details
+  5. UV / material preparation
+  6. Texture / lookdev
+  7. Render / turntable / export
+  8. Final delivery
+
+FINAL OUTPUTS
+-------------
+  - Blender file (procedural shaders if possible — keeps the file
+    portable with no external textures)
+  - Final still renders (full-model + close-ups)
+  - Turntable video (MP4)
+  - Exports (FBX / GLB / OBJ)
+  - Texture folders (or README placeholders if procedural)
+  - Documentation (readme, asset notes, render notes, export notes,
+    scope/safety note, version history)
+  - Public pack (description, captions, summaries)
+
+IMAGE SEQUENCE
+--------------
+Recommended order (per §10.10):
+  1. Hero (front 3/4)
+  2. Side profile
+  3. Rear 3/4
+  4. Top angle
+  5. Material close-ups (one per material group)
+  6. Edge-wear / surface-detail close-up
+  7. Optional clay + wireframe breakdown
+  8. Turntable
+
+PUBLIC CAPTIONS
+---------------
+  - Hero       : "[ProjectName] — non-functional exterior 3D prop, final
+                 studio render."
+  - Side       : "Full silhouette and part proportions on a neutral
+                 background."
+  - Close-up   : "<material> close-up showing <surface treatment>."
+  - Turntable  : "360 degree turntable of a non-functional exterior 3D
+                 prop."
+
+SAFE SCOPE NOTE
+---------------
+This project is a non-functional exterior visual prop only. It does not
+include internal mechanisms, working components, manufacturing
+dimensions, or real assembly instructions.
+
+TEMPLATE RULES
+--------------
+  1. Replace [ProjectName] with the actual project name.
+  2. Replace [hero_image.png] with the chosen hero render.
+  3. Keep the safe-scope note verbatim.
+  4. Remove subject-specific wording outside scope disclaimers.
+  5. Keep all public wording concise.
+  6. Pair this template with the negation-aware forbidden-word scanner
+     before publishing.

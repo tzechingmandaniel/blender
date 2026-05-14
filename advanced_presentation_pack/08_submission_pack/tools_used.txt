@@ -1,0 +1,40 @@
+Tools Used
+===========
+Scope reminder: non-functional exterior visual prop only. No internal mechanism, no working trigger, no chamber/bolt/spring, no functional magazine, no bore, no rifling, no manufacturing dimensions, no real assembly instructions.
+
+TOOLS
+-----
+  - Blender 5.x       Modelling, material setup, lighting, rendering,
+                      and turntable animation. Both Cycles (still
+                      renders) and Eevee (turntable animation) used.
+
+  - Blender MCP       Structured prompt-based scene organisation and
+                      workflow support. Each phase has a deterministic
+                      Python executor + verify script run via Blender's
+                      headless --background --python interface or via
+                      plain Python for documentation phases.
+
+  - imageio-ffmpeg    Headless MP4 encoding for the turntable video
+                      (Blender 5.x removed FFMPEG output from
+                      image_settings, so PNG sequence + ffmpeg is the
+                      working path).
+
+  - Reference images  Exterior silhouette and material reference only.
+
+  - Texture/material  Dark blued metal, blackened magazine metal, dark
+    workflow          reddish wood (with lengthwise Wave grain), bakelite
+                      grip, seam shadow material, edge-wear materials,
+                      cavity AO via AmbientOcclusion node, roughness
+                      variation via fine Noise. Two reusable shader
+                      NodeGroups: EdgeWearMask, CavityAO.
+
+  - Documentation     Phase plans, issue trackers (Phase 6 + Phase 7),
+    workflow          render notes, export notes, lookdev notes,
+                      texture-workflow notes, handover checklist,
+                      version history, public pack.
+
+SCOPE
+-----
+The tools were used to create a non-functional exterior visual prop
+only. No internal mechanisms, manufacturing dimensions, or real
+assembly instructions are included.

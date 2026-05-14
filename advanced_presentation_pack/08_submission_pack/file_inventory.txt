@@ -1,0 +1,77 @@
+File Inventory
+===============
+Scope reminder: non-functional exterior visual prop only. No internal mechanism, no working trigger, no chamber/bolt/spring, no functional magazine, no bore, no rifling, no manufacturing dimensions, no real assembly instructions.
+
+FINAL BLENDER FILE
+------------------
+  final_delivery/01_blender_final/AK47_exterior_prop_final.blend
+  01_blender/AK47_exterior_prop_final.blend   (working copy)
+
+FINAL RENDERS
+-------------
+  final_delivery/04_final_renders/full_model/                4 stills
+  final_delivery/04_final_renders/closeups/                  7 stills
+  final_delivery/04_final_renders/clay_wireframe_optional/   3 stills
+  final_delivery/04_final_renders/portfolio_selected/        5 stills
+
+TURNTABLE
+---------
+  final_delivery/05_turntable/turntable_ak_style_exterior_prop.mp4
+  final_delivery/05_turntable/turntable_frames/   (12-frame preview)
+  final_delivery/05_turntable/turntable_full_seq/ (180 PNG source frames;
+                                                    excluded from git)
+
+EXPORTS
+-------
+  final_delivery/02_exports/fbx/AK47_exterior_prop_visual.fbx
+  final_delivery/02_exports/glb/AK47_exterior_prop_visual.glb
+  final_delivery/02_exports/obj/AK47_exterior_prop_visual.obj
+  final_delivery/02_exports/obj/AK47_exterior_prop_visual.mtl
+
+TEXTURES (procedural shaders; READMEs only)
+-------------------------------------------
+  final_delivery/03_textures/metal/README.txt
+  final_delivery/03_textures/wood/README.txt
+  final_delivery/03_textures/magazine/README.txt
+  final_delivery/03_textures/grip/README.txt
+  final_delivery/03_textures/shared/README.txt
+
+DOCUMENTATION
+-------------
+  final_delivery/06_documentation/    (9 required + 7 history files)
+
+PUBLIC PACK
+-----------
+  final_delivery/07_public_pack/      (5 files)
+
+POST-DELIVERY
+-------------
+  post_delivery/01_issue_tracker/post_delivery_issue_tracker.txt
+  post_delivery/02_minor_corrections/minor_correction_workflow.txt
+  post_delivery/03_version_updates/version_update_rules.txt
+  post_delivery/04_portfolio_case_study/  (outline + draft)
+  post_delivery/05_public_safe_pack/public_wording_review.txt
+  post_delivery/06_selected_portfolio_renders/  (6 PNGs + MP4 + notes)
+  post_delivery/07_workflow_retrospective/workflow_retrospective.txt
+  post_delivery/08_reusable_templates/  (9 generic templates)
+  post_delivery/09_next_project_notes/next_project_recommendations.txt
+
+ADVANCED PRESENTATION PACK (this folder)
+----------------------------------------
+  advanced_presentation_pack/01_portfolio_page/
+  advanced_presentation_pack/02_website_case_study/
+  advanced_presentation_pack/03_artstation_style_layout/
+  advanced_presentation_pack/04_public_social_pack/
+  advanced_presentation_pack/05_image_sequence/
+  advanced_presentation_pack/06_thumbnail_and_cover/
+  advanced_presentation_pack/07_process_breakdown/
+  advanced_presentation_pack/08_submission_pack/
+  advanced_presentation_pack/09_reusable_presentation_template/
+  advanced_presentation_pack/10_publication_checklist/
+  advanced_presentation_pack/11_archive/
+
+ARCHIVES (regeneratable, excluded from git)
+-------------------------------------------
+  AK47_NonFunctional_Prop_final_delivery_YYYYMMDD.zip       (~234 MB)
+  AK47_NonFunctional_Prop_post_delivery_YYYYMMDD.zip        (~11 MB)
+  AK47_NonFunctional_Prop_advanced_presentation_pack_YYYYMMDD.zip (~50 KB)

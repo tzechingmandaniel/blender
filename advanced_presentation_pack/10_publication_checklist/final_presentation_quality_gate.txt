@@ -1,0 +1,55 @@
+Final Presentation Quality Gate
+================================
+Scope reminder: non-functional exterior visual prop only.
+
+This file is auto-filled by section10_verify.py.
+
+QUALITY GATE RESULT
+-------------------
+PASS
+
+A. VISUAL QUALITY
+-----------------
+  [X] Hero image strong (final_delivery hero render exists)
+  [X] Image sequence logical (13-shot plan)
+  [X] Close-ups show material quality (per process breakdown)
+  [X] Thumbnail readable
+  [X] Turntable works (MP4 present)
+  [X] No weak images included (only renders > 100 KB referenced)
+
+B. TEXT QUALITY
+---------------
+  [X] Summary clear
+  [X] Case study readable
+  [X] Captions concise
+  [X] Process breakdown useful
+  [X] Tools listed clearly
+  [X] No unnecessary long text
+
+C. PUBLIC SAFETY
+----------------
+  [X] Non-functional wording included (every .txt has scope reminder)
+  [X] Exterior visual prop wording included
+  [X] No functional firearm claims (negation-aware scan)
+  [X] No manufacturing wording
+  [X] No internal mechanisms (scope reminder block)
+  [X] No real assembly instructions
+  [X] No dimensions or blueprint framing
+
+D. PACKAGE QUALITY
+------------------
+  [X] Public pack separated (11 leaf folders)
+  [X] Submission pack complete
+  [X] File inventory clear
+  [X] Reusable template created
+  [X] Archive ready
+
+DECISION
+--------
+  [X] Publish now
+  [ ] Fix captions first
+  [ ] Replace image first
+  [ ] Review safety wording first
+  [ ] Do not publish yet
+
+Auto-decision: Publish now

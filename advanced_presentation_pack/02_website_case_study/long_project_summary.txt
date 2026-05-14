@@ -1,0 +1,33 @@
+Long Project Summary
+=====================
+Scope reminder: non-functional exterior visual prop only. No internal mechanism, no working trigger, no chamber/bolt/spring, no functional magazine, no bore, no rifling, no manufacturing dimensions, no real assembly instructions.
+
+This project is a non-functional AK-style exterior 3D prop created as a
+Blender hard-surface modelling, material lookdev, and portfolio
+presentation exercise. The project was structured across a phase-based
+workflow, starting with project setup and reference planning, then
+moving into rough blockout, major exterior part modelling, decorative
+exterior surface details, UV and material preparation, final texture
+and lookdev, render composition, turntable animation, and final delivery
+packaging. Every phase produced a deterministic Python executor and a
+verify script, so the entire pipeline can re-run end-to-end without
+manual intervention.
+
+The main focus was not to create a functional or technical model, but
+to practise visual prop production: silhouette control, clean object
+organisation, material separation, worn dark metal, reddish-brown wood,
+blackened magazine finish, bakelite-style grip, controlled edge wear,
+and clean studio presentation. The shader graphs for the four hero
+materials are fully procedural (Noise + Wave + Pointiness +
+AmbientOcclusion via reusable EdgeWearMask and CavityAO node groups),
+which keeps the final .blend portable on any machine without external
+texture files.
+
+The final package includes the Blender scene, 14 final still renders,
+close-up material renders, a 180-frame H.264 MP4 turntable animation,
+FBX/GLB/OBJ exports, texture-folder READMEs, full project documentation,
+issue trackers, a public-safe presentation pack, and a date-stamped
+archive zip. This asset is intended only for visual rendering, portfolio
+presentation, and game-asset display. It does not include internal
+mechanisms, working firing components, manufacturing dimensions, or
+real assembly instructions.

@@ -1,0 +1,32 @@
+Phase 10 Mega Prompt — Advanced Presentation Pack
+==================================================
+
+Documentation-only public-presentation phase. No Blender, no rendering,
+no model edits. Input is final_delivery/ + post_delivery/. Output is
+advanced_presentation_pack/ + an archive zip.
+
+Steps:
+  1.  Create advanced_presentation_pack/ folder tree (11 leaf folders).
+  2.  Write portfolio_page_plan.txt per §10.4.
+  3.  Write website_case_study_plan.txt + long_project_summary.txt per
+      §10.6 + §10.15.
+  4.  Write artstation_style_layout.txt per §10.8.
+  5.  Write final_image_sequence.txt per §10.10 (13-shot order).
+  6.  Write thumbnail_cover_plan.txt per §10.12.
+  7.  Write short_project_summary.txt per §10.14.
+  8.  Write social_post_pack.txt per §10.17.
+  9.  Write process_breakdown_plan.txt per §10.19.
+ 10.  Write submission_pack_plan.txt + tools_used.txt + file_inventory.txt
+      per §10.21 + §10.23 + §10.24.
+ 11.  Write presentation_template.txt per §10.25 (generic, ProjectName
+      placeholder).
+ 12.  Write publication_checklist.txt per §10.27 +
+      final_presentation_quality_gate.txt per §10.29.
+ 13.  Write archive_contents.txt with the file tree.
+ 14.  Run section10_verify.py — gate the §10.29 quality categories.
+ 15.  Create AK47_NonFunctional_Prop_advanced_presentation_pack_YYYYMMDD.zip
+      via section10_archive.py + extract-test.
+
+Hard scope: non-functional exterior visual prop only. Negation-aware
+forbidden-word scan reused from Phases 8/9. Templates use [ProjectName]
+placeholder.

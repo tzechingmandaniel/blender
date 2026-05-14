@@ -1,0 +1,17 @@
+Phase 10 Prompt 2 — Portfolio Page Plan
+========================================
+
+Write 01_portfolio_page/portfolio_page_plan.txt per §10.4.
+
+8 sections:
+  1. Title
+  2. Hero image (02_front_3quarter_hero.png)
+  3. One-sentence summary
+  4. Project focus (5 bullets)
+  5. Final renders (8-image order)
+  6. Process summary (4 steps)
+  7. Tools used
+  8. Scope reminder
+
+Keep visual-first, short paragraphs only, safe wording, no functional
+firearm details, no dimensions, no internal/cutaway views.

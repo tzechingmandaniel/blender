@@ -1,0 +1,24 @@
+Short Project Summary
+======================
+Scope reminder: non-functional exterior visual prop only. No internal mechanism, no working trigger, no chamber/bolt/spring, no functional magazine, no bore, no rifling, no manufacturing dimensions, no real assembly instructions.
+
+OPTION A (recommended)
+----------------------
+Non-functional AK-style exterior 3D prop created as a Blender
+hard-surface modelling and material lookdev study. Focus areas included
+exterior silhouette, modular object organisation, dark metal,
+reddish-brown wood, blackened magazine material, bakelite-style grip,
+controlled edge wear, studio renders, and turntable presentation.
+
+OPTION B
+--------
+A non-functional exterior visual prop made for portfolio and game-asset
+presentation. This project focused on hard-surface modelling workflow,
+material separation, worn metal/wood lookdev, close-up render
+presentation, and final delivery packaging.
+
+OPTION C
+--------
+Blender exterior prop study focused on silhouette, hard-surface forms,
+material lookdev, edge wear, studio rendering, and clean asset delivery.
+Non-functional visual prop only.

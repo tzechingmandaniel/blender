@@ -1,0 +1,59 @@
+Process Breakdown Plan
+=======================
+Scope reminder: non-functional exterior visual prop only. No internal mechanism, no working trigger, no chamber/bolt/spring, no functional magazine, no bore, no rifling, no manufacturing dimensions, no real assembly instructions.
+
+1. REFERENCE AND SETUP
+----------------------
+Suggested image : project folder structure / collection outline screenshot
+Caption         : Project setup focused on clean folder structure,
+                  references, named collections, and non-functional
+                  exterior prop scope. Eight-phase Blender workflow with
+                  a Python executor + verify script per phase.
+
+2. BLOCKOUT
+-----------
+Suggested image : 04_renders/clay_renders/v02_blockout_side.png
+Caption         : Rough blockout used to establish exterior silhouette,
+                  part separation, and 3D volume before any detail work.
+                  14 BLK_ objects across the receiver, stock, handguards,
+                  magazine, grip, and barrel/front-assembly groups.
+
+3. MAJOR EXTERIOR FORMS
+-----------------------
+Suggested image : 04_renders/clay_renders/v03_major_parts_3quarter.png
+Caption         : Major exterior parts were refined from the blockout
+                  while keeping objects modular and editable. Bevel +
+                  WeightedNormal modifiers applied per part.
+
+4. DECORATIVE EXTERIOR DETAILS
+------------------------------
+Suggested image : 04_renders/clay_renders/v04_minor_details_3quarter.png
+Caption         : 51 decorative surface details added across nine sub-
+                  collections (rivets, ribs, grooves, contour bands,
+                  sling loops, seam markers, edge-wear placeholders).
+                  All surface-only, no functional geometry.
+
+5. MATERIALS AND LOOKDEV
+------------------------
+Suggested image : 04_renders/lookdev/lookdev_closeup_metal_receiver.png
+Caption         : Final lookdev focused on worn dark metal, reddish-brown
+                  wood with lengthwise grain, blackened magazine material,
+                  bakelite-style grip, controlled edge wear via
+                  Pointiness, cavity darkening via AmbientOcclusion, and
+                  subtle roughness variation via noise.
+
+6. FINAL PRESENTATION
+---------------------
+Suggested image : final_delivery/04_final_renders/full_model/02_front_3quarter_hero.png
+Caption         : Final presentation includes 14 studio renders, six
+                  material close-ups, a 180-frame H.264 MP4 turntable
+                  animation, FBX/GLB/OBJ exports, and a clean delivery
+                  package with handover checklist.
+
+PROCESS RULES
+-------------
+  - Keep the process short.
+  - Avoid technical weapon detail.
+  - Do not show internal diagrams or cutaways.
+  - Do not include dimensions.
+  - Focus on art workflow.

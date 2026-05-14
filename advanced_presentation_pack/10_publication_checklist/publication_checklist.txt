@@ -1,0 +1,48 @@
+Publication Checklist
+======================
+Scope reminder: non-functional exterior visual prop only. No internal mechanism, no working trigger, no chamber/bolt/spring, no functional magazine, no bore, no rifling, no manufacturing dimensions, no real assembly instructions.
+
+Before publishing, check:
+
+IMAGES
+------
+  [X] Hero image selected (02_front_3quarter_hero.png)
+  [X] Side profile selected (01_side_profile.png)
+  [X] Material close-ups selected (receiver / wood / magazine / grip)
+  [X] Weak renders removed
+  [X] No guide / reference / blockout objects visible
+  [X] No internal / cutaway images
+  [X] No dimensions or blueprint overlays
+
+TEXT
+----
+  [X] Short summary safe
+  [X] Long summary safe
+  [X] Captions safe (per public_wording_review.txt)
+  [X] Social post safe
+  [X] Case study wording safe
+  [X] No functional claims
+  [X] No manufacturing wording
+  [X] No real-assembly wording
+
+VIDEO
+-----
+  [X] Turntable plays smoothly
+  [X] No functional part animation
+  [X] No hidden objects visible
+  [X] Neutral presentation
+
+FILES
+-----
+  [X] Public pack separated from full delivery package
+  [X] Only selected images included
+  [X] No private notes included
+  [X] No messy prompt dumps included
+  [X] No unnecessary working files included
+
+FINAL DECISION
+--------------
+  [X] Ready to publish
+  [ ] Needs minor text fix
+  [ ] Needs image replacement
+  [ ] Not ready

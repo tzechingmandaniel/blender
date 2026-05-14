@@ -1,0 +1,44 @@
+Thumbnail and Cover Plan
+=========================
+Scope reminder: non-functional exterior visual prop only. No internal mechanism, no working trigger, no chamber/bolt/spring, no functional magazine, no bore, no rifling, no manufacturing dimensions, no real assembly instructions.
+
+THUMBNAIL PURPOSE
+-----------------
+Make people click while still representing the project accurately and
+safely.
+
+RECOMMENDED COVER
+-----------------
+final_delivery/04_final_renders/full_model/02_front_3quarter_hero.png
+
+ALTERNATIVE COVER
+-----------------
+final_delivery/04_final_renders/full_model/01_side_profile.png
+(if the hero feels too busy at thumbnail size)
+
+THUMBNAIL CROP NOTES
+--------------------
+  - Focus on the full prop silhouette.
+  - Show metal + wood contrast (both materials visible).
+  - Avoid cutting off too much of the model on any side.
+  - No overlay text if the image is strong on its own.
+  - Optional small text: "Exterior 3D Prop" (bottom-left, small,
+    neutral colour).
+
+THUMBNAIL RULES
+---------------
+  1. Use neutral background (grey, no scene clutter).
+  2. Avoid aggressive scene context.
+  3. Avoid technical-diagram styling.
+  4. Avoid framing that makes the prop look usable.
+  5. Keep it clean and professional.
+  6. Do not include dimensions or blueprint overlays.
+
+CHECKLIST
+---------
+  [X] Hero render selected
+  [X] Crop planned (full silhouette + material contrast)
+  [X] Text-vs-no-text decision made (no overlay)
+  [X] Safe context confirmed (neutral grey background)
+  [X] Thumbnail readable at small size (full silhouette visible)
+  [X] No technical blueprint styling

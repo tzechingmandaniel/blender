@@ -1,0 +1,17 @@
+Phase 10 Prompt 4 — ArtStation-Style Layout
+============================================
+
+Write 03_artstation_style_layout/artstation_style_layout.txt per §10.8.
+
+8 sections:
+  1. Cover image (02_front_3quarter_hero.png)
+  2. Short title + tagline
+  3. Full model image strip (side / front 3/4 / rear 3/4 / top angle)
+  4. Material close-up strip (receiver / wood stock / handguard /
+     magazine / grip)
+  5. Process breakdown (blockout → major forms → details → materials)
+  6. Turntable embed (turntable_ak_style_exterior_prop.mp4)
+  7. Tools and workflow (short bullets only)
+  8. Scope reminder
+
+Image-led, concise captions only, no internal diagrams.

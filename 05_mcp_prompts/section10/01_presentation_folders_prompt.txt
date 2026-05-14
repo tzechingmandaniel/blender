@@ -1,0 +1,23 @@
+Phase 10 Prompt 1 — advanced_presentation_pack Folder Structure
+================================================================
+
+Create the advanced_presentation_pack/ directory tree:
+
+  advanced_presentation_pack/
+    01_portfolio_page/
+    02_website_case_study/
+    03_artstation_style_layout/
+    04_public_social_pack/
+    05_image_sequence/
+    06_thumbnail_and_cover/
+    07_process_breakdown/
+    08_submission_pack/
+    09_reusable_presentation_template/
+    10_publication_checklist/
+    11_archive/
+
+Idempotent. Hard scope: non-functional exterior visual prop only.
+
+After running:
+  [ ] All 11 leaf folders exist
+  [ ] No file written yet (folders only)

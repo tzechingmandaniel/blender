@@ -1,0 +1,13 @@
+Phase 10 Prompt 6 — Thumbnail and Cover Plan
+=============================================
+
+Write 06_thumbnail_and_cover/thumbnail_cover_plan.txt per §10.12.
+
+Required content:
+  - Recommended cover: 02_front_3quarter_hero.png
+  - Alternative cover: 01_side_profile.png (if hero is too busy)
+  - Thumbnail crop notes (focus on silhouette, show metal+wood contrast)
+  - Optional small title text: "Exterior 3D Prop"
+  - 6 thumbnail rules (neutral bg, no aggressive context, no technical
+    diagram, no usable-prop framing, clean/professional, no dimensions)
+  - 6-box thumbnail checklist

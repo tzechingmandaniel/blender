@@ -1,0 +1,54 @@
+Public Social Post Pack
+========================
+Scope reminder: non-functional exterior visual prop only. No internal mechanism, no working trigger, no chamber/bolt/spring, no functional magazine, no bore, no rifling, no manufacturing dimensions, no real assembly instructions.
+
+MEDIUM-LENGTH POST (~3 sentences)
+---------------------------------
+Finished a non-functional exterior 3D prop study in Blender, focused on
+hard-surface modelling, material separation, dark worn metal, reddish-
+brown wood, blackened metal finish, bakelite-style grip, edge wear,
+studio renders, and turntable presentation.
+
+This was mainly a workflow and lookdev exercise: blockout -> major forms
+-> decorative exterior details -> UV/material setup -> final renders
+and delivery package.
+
+Non-functional visual prop only.
+
+SHORT POST (~2 sentences, single line for social media)
+-------------------------------------------------------
+Blender hard-surface exterior prop study — focused on silhouette,
+modular modelling, worn metal, wood material, edge wear, studio renders,
+and turntable presentation. Non-functional visual prop only.
+
+ONE-LINE TURNTABLE CAPTION
+--------------------------
+360 degree turntable of a non-functional exterior 3D prop —
+hard-surface modelling, material lookdev, and studio rendering.
+
+SAFE HASHTAG SUGGESTIONS
+------------------------
+  #Blender3D
+  #HardSurfaceModeling
+  #GameArt
+  #3DProp
+  #Lookdev
+  #Portfolio
+
+FORBIDDEN HASHTAGS (do NOT include)
+-----------------------------------
+  #firearms
+  #weaponbuild
+  #gunsmithing
+  #blueprint
+  #realweapon
+  #tactical
+
+CHECKLIST
+---------
+  [X] Social post written
+  [X] Short version written
+  [X] One-line turntable caption written
+  [X] Safe hashtags selected
+  [X] Forbidden hashtags listed for awareness
+  [X] Non-functional wording included

@@ -1,0 +1,18 @@
+Phase 10 Prompt 12 — Publication Checklist + Quality Gate
+==========================================================
+
+Write 2 files under 10_publication_checklist/:
+
+  publication_checklist.txt    per §10.27 — 4 sections (Images / Text /
+                                Video / Files) + final decision block.
+
+  final_presentation_quality_gate.txt   per §10.29 — A..D categories
+                                (Visual / Text / Public safety / Package)
+                                with auto-checked boxes against actual
+                                files. Decision: Publish now / Fix
+                                captions first / Replace image first /
+                                Review safety wording first / Do not
+                                publish yet.
+
+The quality gate file lives alongside publication_checklist.txt and is
+auto-filled by section10_verify.py.

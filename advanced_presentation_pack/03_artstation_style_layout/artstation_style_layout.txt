@@ -1,0 +1,61 @@
+ArtStation-Style Layout
+========================
+Scope reminder: non-functional exterior visual prop only. No internal mechanism, no working trigger, no chamber/bolt/spring, no functional magazine, no bore, no rifling, no manufacturing dimensions, no real assembly instructions.
+
+1. COVER IMAGE
+--------------
+final_delivery/04_final_renders/full_model/02_front_3quarter_hero.png
+
+2. SHORT TITLE + TAGLINE
+------------------------
+Title   : Non-functional AK-style Exterior 3D Prop
+Tagline : Hard-surface exterior modelling and material lookdev study.
+
+3. FULL MODEL IMAGE STRIP (left to right)
+-----------------------------------------
+  side profile        01_side_profile.png
+  front 3/4 (hero)    02_front_3quarter_hero.png
+  rear 3/4            03_rear_3quarter.png
+  top angle           04_top_angle.png
+
+4. MATERIAL CLOSE-UP STRIP
+--------------------------
+  receiver metal      05_closeup_receiver_metal.png
+  wood stock          06_closeup_wood_stock.png
+  handguard wood      07_closeup_handguard_wood.png
+  magazine            08_closeup_magazine.png
+  grip                10_closeup_grip.png
+
+5. PROCESS BREAKDOWN STRIP
+--------------------------
+  blockout            (Phase 2 clay render)
+  major forms         (Phase 3 clay render)
+  decorative details  (Phase 4 close-ups)
+  final material/look (Phase 6 lookdev close-ups)
+
+6. TURNTABLE EMBED
+------------------
+final_delivery/05_turntable/turntable_ak_style_exterior_prop.mp4
+
+7. TOOL AND WORKFLOW NOTES (bullets only)
+-----------------------------------------
+  - Blender 5.x (Cycles + Eevee)
+  - 8-phase pipeline, executor + verify scripts per phase
+  - Procedural shader graphs (no PNG textures required)
+  - Reusable shader NodeGroups: EdgeWearMask, CavityAO
+  - imageio-ffmpeg for headless MP4 encoding
+
+8. SCOPE NOTE
+-------------
+Non-functional exterior visual prop only. No internal mechanism,
+no working components, no manufacturing dimensions, no real assembly
+instructions.
+
+LAYOUT RULES
+------------
+  - Lead with the strongest image (cover).
+  - Avoid too many text blocks.
+  - Use image captions, not long paragraphs.
+  - No dimensions, no technical internal diagrams, no blueprint
+    overlays.
+  - Safe public wording throughout.

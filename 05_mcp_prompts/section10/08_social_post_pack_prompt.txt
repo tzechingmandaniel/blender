@@ -1,0 +1,27 @@
+Phase 10 Prompt 8 — Public Social Post Pack
+============================================
+
+Write 04_public_social_pack/social_post_pack.txt per §10.17.
+
+Required sections:
+
+  Medium-length post (~3 sentences):
+    Finished a non-functional exterior 3D prop study in Blender, focused
+    on hard-surface modelling, material separation, dark worn metal,
+    reddish-brown wood, blackened metal finish, bakelite-style grip,
+    edge wear, studio renders, and turntable presentation.
+    Workflow: blockout → major forms → exterior details → UV/material
+    setup → final renders and delivery package.
+    Non-functional visual prop only.
+
+  Short post (~2 sentences) — single-line social media version.
+
+  One-line turntable caption:
+    "360 degree turntable of a non-functional exterior 3D prop —
+    hard-surface modelling, material lookdev, and studio rendering."
+
+  Safe hashtag suggestions:
+    #Blender3D #HardSurfaceModeling #GameArt #3DProp #Lookdev #Portfolio
+
+  Forbidden hashtags (do NOT include):
+    #firearms #weaponbuild #gunsmithing #blueprint #realweapon #tactical

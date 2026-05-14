@@ -1,0 +1,16 @@
+Phase 10 Prompt 9 — Process Breakdown
+======================================
+
+Write 07_process_breakdown/process_breakdown_plan.txt per §10.19.
+
+6 sections, each with a suggested image and a short caption:
+
+  1. Reference and setup     — folder/collection structure
+  2. Blockout                — silhouette side-on (v02 clay render)
+  3. Major forms             — refined parts (v03 clay render)
+  4. Decorative details      — close-ups of rivets / grooves / contours
+  5. Materials and lookdev   — Phase 6 material close-ups
+  6. Final presentation      — hero render + turntable
+
+Rule: short captions only, no measurements, no internal diagrams,
+art-workflow framing not technical-firearm framing.
