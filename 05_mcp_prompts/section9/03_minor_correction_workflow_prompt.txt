@@ -1,0 +1,25 @@
+Phase 9 Prompt 3 — Minor Correction Workflow
+=============================================
+
+Write post_delivery/02_minor_corrections/minor_correction_workflow.txt
+per §9.6.
+
+Required sections:
+  - Minor correction examples (8 bullets — texture path, render too dark,
+    typo, caption wording, wrong file copied, missing material link,
+    turntable off-centre, floating decorative detail)
+  - Major issue examples (6 bullets — broken geometry, major UV failure,
+    wrong object scale, major material failure, export unusable,
+    final .blend cannot open)
+  - 8 correction rules (no overwrite without backup, correction note
+    first, fix only the specific issue, save as new version, update
+    version history, re-test affected output, replace only affected
+    files, archive replaced file)
+  - Version naming (AK47_exterior_prop_final_v1_1.blend, v1_2.blend, etc)
+  - Correction note format (7 fields: Correction ID, Related issue,
+    File affected, Change made, Reason, Test result, Status)
+  - Scope reminder
+
+After running:
+  [ ] File exists + non-empty
+  [ ] All required sections present

@@ -1,0 +1,53 @@
+Version Update Rules
+=====================
+Scope reminder: non-functional exterior visual prop only. No internal mechanism, no working trigger, no chamber/bolt/spring, no functional magazine, no bore, no rifling, no manufacturing dimensions, no real assembly instructions.
+
+VERSION SYSTEM
+--------------
+  v1.0   Original final delivery (Phase 8 output).
+  v1.1   Minor post-delivery correction.
+  v1.2   Another minor correction.
+  v1.3 .. v1.N   Subsequent minor corrections.
+  v2.0   Major visual revision (rare; only if genuinely required).
+
+USE v1.X FOR (minor)
+--------------------
+  - texture relink
+  - typo fix in any documentation file
+  - render replacement (single image)
+  - export replacement (single FBX/GLB/OBJ)
+  - small material adjustment (one MAT_* setting)
+  - camera/render correction (one CAM_* tweak)
+
+USE v2.0 FOR (major; rare)
+--------------------------
+  - major remodel of any AK_ part
+  - major UV rebuild
+  - full material redesign across all hero materials
+  - full render scene redesign (new lighting + cameras)
+
+NEVER CREATE FILE NAMES LIKE
+----------------------------
+  final_final.blend
+  real_final.blend
+  fixed_final.blend
+  newnewfinal.blend
+  last_version_final.blend
+
+VERSION LOG FORMAT
+------------------
+Each new version gets one entry in 03_version_updates/version_log.txt
+with these 6 fields:
+
+  Version       : v1.1
+  Date          : YYYY-MM-DD
+  Reason        : <which issue from post_delivery_issue_tracker>
+  Files changed : <relative paths of changed files>
+  Testing       : <how the change was verified>
+  Status        : Released / Reverted / Superseded
+
+ARCHIVE RULE
+------------
+Before replacing any file in final_delivery/, copy the original file
+into post_delivery/10_post_delivery_archive/<version>/ so it can be
+recovered.

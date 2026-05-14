@@ -1,0 +1,51 @@
+Post-Delivery Issue Tracker
+============================
+Scope reminder: non-functional exterior visual prop only. No internal mechanism, no working trigger, no chamber/bolt/spring, no functional magazine, no bore, no rifling, no manufacturing dimensions, no real assembly instructions.
+
+Issue format (one record per ----- block):
+
+  Issue ID            : PD_ISSUE_NNN  (or PD_INFO_NNN for info-only)
+  Date found          : YYYY-MM-DD
+  Category            : Render / Texture / Export / Documentation /
+                        File structure / Public wording / Other
+  Problem             : One-line description
+  Where found         : Relative file path / render name / export file /
+                        documentation file
+  Severity            : Low / Medium / High
+  Recommended action  : Fix / Defer / Ignore / Archive note only
+  Assigned phase      : 6 / 7 / 8 / Post-delivery correction
+  Status              : Open / In Progress / Fixed / Deferred / Closed
+  Notes               : Additional comments
+
+Categories:
+  - Render
+  - Texture
+  - Export
+  - Documentation
+  - File structure
+  - Public wording
+  - Other
+
+----------------------------------------------------------------------------
+
+  Issue ID            : PD_INFO_001
+  Date found          : 2026-05-14
+  Category            : Other
+  Problem             : No post-delivery issues observed at handover;
+                        tracker initialised for future minor corrections.
+  Where found         : --
+  Severity            : Low
+  Recommended action  : Archive note only
+  Assigned phase      : Post-delivery correction
+  Status              : Closed
+  Notes               : Phase 8 verify.py reported 32/32 PASS; archive
+                        round-trip OK. Phase 9 has not surfaced any
+                        delivery defects.
+
+----------------------------------------------------------------------------
+
+Summary:
+  Open issues         : 0
+  Medium severity     : 0
+  High severity       : 0
+  Blocking next steps : NO

@@ -1,0 +1,36 @@
+Handover Checklist Template
+============================================================
+Scope reminder: non-functional exterior 3D prop only. No internal mechanism, no functional anything, no manufacturing dimensions, no real assembly instructions.
+
+A. Final files:
+  [ ] Final .blend included
+  [ ] Final renders included
+  [ ] Turntable video / preview frames included
+  [ ] Export files included if required
+  [ ] Textures or texture READMEs included
+  [ ] Documentation included
+  [ ] Public pack included
+
+B. Final .blend opens correctly:
+  [ ] Materials load
+  [ ] Textures load (or shaders are procedural)
+  [ ] Cameras exist
+  [ ] Lights exist
+  [ ] Turntable setup exists
+  [ ] Export-ready collection exists
+
+C. Documentation completeness:
+  [ ] readme.txt
+  [ ] asset_notes.txt
+  [ ] material_notes.txt
+  [ ] texture_notes.txt
+  [ ] render_notes.txt
+  [ ] export_notes.txt
+  [ ] scope_and_safety_note.txt
+  [ ] version_history.txt
+
+D. Safety / scope:
+  [ ] Non-functional exterior scope stated
+  [ ] No internal mechanisms in any object name
+  [ ] No working parts in any object name
+  [ ] No forbidden wording in any delivery .txt

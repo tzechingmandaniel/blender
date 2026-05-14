@@ -1,0 +1,26 @@
+Phase Workflow Template
+============================================================
+Scope reminder: non-functional exterior 3D prop only. No internal mechanism, no functional anything, no manufacturing dimensions, no real assembly instructions.
+
+Generic 8-phase workflow:
+
+  1. Project setup    -> v01_project_setup.blend
+  2. Blockout         -> v02_blockout.blend
+  3. Major parts      -> v03_major_parts.blend
+  4. Minor details    -> v04_minor_details.blend
+  5. UV / materials   -> v05_uv_materials.blend
+  6. Final lookdev    -> v06_final_textures_lookdev.blend
+  7. Final scene      -> v07_final_scene_export.blend
+  8. Delivery package -> final_delivery/ + archive zip
+  (9. Post-delivery   -> post_delivery/)
+
+Each phase has 3 Python scripts:
+  sectionN_executor.py   builds the deliverable
+  sectionN_verify.py     gates the §N final review checklist
+  sectionN_render_*.py / archive.py / export.py  (as needed)
+
+Idempotency rules:
+  - Document appends use a marker (\n\nSection N —) so re-running the
+    executor replaces the block instead of duplicating it.
+  - Folder creation uses os.makedirs(..., exist_ok=True).
+  - Material / NodeGroup creation checks bpy.data first.

@@ -1,0 +1,16 @@
+Retrospective Template
+============================================================
+Scope reminder: non-functional exterior 3D prop only. No internal mechanism, no functional anything, no manufacturing dimensions, no real assembly instructions.
+
+  1. What worked well
+  2. What caused problems
+  3. What should be improved next time
+  4. What skills improved
+  5. What should be reused
+  6. What should NOT be repeated
+
+For each section, write at least 3 concrete bullets specific to this
+project — no generic platitudes ("be more organised", "plan better").
+
+Add a final line stating the next-project recommendation (see
+09_next_project_notes/next_project_recommendations.txt).

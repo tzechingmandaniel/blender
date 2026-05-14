@@ -1,0 +1,68 @@
+Minor Correction Workflow
+==========================
+Scope reminder: non-functional exterior visual prop only. No internal mechanism, no working trigger, no chamber/bolt/spring, no functional magazine, no bore, no rifling, no manufacturing dimensions, no real assembly instructions.
+
+This workflow describes how to fix small post-delivery issues without
+damaging the final package.
+
+MINOR CORRECTION EXAMPLES
+-------------------------
+  - Missing texture path
+  - One render too dark
+  - Typo in readme
+  - Public caption wording issue
+  - Wrong file copied into final_delivery
+  - Export missing material link
+  - Turntable slightly off-centre
+  - Small floating decorative detail visible in render
+
+MAJOR ISSUE EXAMPLES (do NOT treat as minor)
+--------------------------------------------
+  - Broken model geometry
+  - Major UV failure
+  - Wrong object scale
+  - Major material failure
+  - Export unusable
+  - Final .blend cannot open
+
+Major issues require a v2.0 revision (see version_update_rules.txt).
+
+CORRECTION RULES (in order)
+---------------------------
+  1. Never overwrite the original final delivery without backup.
+  2. Create a correction note FIRST (see format below).
+  3. Fix only the specific issue called out in the related issue tracker
+     entry.
+  4. Save the corrected file as a NEW version
+     (AK47_exterior_prop_final_v1_1.blend, ...).
+  5. Update version_history.txt in 06_documentation/.
+  6. Re-test affected output (re-render the specific image; re-open the
+     specific export).
+  7. Replace ONLY the affected file(s) in final_delivery/. Do not
+     rebuild the entire delivery folder.
+  8. Archive the old file in 10_post_delivery_archive/ before overwriting.
+
+VERSION NAMING (per §9.8)
+-------------------------
+  v1.0 -> AK47_exterior_prop_final.blend       (original Phase 8 delivery)
+  v1.1 -> AK47_exterior_prop_final_v1_1.blend  (first minor correction)
+  v1.2 -> AK47_exterior_prop_final_v1_2.blend  (second minor correction)
+  ...
+  v2.0 -> AK47_exterior_prop_final_v2_0.blend  (only if major revision)
+
+NEVER use names like:
+  final_final.blend, real_final.blend, fixed_final.blend,
+  newnewfinal.blend, last_version_final.blend
+
+CORRECTION NOTE FORMAT
+----------------------
+Write one note per correction into
+02_minor_corrections/correction_NNN.txt with these 7 fields:
+
+  Correction ID  : CORR_NNN
+  Related issue  : PD_ISSUE_NNN (from post_delivery_issue_tracker.txt)
+  File affected  : <relative path of the file that was replaced>
+  Change made    : <one-paragraph description of the actual change>
+  Reason         : <why the change was needed>
+  Test result    : <which renders/files re-tested and the outcome>
+  Status         : Open / Applied / Reverted / Closed

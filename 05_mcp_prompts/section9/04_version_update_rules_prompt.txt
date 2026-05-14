@@ -1,0 +1,26 @@
+Phase 9 Prompt 4 — Version Update Rules
+========================================
+
+Write post_delivery/03_version_updates/version_update_rules.txt per §9.8.
+
+Required sections:
+  - Version system definition (v1.0, v1.1, v1.2, v2.0)
+  - When to use v1.1/v1.2 (6 examples: texture relink, typo fix, render
+    replacement, export replacement, small material adjustment,
+    camera/render correction)
+  - When to use v2.0 (4 examples: major remodel, major UV rebuild,
+    full material redesign, full render scene redesign)
+  - Bad file names to NEVER use:
+      final_final.blend
+      real_final.blend
+      fixed_final.blend
+      newnewfinal.blend
+      last_version_final.blend
+  - Version log format (6 fields: Version, Date, Reason, Files changed,
+    Testing, Status)
+  - Scope reminder
+
+After running:
+  [ ] File exists + non-empty
+  [ ] All required sections present
+  [ ] Bad-name list present

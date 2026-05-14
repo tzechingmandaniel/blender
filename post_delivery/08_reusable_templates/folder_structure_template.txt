@@ -1,0 +1,35 @@
+Folder Structure Template
+============================================================
+Scope reminder: non-functional exterior 3D prop only. No internal mechanism, no functional anything, no manufacturing dimensions, no real assembly instructions.
+
+Recommended folder layout for any ProjectName_NonFunctional_Prop:
+
+  00_references/
+    proportion_notes/
+    cropped_parts/
+    paintover_guides/
+  01_blender/
+    v01_project_setup.blend
+    v02_blockout.blend
+    v03_major_parts.blend
+    v04_minor_details.blend
+    v05_uv_materials.blend
+    v06_final_textures_lookdev.blend
+    v07_final_scene_export.blend
+    ProjectName_exterior_prop_final.blend
+  02_exports/
+  03_textures/
+    metal/  wood/  magazine/  grip/  shared/
+    (or whatever material groups apply to the project)
+  04_renders/
+    viewport_tests/  clay_renders/  uv_checker/  lookdev/  final/
+  05_mcp_prompts/
+    section1/ ... section9/
+      sectionN_executor.py
+      sectionN_verify.py
+      sectionN_render_*.py / sectionN_archive.py / etc.
+  06_documentation/
+  08_reviews/
+  09_archive/
+  final_delivery/  (built by Phase 8)
+  post_delivery/   (built by Phase 9)

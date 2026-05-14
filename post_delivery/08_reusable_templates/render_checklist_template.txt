@@ -1,0 +1,32 @@
+Render Checklist Template
+============================================================
+Scope reminder: non-functional exterior 3D prop only. No internal mechanism, no functional anything, no manufacturing dimensions, no real assembly instructions.
+
+Image quality:
+  [ ] Correct resolution (full-model = 1920x1080, close-up = 1080x1080)
+  [ ] No major noise (Cycles samples >= 64 / Eevee taa >= 32)
+  [ ] No overexposed highlights
+  [ ] No crushed dark areas
+  [ ] Model not clipped
+  [ ] Camera framing clean
+  [ ] Materials readable
+
+Scene quality:
+  [ ] No guide/reference visible
+  [ ] No blockout object visible
+  [ ] No test object visible
+  [ ] No missing texture warnings
+  [ ] No floating detail obvious
+
+Portfolio quality:
+  [ ] Hero render strong
+  [ ] Side render readable
+  [ ] Close-ups show material quality
+  [ ] Background not distracting
+  [ ] Renders feel consistent
+
+Safety:
+  [ ] No technical assembly diagram style
+  [ ] No internal/cutaway view
+  [ ] No dimensions
+  [ ] No functional-use scene

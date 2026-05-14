@@ -1,0 +1,47 @@
+Portfolio Selection Notes
+==========================
+Scope reminder: non-functional exterior visual prop only. No internal mechanism, no working trigger, no chamber/bolt/spring, no functional magazine, no bore, no rifling, no manufacturing dimensions, no real assembly instructions.
+
+Selection rules (per §9.13):
+  1. Choose fewer strong images, not every render.
+  2. Use the hero render first.
+  3. Include one full side profile.
+  4. Include 2-4 material close-ups.
+  5. Include the turntable if it is smooth.
+  6. Avoid images that look too technical or blueprint-like.
+  7. Avoid images focusing on functional-looking areas.
+
+Files in this folder:
+
+  02_front_3quarter_hero.png        HERO — shows full silhouette + all
+                                    materials (metal + wood + magazine +
+                                    grip) in one shot. Strongest portfolio
+                                    image.
+  01_side_profile.png               Full silhouette + part proportions on
+                                    a neutral background.
+  05_closeup_receiver_metal.png     Dark blued metal close-up with subtle
+                                    Pointiness-driven edge wear.
+  06_closeup_wood_stock.png         Reddish-brown wood with Wave-driven
+                                    lengthwise grain.
+  08_closeup_magazine.png           Blackened matte metal (visibly more
+                                    matte than the receiver).
+  10_closeup_grip.png               Bakelite/polymer grip — distinct from
+                                    wood (fine noise, no grain).
+  turntable_ak_style_exterior_prop.mp4
+                                    180-frame 1280x720 turntable @ 24 fps,
+                                    full 360 rotation, neutral background.
+
+Files NOT selected and why:
+  - 03_rear_3quarter.png            Redundant with the hero shot.
+  - 04_top_angle.png                Useful for shape-volume QA but reads
+                                    technical at first glance.
+  - 07_closeup_handguard_wood.png   Material story already covered by
+                                    06_closeup_wood_stock.png.
+  - 09_closeup_front_sight_visual.png  Close-up of a sight-like feature
+                                    — risk of reading as functional
+                                    detail. Skipped per §9.13 rule 7.
+  - 11_closeup_edgewear.png         Useful for breakdown, not portfolio
+                                    headline.
+  - 12_clay_full_model.png          Process breakdown, not final image.
+  - 13_wireframe_full_model.png     Topology breakdown, not final image.
+  - 14_material_breakdown.png       Same.

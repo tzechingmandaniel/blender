@@ -1,0 +1,84 @@
+Workflow Retrospective
+=======================
+Scope reminder: non-functional exterior visual prop only. No internal mechanism, no working trigger, no chamber/bolt/spring, no functional magazine, no bore, no rifling, no manufacturing dimensions, no real assembly instructions.
+
+1. WHAT WORKED WELL
+-------------------
+  - Phase-based workflow with three scripts per phase (executor + verify
+    + render/archive). Re-runs were deterministic.
+  - Separate version files (v01..v07) preserved every checkpoint — easy
+    to compare or roll back without git.
+  - Collection naming convention (00_REFERENCE through
+    12_PRESENTATION_STAGE). Render scripts hide non-final collections by
+    name; nothing leaked into final renders.
+  - Material group separation (4 hero MAT_* + 6 fallback). Verify
+    asserted distinctness (magazine rough > receiver rough; grip has no
+    wave node).
+  - Final delivery handover_checklist auto-gated by verify.py. Catches
+    truncated copies and missing docs immediately.
+  - Negation-aware forbidden-word matcher caught its own false
+    positives during Phase 8 self-audit — the audit-the-audit pattern
+    worked.
+  - Idempotent doc appends (Section N marker + truncate-on-reappear)
+    prevented the silent duplication seen in Phase 6 from recurring.
+
+2. WHAT CAUSED PROBLEMS
+-----------------------
+  - Planning got long. Phase 5 alone wrote 12 prompts + a 500-line
+    executor before any material refinement happened.
+  - Early lookdev renders were too bright; took two re-tunes (key light
+    150W -> 30W, base colour darker, grime factor 0.30 -> 0.12).
+  - Phase 6 append_doc had a silent duplicate-Section-6 bug; only
+    caught it during the self-audit "check again" request.
+  - Phase 7 wireframe render: Freestyle linestyle was None at headless
+    init; had to switch to the Wireframe shader node.
+  - Phase 8 forbidden-word matcher flagged scope-disclaimer phrases
+    ("does not include ... real assembly instructions"); fixed with a
+    250-char negation look-back.
+  - Blender 5.x removed FFMPEG from image_settings; the original
+    section8_render_turntable_mp4.py crashed immediately. Switched to
+    PNG sequence + imageio-ffmpeg encode.
+  - Cycles CPU for a 180-frame turntable would have taken ~3 hours.
+    Switched to Eevee — completed in 6 min 40 s.
+
+3. WHAT TO IMPROVE NEXT TIME
+----------------------------
+  - Render a hero shot in Phase 3 (before details), not Phase 7. Early
+    visual feedback catches silhouette problems sooner.
+  - Cap each phase's prompt files at 5-8, not 12-15. Long prompt lists
+    duplicate executor logic.
+  - Write the verify script BEFORE the executor — it forces a tighter
+    spec for what the phase actually has to produce.
+  - Default to Eevee for previews; reserve Cycles for hero stills.
+  - If a downstream target needs PNG textures, bake the procedural
+    shaders to PNG inside Phase 6 (not deferred to Phase 9).
+  - Pick the negation-aware safety matcher from day 1, not Phase 8.
+
+4. WHAT SKILLS IMPROVED
+-----------------------
+  - Blender 5.x layered-action API (action.layers / strips / channels)
+    — handled the keyframe-interpolation change.
+  - Pointiness + AmbientOcclusion shader patterns for geometry-driven
+    wear / cavity treatment.
+  - Wave-driven wood grain locked to a specific UV axis (+X = +U).
+  - Idempotent text generators with marker-based truncation.
+  - imageio-ffmpeg as a portable headless MP4 encode path.
+  - Eevee animation rendering (much faster than Cycles for previews).
+
+5. WHAT TO REUSE (templates extracted in 08_reusable_templates/)
+---------------------------------------------------------------
+  - 8-phase folder structure with versioned .blend per phase
+  - section{N}_executor.py / section{N}_verify.py / section{N}_*.py trio
+  - EdgeWearMask + CavityAO shader NodeGroups
+  - Negation-aware forbidden-word scanner (250-char look-back)
+  - handover_checklist.txt auto-gated by verify.py
+  - PNG sequence -> imageio-ffmpeg -> H.264 MP4 encode pipeline
+
+6. WHAT NOT TO REPEAT
+---------------------
+  - Endless prompt expansion before any geometry exists.
+  - Over-documenting steps that the executor already does.
+  - Adding optional phases without a concrete deliverable.
+  - Cycles CPU for animation previews — always Eevee.
+  - Forbidden-word checks that flag scope disclaimers (use negation
+    awareness from the start).

@@ -1,0 +1,17 @@
+Portfolio Case Study Outline
+=============================
+Scope reminder: non-functional exterior visual prop only. No internal mechanism, no working trigger, no chamber/bolt/spring, no functional magazine, no bore, no rifling, no manufacturing dimensions, no real assembly instructions.
+
+1. Project title
+2. Short summary
+3. Goal
+4. Tools
+5. Workflow overview
+6. Challenges
+7. Solutions
+8. Final result
+9. What I learned
+10. Safety/scope note
+
+Each section is one paragraph (case_study_draft.txt has the filled-in
+version).

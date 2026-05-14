@@ -1,0 +1,47 @@
+Next Project Recommendations
+=============================
+Scope reminder: non-functional exterior visual prop only. No internal mechanism, no working trigger, no chamber/bolt/spring, no functional magazine, no bore, no rifling, no manufacturing dimensions, no real assembly instructions.
+
+10 candidate non-weapon subjects:
+  1. Weathered toolbox
+  2. Vintage camera
+  3. Sci-fi radio
+  4. Industrial control panel
+  5. Flashlight
+  6. Camping lantern
+  7. Game controller
+  8. Robot exterior shell
+  9. Mechanical keyboard
+ 10. Medical scanner exterior prop
+
+Selection criteria:
+  [ ] Non-functional
+  [ ] Safe for portfolio
+  [ ] Clear silhouette
+  [ ] Multiple materials
+  [ ] Not too large in scope
+  [ ] Can be finished faster than current project
+  [ ] Good close-up material opportunities
+  [ ] No dangerous functional mechanism
+
+BEST RECOMMENDATION
+-------------------
+Weathered toolbox OR vintage camera.
+
+Reasons:
+  - Safer public portfolio subject — no chance of being misread as a
+    functional / restricted item.
+  - Strong hard-surface practice: corners, panel lines, screws, hinges,
+    handles, leather/plastic/metal contrast.
+  - Good material variety (steel + paint + leather + rubber for toolbox;
+    metal + leather + bakelite + glass for camera).
+  - No restricted-mechanism concerns when sharing renders publicly.
+  - Easier to finish and present in a shorter cycle than this project.
+
+WORKFLOW REUSE
+--------------
+The 8-phase workflow + 3-script-per-phase pattern from this project
+transfers directly. Generic templates in 08_reusable_templates/ are
+already de-namespaced. Just swap ProjectName_NonFunctional_Prop into the
+folder layout and adjust the material groups to whatever the new subject
+needs.

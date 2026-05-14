@@ -39,6 +39,9 @@ __pycache__/
 # --- Phase 8 delivery artifacts (regeneratable, exceed GitHub's 100 MB single-file limit) ---
 # Final delivery archive zip (234 MB) — rebuild from section8_archive.py
 AK47_NonFunctional_Prop_final_delivery_*.zip
+# Phase 9 post-delivery archive zip (~11 MB; small enough to commit but
+# kept out by default to match the Phase 8 pattern — uncomment to commit)
+AK47_NonFunctional_Prop_post_delivery_*.zip
 09_archive/*.zip
 
 # 180-frame turntable source PNG sequence (174 MB) — rebuild from

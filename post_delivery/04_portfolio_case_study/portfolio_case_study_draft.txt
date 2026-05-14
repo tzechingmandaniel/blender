@@ -1,0 +1,91 @@
+Portfolio Case Study — Draft
+=============================
+Scope reminder: non-functional exterior visual prop only. No internal mechanism, no working trigger, no chamber/bolt/spring, no functional magazine, no bore, no rifling, no manufacturing dimensions, no real assembly instructions.
+
+TITLE
+-----
+Non-functional AK-style Exterior 3D Prop — phase-based Blender workflow.
+
+SHORT SUMMARY
+-------------
+A non-functional exterior 3D prop created as a hard-surface modelling,
+material, and render presentation exercise. The focus was on exterior
+silhouette, modular asset structure, dark worn metal, reddish-brown
+wood, blackened magazine material, bakelite-style grip, controlled edge
+wear, and final portfolio presentation.
+
+GOAL
+----
+Build a visually readable exterior prop using a structured Blender
+workflow, moving from project setup to blockout, major forms, decorative
+exterior details, UV/material preparation, look development, render
+composition, and final delivery packaging.
+
+TOOLS
+-----
+Blender 5.1 (Cycles + Eevee), Python (executor + verify + archive
+scripts), imageio-ffmpeg (for headless MP4 encode).
+
+WORKFLOW (8 phases)
+-------------------
+  1. Project setup and references                      (v01)
+  2. Rough blockout                                    (v02)
+  3. Major exterior parts                              (v03)
+  4. Decorative exterior details                       (v04)
+  5. UV and material preparation                       (v05)
+  6. Final texture / lookdev (procedural shaders)      (v06)
+  7. Final scene, renders, turntable, export setup     (v07)
+  8. Final delivery packaging + archive                (AK47_exterior_prop_final.blend)
+
+Every phase has a deterministic Python executor + verify script. Total
+final-delivery output: 246 files, 234 MB zip archive.
+
+CHALLENGES
+----------
+  - Keeping the blockout simple (silhouette before details)
+  - Avoiding over-detailing in Phase 4 (capped at 51 detail objects)
+  - Maintaining per-material UV atlas density consistency
+  - Procedural shaders for wear/dirt that don't pop on flat faces
+  - Lookdev lighting that doesn't blow out dark blued metal
+  - Headless MP4 encoding without system ffmpeg (Blender 5.x removed
+    FFMPEG from image_settings)
+  - Safe public wording across all delivery documents
+
+SOLUTIONS
+---------
+  - Phase-based planning with executor + verify scripts per phase
+  - Preserved every checkpoint .blend file
+  - Per-material UV atlas via average_islands_scale + pack_islands
+  - Procedural shader graphs: Noise + Wave + Pointiness + AmbientOcclusion
+  - Reusable NodeGroups: EdgeWearMask, CavityAO
+  - Eevee for turntable animation (180 frames in 7 minutes vs hours)
+  - imageio-ffmpeg for headless H.264 MP4 encode
+  - Negation-aware forbidden-word matcher that understands "no X" / "does
+    not include X" / "without X" disclaimers
+
+FINAL RESULT
+------------
+The final delivery package contains:
+  - AK47_exterior_prop_final.blend
+  - 14 final stills (4 full-model + 7 close-up + 3 clay/wire) at
+    1920x1080 or 1080x1080
+  - 1.65 MB H.264 MP4 turntable (180 frames, 1280x720, 24 fps)
+  - FBX + GLB + OBJ exports
+  - Procedural-shader-driven materials (no PNG dependencies)
+  - 16 documentation files + 5 public-pack files + handover checklist
+    auto-gated to PASS
+
+LEARNING
+--------
+This project deepened my workflow planning, hard-surface organisation,
+material separation, lookdev control, render presentation, and final
+packaging discipline. Also strengthened Python automation: writing
+deterministic executor/verify scripts per phase paid off when I needed
+to re-tune materials in Phase 6 — the entire pipeline re-ran without
+manual intervention.
+
+SAFETY / SCOPE NOTE
+-------------------
+This is a non-functional exterior visual prop only. It does not include
+internal mechanisms, working firing components, manufacturing
+dimensions, or real assembly instructions.

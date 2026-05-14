@@ -1,0 +1,25 @@
+Issue Tracker Template
+============================================================
+Scope reminder: non-functional exterior 3D prop only. No internal mechanism, no functional anything, no manufacturing dimensions, no real assembly instructions.
+
+Issue tracker entry format:
+
+  Issue ID            : <PREFIX>_NNN
+  Date found          : YYYY-MM-DD
+  Category            : Render / Texture / Export / Documentation /
+                        File structure / Public wording / Other
+  Problem             : <one-line description>
+  Where found         : <relative file path>
+  Severity            : Low / Medium / High
+  Recommended action  : Fix / Defer / Ignore / Archive note only
+  Assigned phase      : <which phase to handle this in>
+  Status              : Open / In Progress / Fixed / Deferred / Closed
+  Notes               : <additional comments>
+
+Summary block at the end of the file:
+  Open issues         : <count>
+  Medium severity     : <count>
+  High severity       : <count>
+  Blocking next steps : YES / NO
+
+High-severity entries always block the next phase.

@@ -1,0 +1,37 @@
+Phase 9 Prompt 10 — Next Project Notes
+=======================================
+
+Write post_delivery/09_next_project_notes/next_project_recommendations.txt
+per §9.21.
+
+Required content:
+  10 candidate non-weapon subjects:
+    1. Weathered toolbox
+    2. Vintage camera
+    3. Sci-fi radio
+    4. Industrial control panel
+    5. Flashlight
+    6. Camping lantern
+    7. Game controller
+    8. Robot exterior shell
+    9. Mechanical keyboard
+   10. Medical scanner exterior prop
+
+  Selection criteria (8 boxes):
+    [ ] Non-functional
+    [ ] Safe for portfolio
+    [ ] Clear silhouette
+    [ ] Multiple materials
+    [ ] Not too large in scope
+    [ ] Can be finished faster than current project
+    [ ] Good close-up material opportunities
+    [ ] No dangerous functional mechanism
+
+  Best recommendation: weathered toolbox OR vintage camera, with
+  rationale (4 bullets per §9.21).
+
+After running:
+  [ ] File exists + non-empty
+  [ ] All 10 candidates listed
+  [ ] All 8 criteria listed
+  [ ] Best recommendation called out

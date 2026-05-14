@@ -1,0 +1,33 @@
+Phase 9 Prompt 9 — Reusable Generic Templates
+==============================================
+
+Write 9 generic template files under post_delivery/08_reusable_templates/:
+
+  folder_structure_template.txt
+  phase_workflow_template.txt
+  mcp_prompt_template.txt
+  issue_tracker_template.txt
+  render_checklist_template.txt
+  export_checklist_template.txt
+  handover_checklist_template.txt
+  public_wording_template.txt
+  retrospective_template.txt
+
+§9.19 transforms:
+  AK47_NonFunctional_Prop          ->  ProjectName_NonFunctional_Prop
+  AK-style exterior prop           ->  non-functional exterior 3D prop
+  MAT_metal_dark_blued etc.        ->  MAT_<group>_<descriptor>
+  CAM_final_front_3quarter etc.    ->  CAM_<role>_<angle>
+  EMPTY_turntable_center           ->  EMPTY_turntable_center  (keep)
+
+Each template:
+  - opens with the non-functional exterior prop scope reminder
+  - lists generic folders/object-naming/phase structure
+  - keeps the verify/handover/render/export checklists
+  - keeps the safety-word lists (forbidden + safe + rewrite examples)
+  - removes project-specific names where they don't aid the disclaimer
+
+After running:
+  [ ] 9 template files exist + non-empty
+  [ ] None contain AK47_NonFunctional_Prop (replaced with placeholder)
+  [ ] All include scope reminder

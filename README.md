@@ -19,6 +19,7 @@ scripts driven by an LLM/MCP workflow.
 - ✅ **Section 6 — Final texture / lookdev** complete (`v06_final_textures_lookdev.blend`)
 - ✅ **Section 7 — Final scene / renders / turntable / export** complete (`v07_final_scene_export.blend`)
 - ✅ **Section 8 — Final review / packaging / handover** complete (`final_delivery/` + archive zip)
+- ✅ **Section 9 — Post-delivery / portfolio / retrospective** complete (`post_delivery/` + archive zip)
 
 ## Directory layout
 
@@ -97,6 +98,11 @@ AK47_PROJECT_ROOT="$(pwd)" \
 AK47_PROJECT_ROOT="$(pwd)" python 05_mcp_prompts/section8/section8_executor.py
 AK47_PROJECT_ROOT="$(pwd)" python 05_mcp_prompts/section8/section8_archive.py
 AK47_PROJECT_ROOT="$(pwd)" python 05_mcp_prompts/section8/section8_verify.py
+
+# Section 9 — post-delivery / portfolio / retrospective (no Blender needed)
+AK47_PROJECT_ROOT="$(pwd)" python 05_mcp_prompts/section9/section9_executor.py
+AK47_PROJECT_ROOT="$(pwd)" python 05_mcp_prompts/section9/section9_archive.py
+AK47_PROJECT_ROOT="$(pwd)" python 05_mcp_prompts/section9/section9_verify.py
 ```
 
 Each section also has a `section*_verify.py` that asserts the deliverables

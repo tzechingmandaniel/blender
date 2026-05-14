@@ -1,0 +1,27 @@
+Phase 9 Prompt 5 — Portfolio Case Study (outline + draft)
+==========================================================
+
+Write two files under post_delivery/04_portfolio_case_study/:
+
+  portfolio_case_study_outline.txt (per §9.10)
+    1. Project title
+    2. Short summary
+    3. Goal
+    4. Tools
+    5. Workflow overview
+    6. Challenges
+    7. Solutions
+    8. Final result
+    9. What I learned
+   10. Safety/scope note
+
+  portfolio_case_study_draft.txt (per §9.12)
+    Filled-in draft of the outline. Use safe wording — hard-surface
+    exterior modelling, material/lookdev, rendering, portfolio
+    presentation. Reference the 8-phase Blender workflow from project
+    setup to delivery. Close with the non-functional exterior scope note.
+
+After running:
+  [ ] Both files exist + non-empty
+  [ ] Draft mentions the 8 phases
+  [ ] Both files include scope reminder

@@ -1,0 +1,33 @@
+Phase 9 Mega Prompt — Post-Delivery / Portfolio / Retrospective
+================================================================
+
+Documentation-only finishing phase. No Blender, no rendering, no model
+edits. Input is the Phase 8 final_delivery/ package. Output is the
+post_delivery/ folder and an optional zip archive.
+
+Steps:
+  1.  Create post_delivery/ folder tree (10 leaf folders).
+  2.  Write post_delivery_issue_tracker.txt with §9.4 format and one
+      pre-populated PD_INFO_001 entry.
+  3.  Write minor_correction_workflow.txt per §9.6.
+  4.  Write version_update_rules.txt per §9.8.
+  5.  Write portfolio_case_study_outline.txt + portfolio_case_study_draft.txt
+      per §9.10 / §9.12.
+  6.  Copy the 6-still + 1-MP4 portfolio set from final_delivery/ into
+      06_selected_portfolio_renders/ + write portfolio_selection_notes.txt.
+  7.  Write public_wording_review.txt with safe/avoid/rewrite sections
+      per §9.15.
+  8.  Write workflow_retrospective.txt with 6 sections per §9.17.
+  9.  Write 9 reusable generic templates per §9.19 (placeholders
+      replace project-specific names).
+ 10.  Write next_project_recommendations.txt with 10 candidates +
+      criteria + best recommendation per §9.21.
+ 11.  Run section9_verify.py — gate the §9.24 final checklist.
+ 12.  Create AK47_NonFunctional_Prop_post_delivery_YYYYMMDD.zip
+      via section9_archive.py + extract-test.
+
+Hard scope (enforced):
+  - documentation only, no Blender, no model edits
+  - non-functional exterior prop wording throughout
+  - negation-aware forbidden-word matcher (reused from Phase 8)
+  - templates are generic; project name replaced with placeholder

@@ -1,0 +1,22 @@
+Phase 9 Prompt 1 — post_delivery Folder Structure
+==================================================
+
+Create the post_delivery/ directory tree:
+
+  post_delivery/
+    01_issue_tracker/
+    02_minor_corrections/
+    03_version_updates/
+    04_portfolio_case_study/
+    05_public_safe_pack/
+    06_selected_portfolio_renders/
+    07_workflow_retrospective/
+    08_reusable_templates/
+    09_next_project_notes/
+    10_post_delivery_archive/
+
+Idempotent on re-run. Hard scope: non-functional exterior prop only.
+
+After running:
+  [ ] All 10 leaf folders exist
+  [ ] No file written yet (folders only)

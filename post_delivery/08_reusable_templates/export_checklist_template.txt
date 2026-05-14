@@ -1,0 +1,18 @@
+Export Checklist Template
+============================================================
+Scope reminder: non-functional exterior 3D prop only. No internal mechanism, no functional anything, no manufacturing dimensions, no real assembly instructions.
+
+  [ ] Export source = <ExportReadyCollection> only
+  [ ] Apply scale only if needed
+  [ ] Preserve material assignments
+  [ ] Preserve UVs
+  [ ] Include texture references if format supports
+  [ ] Export selected export-ready objects only
+  [ ] Do not export references/guides/blockouts/cameras/lights
+  [ ] Test import in a clean Blender scene
+
+Safety:
+  [ ] Export contains exterior visual prop only
+  [ ] No internal/functional parts
+  [ ] No manufacturing dimensions
+  [ ] No technical assembly notes

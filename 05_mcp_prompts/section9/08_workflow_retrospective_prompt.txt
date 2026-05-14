@@ -1,0 +1,70 @@
+Phase 9 Prompt 8 — Workflow Retrospective
+==========================================
+
+Write post_delivery/07_workflow_retrospective/workflow_retrospective.txt
+per §9.17.
+
+Six required sections (each with concrete bullets specific to this
+8-phase Blender project, not generic platitudes):
+
+  1. What worked well
+     - phase-based workflow with executor/verify/render scripts per phase
+     - separate version files (v01..v07) preserved every checkpoint
+     - collection naming convention (00_REFERENCE..12_PRESENTATION_STAGE)
+     - material group separation (4 hero MAT_* + 6 fallback)
+     - final delivery + handover checklist auto-gated by verify scripts
+     - negation-aware forbidden-word matcher (caught its own false
+       positives during Phase 8 self-audit)
+     - idempotent doc appends (handled in Phase 6+7+8)
+
+  2. What caused problems
+     - planning got long; Phase 5 alone wrote 12 prompts + a 500-line
+       executor before the model needed materials at all
+     - early lookdev renders were too bright; took two re-tunes
+       (lights 150W->30W, base colour darker, grime factor lowered)
+     - Phase 6 append_doc bug — silent duplicate Section 6 blocks
+     - Phase 7 wireframe render: Freestyle linestyle was None;
+       had to switch to Wireframe shader node
+     - Phase 8 forbidden-word matcher flagged scope-disclaimer phrases;
+       had to add negation awareness + 250-char look-back
+     - Blender 5.x removed FFMPEG from image_settings; switched to
+       PNG sequence + imageio-ffmpeg encode
+
+  3. What should be improved next time
+     - render a hero shot in Phase 3 (before details), not Phase 7
+     - cap each phase's prompt files at 5-8, not 12-15
+     - write the verify script BEFORE the executor — drives the spec
+     - prefer Eevee for previews (180-frame turntable in 7 min vs
+       3+ hours on Cycles)
+     - bake procedural shaders to PNG earlier if a PNG-textures target
+       is expected downstream
+
+  4. What skills improved
+     - Blender 5.x layered-action API (action.layers/strips/channels)
+     - Pointiness + AmbientOcclusion shader patterns for procedural wear
+     - Wave-driven wood grain locked to a specific UV axis
+     - Idempotent text generators with marker-based truncation
+     - Negation-aware safety-word scanner
+     - imageio-ffmpeg path for headless MP4 encoding
+
+  5. What should be reused
+     - 8-phase folder structure
+     - section{N}_executor.py / section{N}_verify.py / section{N}_*.py
+       trio per phase
+     - EdgeWearMask + CavityAO shader NodeGroups
+     - Negation-aware forbidden-word scanner
+     - handover_checklist.txt auto-gated by verify.py
+     - PNG sequence -> imageio-ffmpeg -> MP4 encode pipeline
+
+  6. What should NOT be repeated
+     - Endless prompt expansion before any geometry exists
+     - Over-documenting steps that the executor already does
+     - Adding optional phases without a concrete deliverable
+     - Cycles CPU for animation previews (use Eevee)
+     - Forbidden-word checks that flag scope disclaimers
+
+After running:
+  [ ] File exists + non-empty
+  [ ] All 6 sections present
+  [ ] Each section has at least 3 concrete bullets
+  [ ] Mentions scope reminder

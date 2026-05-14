@@ -1,0 +1,61 @@
+Public Wording Review
+======================
+Scope reminder: non-functional exterior visual prop only. No internal mechanism, no working trigger, no chamber/bolt/spring, no functional magazine, no bore, no rifling, no manufacturing dimensions, no real assembly instructions.
+
+This guide ensures any public-facing copy about the project stays inside
+the non-functional exterior visual prop scope.
+
+SAFE WORDING (use freely)
+-------------------------
+  - non-functional exterior 3D prop
+  - visual rendering
+  - portfolio presentation
+  - game-asset display
+  - hard-surface exterior modelling
+  - material/lookdev exercise
+  - decorative exterior details
+  - safe visual prop workflow
+
+AVOID WORDING (do not use)
+--------------------------
+  - working AK
+  - functional firearm
+  - accurate weapon build
+  - manufacturable replica
+  - real assembly model
+  - firing mechanism
+  - internal reconstruction
+  - technical firearm blueprint
+  - full real weapon detail
+
+REWRITE EXAMPLES
+----------------
+
+  Unsafe : Accurate AK-47 model with full details.
+  Safer  : Non-functional AK-style exterior 3D prop focused on visual
+           silhouette, materials, and portfolio presentation.
+
+  Unsafe : Realistic weapon model ready for use.
+  Safer  : Exterior visual prop asset prepared for rendering and game-art
+           presentation.
+
+  Unsafe : Complete AK build breakdown.
+  Safer  : Phase-based exterior prop modelling workflow breakdown.
+
+PORTFOLIO CAPTION GUIDANCE
+--------------------------
+  - Start with "non-functional exterior 3D prop" the first time the
+    asset is named in a portfolio page.
+  - Describe materials by visual identity (dark blued steel, reddish-brown
+    wood, blackened matte metal, bakelite/polymer), not by claimed
+    manufacturing accuracy.
+  - For close-ups, describe surface treatment (edge wear, grain, cavity
+    AO) rather than the role of the depicted part.
+
+PUBLIC DESCRIPTION GUIDANCE
+---------------------------
+  - Lead with hard-surface modelling + material/lookdev framing.
+  - Mention "no internal mechanism, no working components" once early.
+  - Avoid claims of functional accuracy.
+  - Avoid the words "ammunition", "manufacturable", "blueprint" unless
+    they appear inside a "does not include" disclaimer.

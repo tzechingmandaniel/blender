@@ -1,0 +1,22 @@
+Mcp Prompt Template
+============================================================
+Scope reminder: non-functional exterior 3D prop only. No internal mechanism, no functional anything, no manufacturing dimensions, no real assembly instructions.
+
+Template for an MCP prompt that the executor follows:
+
+Phase N Prompt M -- <Short Title>
+==================================
+
+Open <previous-phase>.blend and save as <this-phase>.blend.
+
+Do <specific deliverable list, one bullet per output>.
+
+Hard scope: non-functional exterior prop only. No internal mechanism,
+no working trigger, no chamber/bolt/spring, no functional magazine,
+no bore, no rifling, no manufacturing dimensions, no real assembly
+instructions.
+
+After running:
+  [ ] <verifiable check 1>
+  [ ] <verifiable check 2>
+  [ ] <verifiable check 3>

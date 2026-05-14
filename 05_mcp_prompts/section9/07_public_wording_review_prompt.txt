@@ -1,0 +1,46 @@
+Phase 9 Prompt 7 — Public Wording Review
+=========================================
+
+Write post_delivery/05_public_safe_pack/public_wording_review.txt per §9.15.
+
+Required sections:
+
+  Safe wording (8 phrases):
+    non-functional exterior 3D prop
+    visual rendering
+    portfolio presentation
+    game-asset display
+    hard-surface exterior modelling
+    material/lookdev exercise
+    decorative exterior details
+    safe visual prop workflow
+
+  Avoid wording (9 phrases):
+    working AK
+    functional firearm
+    accurate weapon build
+    manufacturable replica
+    real assembly model
+    firing mechanism
+    internal reconstruction
+    technical firearm blueprint
+    full real weapon detail
+
+  Rewrite examples (3 pairs from §9.15):
+    Unsafe: "Accurate AK-47 model with full details."
+    Safer:  "Non-functional AK-style exterior 3D prop focused on visual
+             silhouette, materials, and portfolio presentation."
+
+    Unsafe: "Realistic weapon model ready for use."
+    Safer:  "Exterior visual prop asset prepared for rendering and
+             game-art presentation."
+
+    Unsafe: "Complete AK build breakdown."
+    Safer:  "Phase-based exterior prop modelling workflow breakdown."
+
+  Portfolio caption guidance + public description guidance.
+
+After running:
+  [ ] File exists + non-empty
+  [ ] All 3 sections present
+  [ ] Mentions scope reminder

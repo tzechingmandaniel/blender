@@ -1,0 +1,31 @@
+Phase 9 Prompt 2 — Post-Delivery Issue Tracker
+===============================================
+
+Write post_delivery/01_issue_tracker/post_delivery_issue_tracker.txt.
+
+Format (per §9.4):
+  Issue ID            (PD_ISSUE_NNN)
+  Date found          (YYYY-MM-DD)
+  Category            (Render / Texture / Export / Documentation /
+                       File structure / Public wording / Other)
+  Problem             (one-line description)
+  Where found         (relative file path)
+  Severity            (Low / Medium / High)
+  Recommended action  (Fix / Defer / Ignore / Archive note only)
+  Assigned phase      (6 / 7 / 8 / Post-delivery correction)
+  Status              (Open / In Progress / Fixed / Deferred / Closed)
+  Notes               (free text)
+
+Pre-populate with one informational entry:
+  PD_INFO_001  | today | Other | "No post-delivery issues observed at
+  handover; tracker initialised for future minor corrections." | -- |
+  Low | Archive note only | Post-delivery correction | Closed | --
+
+Hard scope: visual maintenance issues only. No functional content.
+
+After running:
+  [ ] Tracker file exists
+  [ ] Has the §9.4 field list
+  [ ] Has the 7 category list
+  [ ] PD_INFO_001 entry present
+  [ ] Mentions non-functional scope

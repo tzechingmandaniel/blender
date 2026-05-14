@@ -1,0 +1,28 @@
+Public Wording Template
+============================================================
+Scope reminder: non-functional exterior 3D prop only. No internal mechanism, no functional anything, no manufacturing dimensions, no real assembly instructions.
+
+Safe wording (use):
+  - non-functional exterior 3D prop
+  - visual rendering / portfolio presentation / game-asset display
+  - hard-surface exterior modelling
+  - material/lookdev exercise
+  - decorative exterior details
+
+Forbidden wording (use a negation-aware matcher, 250-char look-back):
+  - working <subject>
+  - functional <subject>
+  - manufacturable / manufacturing-ready
+  - real assembly instruction[s]
+  - technical <subject> reconstruction
+  - blueprint-level
+  - live ammunition
+
+Negation phrases to whitelist (these can precede a forbidden token):
+  no, not, does not, doesn't, without, exclude, excluded, avoid,
+  must not, should not, never, neither
+
+Rewrite pattern:
+  unsafe  : <claim of functional accuracy>
+  safer   : Non-functional exterior 3D prop focused on <materials /
+            silhouette / lookdev / portfolio presentation>.
