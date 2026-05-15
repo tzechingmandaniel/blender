@@ -1,0 +1,60 @@
+Archive Plan
+Non-functional AK-style Exterior 3D Prop
+============================================================
+
+ARCHIVE NAME
+------------
+AK47_NonFunctional_Prop_advanced_presentation_pack_YYYYMMDD.zip
+
+Replace YYYYMMDD with the date of archive creation (e.g. 20260514).
+
+
+INCLUDE
+-------
+- advanced_presentation_pack/                  (the whole folder)
+- selected portfolio renders                   (only the files referenced in
+                                                final_image_sequence.txt)
+- safe public captions                         (04_public_social_pack/)
+- website case study plan                      (02_website_case_study/)
+- ArtStation-style layout                      (03_artstation_style_layout/)
+- social post pack                             (04_public_social_pack/social_post_pack.txt)
+- thumbnail plan                               (06_thumbnail_and_cover/)
+- process breakdown                            (07_process_breakdown/)
+- submission pack                              (08_submission_pack/)
+- reusable presentation template               (09_reusable_presentation_template/)
+- publication checklist                        (10_publication_checklist/)
+
+
+EXCLUDE
+-------
+- unnecessary working files
+- unsafe wording drafts (any old draft that doesn't pass publication_checklist)
+- old failed captions
+- private notes / TODOs
+- unrelated files
+- raw reference dumps (00_references/ raw images — keep only safe excerpts
+  if needed for the process breakdown)
+- intermediate Blender saves not selected as final
+
+
+HOW TO BUILD THE ARCHIVE
+------------------------
+PowerShell (recommended on this machine):
+  $date = Get-Date -Format "yyyyMMdd"
+  Compress-Archive `
+    -Path advanced_presentation_pack `
+    -DestinationPath "AK47_NonFunctional_Prop_advanced_presentation_pack_$date.zip"
+
+Verify by opening the archive and confirming the 11 numbered subfolders
+are present at the top level.
+
+
+ARCHIVE CHECKLIST
+-----------------
+[ ] Archive created
+[ ] Archive opens (no corruption)
+[ ] advanced_presentation_pack/ included
+[ ] Selected renders included (or referenced if stored elsewhere)
+[ ] Public text included
+[ ] Reusable template included
+[ ] Unsafe drafts excluded

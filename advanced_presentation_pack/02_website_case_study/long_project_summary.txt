@@ -1,0 +1,33 @@
+Long Project Summary
+Non-functional AK-style Exterior 3D Prop
+============================================================
+
+This project is a non-functional AK-style exterior 3D prop created as a
+Blender hard-surface modelling, material lookdev, and portfolio presentation
+exercise. The project was structured across a phase-based workflow, starting
+with project setup and reference planning, then moving into rough blockout,
+major exterior part modelling, decorative exterior surface details, UV and
+material preparation, final texture/lookdev, render composition, turntable
+animation, and final delivery packaging.
+
+The main focus was not to create a functional or technical model, but to
+practise visual prop production: silhouette control, clean object
+organisation, material separation, worn dark metal, reddish-brown wood,
+blackened magazine finish, bakelite-style grip, controlled edge wear, and
+clean studio presentation. The final package includes the Blender scene,
+final still renders, close-up material renders, a turntable video, texture
+folders, documentation, and a public-safe presentation pack.
+
+This asset is intended only for visual rendering, portfolio presentation,
+and game-asset display. It does not include internal mechanisms, working
+firing components, manufacturing dimensions, or real assembly instructions.
+
+
+CHECKLIST
+---------
+[ ] Long summary written
+[ ] Workflow explained
+[ ] Visual focus explained
+[ ] Final outputs listed
+[ ] Safe scope included
+[ ] No functional details

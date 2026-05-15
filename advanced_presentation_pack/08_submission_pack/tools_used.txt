@@ -1,0 +1,45 @@
+Tools Used
+Non-functional AK-style Exterior 3D Prop
+============================================================
+
+TOOLS
+-----
+- Blender
+    Modelling, material setup, lighting, rendering, and turntable animation.
+    Used as the single DCC for the whole project — no external bake or
+    sculpt tools required.
+
+- Blender MCP
+    Structured prompt-based scene organisation and workflow support.
+    Used to drive section-level Python scripts (project setup, blockout,
+    etc.) from a phase plan.
+
+- Image references
+    Exterior silhouette and material references only. No technical
+    diagrams, no measurement-bearing references, no internal cutaways.
+
+- Texture and material workflow
+    Material groups for dark metal, blackened metal, wood, grip, seam
+    detail, edge wear, and roughness variation. Shared base textures
+    where appropriate; per-material adjustments via material slots.
+
+- Documentation workflow
+    Phase plans, issue trackers, render notes, export notes, and delivery
+    checklists. Each section produced its own short README.
+
+
+SCOPE
+-----
+The tools above were used to create a non-functional exterior visual prop
+only. No internal mechanisms, manufacturing dimensions, or real assembly
+instructions are included.
+
+
+CHECKLIST
+---------
+[ ] Blender included
+[ ] Blender MCP included if used
+[ ] Reference use explained safely
+[ ] Material workflow explained
+[ ] Documentation workflow mentioned
+[ ] Scope note included

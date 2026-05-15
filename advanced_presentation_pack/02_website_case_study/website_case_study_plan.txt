@@ -1,0 +1,125 @@
+Website Case Study Plan
+Non-functional AK-style Exterior 3D Prop
+============================================================
+
+PURPOSE
+-------
+Longer-form case study for a personal website. Walks a visitor through the
+project from goals to final result. Heavier on text than the portfolio page,
+but still image-led — each section should have at least one image.
+
+Target length: 600–900 words across the body sections (sections 2–9).
+
+
+1. HERO SECTION
+---------------
+- Title:          Non-functional AK-style Exterior 3D Prop
+- Hero image:     02_front_3quarter_hero.png
+- One-line:       Hard-surface exterior modelling and material lookdev study
+                  in Blender. Non-functional visual prop only.
+
+
+2. PROJECT OVERVIEW
+-------------------
+This project is a non-functional exterior 3D prop built as a hard-surface
+modelling and material lookdev exercise. The goal was to practise visual
+prop production — silhouette, modular object organisation, material
+separation, and studio render presentation — not to model a functional or
+technical firearm. The final package is intended for portfolio display and
+game-asset presentation.
+
+
+3. GOALS
+--------
+- Create a readable, recognisable exterior silhouette.
+- Use modular object organisation (one collection per major part group).
+- Practise hard-surface modelling discipline (clean topology, controlled
+  bevels, predictable normals).
+- Develop a dark metal / reddish-brown wood / blackened magazine / bakelite
+  grip material set with controlled edge wear.
+- Produce final studio renders, material close-ups, and a turntable.
+
+
+4. REFERENCE AND PLANNING
+-------------------------
+- Reference collection: exterior silhouette and material references only.
+- View planning: side, top, and front guide views set up in Blender.
+- Material reference planning: separate boards for metal, wood, magazine,
+  and grip.
+- Safe exterior-only scope confirmed at the start of the project.
+
+Recommended image: 00_references/reference_board.png (if safe to publish)
+or a clean blockout silhouette image.
+
+
+5. WORKFLOW
+-----------
+A. Project setup            — folder structure, naming, units, collections
+B. Blockout                 — rough silhouette and proportion
+C. Major exterior forms     — refined modular parts
+D. Minor decorative details — exterior surface detail pass
+E. UV and material setup    — UV unwrap, material slots, shared textures
+F. Final lookdev            — metal, wood, magazine, grip, edge wear
+G. Render and turntable     — studio lighting, hero render, close-ups, video
+H. Packaging                — final_delivery package and documentation
+
+Recommended images: one process-shot per stage (B, D, F, G).
+
+
+6. CHALLENGES
+-------------
+- Controlling proportion across many modular parts.
+- Avoiding over-detailing exterior surfaces.
+- Organising files and versioned saves cleanly.
+- Balancing the four material groups so none dominates.
+- Keeping all public-facing wording within a safe, non-functional scope.
+
+
+7. SOLUTIONS
+------------
+- Phase-based workflow with a clear deliverable per phase.
+- Versioned .blend files (v01_project_setup, v02_blockout, …).
+- Named collections per part group; consistent BLK_ / AK_ / MAT_ prefixes.
+- Material groups instead of one-off materials per object.
+- Per-phase render and export checklists.
+- Safe scope notes embedded in documentation and READMEs.
+
+
+8. FINAL RESULT
+---------------
+- Blender file:    final_delivery/01_blender_final/AK47_exterior_prop_final.blend
+- Renders:         final_delivery/04_final_renders/ (full model + close-ups)
+- Turntable:       final_delivery/05_turntable/turntable_ak_style_exterior_prop.mp4
+- Textures:        final_delivery/03_textures/ (metal, wood, magazine, grip, shared)
+- Exports:         final_delivery/02_exports/ (fbx, glb, obj)
+- Documentation:   final_delivery/06_documentation/
+
+
+9. REFLECTION
+-------------
+What improved during this project:
+- Planning discipline — phase-based workflow kept scope under control.
+- Modelling workflow — modular collections made re-work cheap.
+- Material judgement — the four material groups read clearly at distance.
+- Render presentation — hero + close-up + turntable feels like a complete set.
+- Packaging — separating public pack from working files saved publication time.
+
+
+10. SAFE SCOPE NOTE
+-------------------
+Non-functional exterior visual prop only.
+No internal mechanisms, working components, manufacturing dimensions,
+or real assembly instructions are included or implied.
+
+
+CHECKLIST
+---------
+[ ] Hero section planned
+[ ] Overview written
+[ ] Goals listed
+[ ] Workflow listed
+[ ] Challenges listed
+[ ] Solutions listed
+[ ] Final result written
+[ ] Reflection written
+[ ] Safe scope included

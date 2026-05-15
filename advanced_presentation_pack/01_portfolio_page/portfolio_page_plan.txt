@@ -1,0 +1,96 @@
+Portfolio Page Plan
+Non-functional AK-style Exterior 3D Prop
+============================================================
+
+PURPOSE
+-------
+Short, visual-first portfolio page suitable for a personal portfolio site,
+ArtStation project page header, or LinkedIn featured item. This is NOT the
+long case study (see 02_website_case_study/).
+
+Keep it under one scroll. Lead with the strongest image.
+
+
+1. TITLE
+--------
+Non-functional AK-style Exterior 3D Prop
+
+
+2. HERO IMAGE
+-------------
+File: 02_front_3quarter_hero.png
+Location (when rendered): final_delivery/04_final_renders/portfolio_selected/
+
+If 02_front_3quarter_hero.png is too busy, fall back to 01_side_profile.png.
+
+
+3. ONE-SENTENCE SUMMARY
+-----------------------
+A non-functional exterior 3D prop created for hard-surface modelling,
+material lookdev, and portfolio presentation.
+
+
+4. PROJECT FOCUS
+----------------
+- exterior silhouette
+- modular asset organisation
+- material separation
+- worn metal and wood lookdev
+- final render and turntable presentation
+
+
+5. FINAL RENDERS (display order)
+--------------------------------
+1. hero render          (02_front_3quarter_hero.png)
+2. side profile         (01_side_profile.png)
+3. rear 3/4             (03_rear_3quarter.png)
+4. top angle            (04_top_angle.png)
+5. receiver close-up    (05_closeup_receiver_metal.png)
+6. wood close-up        (06_closeup_wood_stock.png)
+7. magazine close-up    (08_closeup_magazine.png)
+8. grip close-up        (10_closeup_grip.png)
+
+
+6. PROCESS SUMMARY (4 steps)
+----------------------------
+1. Blockout            — rough exterior silhouette and proportion
+2. Major forms         — refined exterior parts, modular objects
+3. Surface details     — decorative exterior detail pass
+4. Materials & renders — lookdev, studio renders, turntable
+
+
+7. TOOLS
+--------
+- Blender                  (modelling, materials, lighting, rendering, turntable)
+- Blender MCP              (structured prompt-based workflow support)
+- Image references         (exterior silhouette and material reference only)
+- Texture/material workflow (metal, wood, magazine finish, grip, edge wear)
+
+
+8. SAFETY / SCOPE NOTE
+----------------------
+This is a non-functional exterior visual prop only.
+No internal mechanisms, working components, manufacturing dimensions,
+or real assembly instructions are included or implied.
+
+
+PORTFOLIO PAGE RULES
+--------------------
+1. Keep it visual-first.
+2. Do not write long paragraphs.
+3. Use safe wording.
+4. Do not include technical firearm details.
+5. Do not include dimensions.
+6. Do not show internal/cutaway views.
+
+
+CHECKLIST
+---------
+[ ] Title written
+[ ] Hero image selected
+[ ] One-sentence summary written
+[ ] Project focus listed
+[ ] Render order selected
+[ ] Process summary written
+[ ] Tools listed
+[ ] Safe scope note included

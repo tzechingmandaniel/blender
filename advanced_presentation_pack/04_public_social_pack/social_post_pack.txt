@@ -1,0 +1,75 @@
+Public Social Post Pack
+Non-functional AK-style Exterior 3D Prop
+============================================================
+
+PURPOSE
+-------
+Ready-to-paste post copy for social platforms. All variants are public-safe
+and emphasise the non-functional exterior visual prop scope.
+
+
+MEDIUM POST  (ArtStation description, LinkedIn body, Mastodon)
+--------------------------------------------------------------
+Finished a non-functional exterior 3D prop study in Blender, focused on
+hard-surface modelling, material separation, dark worn metal, reddish-brown
+wood, blackened metal finish, bakelite-style grip, edge wear, studio renders,
+and turntable presentation.
+
+This was mainly a workflow and lookdev exercise: blockout → major forms →
+decorative exterior details → UV/material setup → final renders and
+delivery package.
+
+Non-functional visual prop only.
+
+
+SHORT POST  (X / Bluesky / Threads)
+-----------------------------------
+Blender hard-surface exterior prop study — focused on silhouette, modular
+modelling, worn metal, wood material, edge wear, studio renders, and
+turntable presentation. Non-functional visual prop only.
+
+
+TURNTABLE CAPTION  (one-line, for the video itself)
+---------------------------------------------------
+Turntable for a non-functional AK-style exterior 3D prop — hard-surface
+modelling and material lookdev study in Blender.
+
+
+HASHTAG SUGGESTIONS  (safe, on-topic)
+-------------------------------------
+#Blender3D
+#HardSurfaceModeling
+#GameArt
+#3DProp
+#Lookdev
+#Portfolio
+
+
+HASHTAGS / PHRASES TO AVOID
+---------------------------
+#firearms
+#weaponbuild
+#gunsmithing
+#blueprint
+#realweapon
+#tactical
+Also avoid wording like "build", "assembly", "load", "fire", "spec",
+"caliber", "ballistic", "milspec", "real-scale measurements".
+
+
+POSTING NOTES
+-------------
+- Lead with the hero image; do not lead with a close-up.
+- Keep the post text shorter than the platform limit so previews are clean.
+- If using a thread, put process shots in replies, not in the lead post.
+- Do not tag firearm manufacturers, gunsmithing accounts, or weapon-build
+  communities — keep the project in the 3D-art / lookdev space.
+
+
+CHECKLIST
+---------
+[ ] Social post written
+[ ] Short version written
+[ ] Safe hashtags selected
+[ ] Unsafe hashtags avoided
+[ ] Non-functional wording included

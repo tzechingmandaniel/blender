@@ -1,0 +1,66 @@
+Publication Checklist
+Non-functional AK-style Exterior 3D Prop
+============================================================
+
+PURPOSE
+-------
+Final pre-publication check. Run through every item before posting anywhere
+public. If any unsafe item is checked, do NOT publish — fix first.
+
+
+IMAGES
+------
+[ ] Hero image selected
+[ ] Side profile selected
+[ ] Material close-ups selected
+[ ] Weak renders removed
+[ ] No guide/reference/blockout objects visible in any final image
+[ ] No internal/cutaway images
+[ ] No dimensions or blueprint overlays
+
+
+TEXT
+----
+[ ] Short summary safe
+[ ] Long summary safe
+[ ] Captions safe
+[ ] Social post safe
+[ ] Case study wording safe
+[ ] No functional claims (e.g. "fires", "loads", "chambers", "cycles")
+[ ] No manufacturing wording (e.g. "tolerances", "spec", "milspec")
+[ ] No real assembly wording (e.g. "assembly instructions", "build guide")
+
+
+VIDEO  (turntable)
+------------------
+[ ] Turntable plays smoothly (no stutters or frame drops)
+[ ] No functional part animation (no moving bolt, trigger, magazine)
+[ ] No hidden objects accidentally visible in any frame
+[ ] Neutral presentation (no tactical staging, no environment context)
+
+
+FILES
+-----
+[ ] Public pack separated from full delivery package
+[ ] Only selected images included in the public pack
+[ ] No private notes (TODOs, internal comments) included
+[ ] No messy prompt dumps included
+[ ] No unnecessary working files included
+
+
+FINAL DECISION
+--------------
+[ ] Ready to publish
+[ ] Needs minor text fix
+[ ] Needs image replacement
+[ ] Not ready
+
+
+NOTES (optional)
+----------------
+If "needs minor text fix" or "needs image replacement", record the specific
+item below before unblocking publication:
+
+  -
+  -
+  -

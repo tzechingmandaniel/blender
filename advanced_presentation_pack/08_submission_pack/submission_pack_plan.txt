@@ -1,0 +1,59 @@
+Submission Pack Plan
+Non-functional AK-style Exterior 3D Prop
+============================================================
+
+PURPOSE
+-------
+Optional package for submitting the project to a teacher, client, reviewer,
+or portfolio platform. Bundles only the final selected content — not the
+full working tree.
+
+
+CONTENTS
+--------
+1.  cover_image.png                  (= 02_front_3quarter_hero.png)
+2.  project_summary_short.txt        (Option B from 04_public_social_pack/)
+3.  project_summary_long.txt         (= 02_website_case_study/long_project_summary.txt)
+4.  selected_render_list.txt         (the 13 entries from 05_image_sequence/final_image_sequence.txt)
+5.  portfolio_captions.txt           (captions from 07_process_breakdown/)
+6.  final_turntable_link_or_file.txt (file path OR upload URL for turntable .mp4)
+7.  workflow_summary.txt             (= section 5 of website_case_study_plan.txt)
+8.  tools_used.txt                   (see tools_used.txt in this folder)
+9.  scope_and_safety_note.txt        (non-functional exterior visual prop note)
+10. file_inventory.txt               (see file_inventory.txt in this folder)
+
+
+FILE INVENTORY SHOULD LIST
+--------------------------
+- final .blend
+- final renders (full model + close-ups + portfolio_selected/)
+- turntable .mp4
+- exports (fbx / glb / obj)
+- textures (metal / wood / magazine / grip / shared)
+- documentation
+
+
+SUBMISSION PACK RULES
+---------------------
+1. Include only final selected content.
+2. Do not include all working files unless the reviewer asks for them.
+3. Keep public-safe wording throughout.
+4. Avoid technical weapon language in filenames and captions.
+5. Include the scope and safety note as its own file — do not hide it
+   inside a summary.
+6. Name the archive with the date:
+     AK47_NonFunctional_Prop_submission_pack_YYYYMMDD.zip
+
+
+CHECKLIST
+---------
+[ ] Cover image included
+[ ] Summary (short) included
+[ ] Summary (long) included
+[ ] Selected renders listed
+[ ] Captions included
+[ ] Turntable included
+[ ] Workflow summary included
+[ ] Tools listed
+[ ] Scope and safety note included
+[ ] File inventory included

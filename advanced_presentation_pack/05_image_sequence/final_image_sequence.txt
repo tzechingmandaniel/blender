@@ -1,0 +1,102 @@
+Final Image Sequence
+Non-functional AK-style Exterior 3D Prop
+============================================================
+
+PURPOSE
+-------
+Canonical, ordered list of images and the turntable video used across all
+presentation surfaces (portfolio page, website case study, ArtStation,
+submission pack). Other documents reference this order — do not reorder
+without updating them.
+
+All source files live in:
+  final_delivery/04_final_renders/portfolio_selected/
+  final_delivery/05_turntable/
+
+
+SEQUENCE
+--------
+
+01_cover_hero
+    File:    02_front_3quarter_hero.png
+    Purpose: lead image, used as cover and thumbnail base
+
+02_side_silhouette
+    File:    01_side_profile.png
+    Purpose: silhouette reading at a glance
+
+03_rear_volume
+    File:    03_rear_3quarter.png
+    Purpose: rear 3/4 to show volume from the back
+
+04_top_volume
+    File:    04_top_angle.png
+    Purpose: top angle to show flat-plane forms
+
+05_receiver_material
+    File:    05_closeup_receiver_metal.png
+    Purpose: dark worn metal lookdev
+
+06_wood_material
+    File:    06_closeup_wood_stock.png
+    Purpose: reddish-brown wood stock lookdev
+
+07_handguard_material
+    File:    07_closeup_handguard_wood.png
+    Purpose: handguard wood — same family, different surface treatment
+
+08_magazine_material
+    File:    08_closeup_magazine.png
+    Purpose: blackened magazine finish
+
+09_grip_material
+    File:    10_closeup_grip.png
+    Purpose: bakelite-style grip
+
+10_edgewear_detail
+    File:    11_closeup_edgewear.png
+    Purpose: controlled edge wear, paint-rub detail
+
+11_optional_clay
+    File:    12_clay_full_model.png
+    Purpose: optional — clay render to show form without materials
+
+12_optional_wireframe
+    File:    13_wireframe_full_model.png
+    Purpose: optional — wireframe to show modelling discipline
+
+13_turntable
+    File:    turntable_ak_style_exterior_prop.mp4
+    Purpose: final motion presentation
+
+
+IMAGE SEQUENCE RULES
+--------------------
+1. Start with strongest hero image.
+2. Show full model before close-ups.
+3. Show close-ups by material group (metal → wood → magazine → grip → wear).
+4. Put optional technical/art breakdown (clay, wireframe) near the end.
+5. End with turntable.
+6. Do not include weak renders — if a render is weak, remove it from the
+   sequence rather than burying it.
+7. Do not include unsafe technical views (cutaways, internals, blueprints).
+
+
+WHERE THIS SEQUENCE IS USED
+---------------------------
+- 01_portfolio_page/portfolio_page_plan.txt    (subset: 01–04, 05–06, 08, 09)
+- 02_website_case_study/website_case_study_plan.txt (one image per section)
+- 03_artstation_style_layout/                  (full sequence, two strips)
+- 07_process_breakdown/process_breakdown_plan.txt (process shots + 01, 13)
+- 08_submission_pack/                          (full sequence)
+
+
+CHECKLIST
+---------
+[ ] Cover selected
+[ ] Full model sequence selected
+[ ] Close-up sequence selected
+[ ] Optional breakdown placed near end
+[ ] Turntable placed last
+[ ] Weak images removed
+[ ] Unsafe views excluded

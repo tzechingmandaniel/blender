@@ -1,0 +1,113 @@
+Reusable Presentation Template
+For future non-functional exterior 3D prop projects
+============================================================
+
+HOW TO USE
+----------
+Copy this file into a new project's advanced_presentation_pack folder and
+fill in the [bracketed] placeholders. Keep the safe-scope note as-is unless
+the new project explicitly is a different type of asset.
+
+
+--- BEGIN TEMPLATE ---
+
+PROJECT TITLE
+-------------
+[ProjectName] — Non-functional Exterior 3D Prop
+
+
+ONE-LINE SUMMARY
+----------------
+A non-functional exterior 3D prop created for hard-surface modelling,
+material lookdev, and portfolio/game-asset presentation.
+
+
+HERO IMAGE
+----------
+[hero_image.png]
+
+
+PROJECT FOCUS
+-------------
+- exterior silhouette
+- modular modelling
+- material separation
+- decorative exterior detail
+- UV/material workflow
+- final renders
+- turntable
+
+
+WORKFLOW
+--------
+1. Project setup
+2. Blockout
+3. Major forms
+4. Decorative exterior details
+5. UV/material preparation
+6. Texture/lookdev
+7. Render/turntable/export
+8. Final delivery
+
+
+IMAGE SEQUENCE
+--------------
+1. hero render
+2. side profile
+3. rear 3/4
+4. top angle
+5. material close-up 1 — [material name]
+6. material close-up 2 — [material name]
+7. material close-up 3 — [material name]
+8. material close-up 4 — [material name]
+9. edge wear / detail close-up
+10. optional clay / wireframe
+11. turntable video
+
+
+FINAL OUTPUTS
+-------------
+- Blender file
+- renders (full model + close-ups + portfolio_selected)
+- turntable video
+- exports (fbx / glb / obj)
+- texture folders (per material group + shared)
+- documentation
+
+
+PUBLIC CAPTIONS
+---------------
+Short:  [one-sentence caption — describes the prop and the workflow focus]
+Medium: [2–3 sentence caption — adds workflow stages and final outputs]
+Long:   [paragraph — see long_project_summary.txt for the pattern]
+
+
+SAFE SCOPE NOTE
+---------------
+This project is a non-functional exterior visual prop only. It does not
+include internal mechanisms, working components, manufacturing dimensions,
+or real assembly instructions.
+
+
+--- END TEMPLATE ---
+
+
+TEMPLATE RULES
+--------------
+1. Replace [ProjectName] and [hero_image.png] with the new project's values.
+2. Replace material close-up entries with the new material set.
+3. Keep the safe scope note unless the new project is explicitly out of
+   this template's scope (e.g. a non-weapon prop) — in which case rewrite
+   the scope note for that asset type.
+4. Remove object-specific wording from captions before reusing.
+5. Keep all public-facing wording concise.
+
+
+CHECKLIST
+---------
+[ ] Generic title included
+[ ] Generic summary included
+[ ] Workflow included
+[ ] Final outputs included
+[ ] Safe scope included
+[ ] Template is reusable

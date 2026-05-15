@@ -1,0 +1,71 @@
+Final Presentation Quality Gate
+Non-functional AK-style Exterior 3D Prop
+============================================================
+
+GATE RESULT
+-----------
+[ ] PASS
+[ ] PASS WITH MINOR FIXES
+[ ] FAIL
+
+Date evaluated: ____________________
+Evaluator:      ____________________
+
+
+A. VISUAL QUALITY
+-----------------
+[ ] Hero image strong (reads at thumbnail size)
+[ ] Image sequence logical (hero → full views → close-ups → optional → turntable)
+[ ] Close-ups show material quality clearly
+[ ] Thumbnail readable at 100x100 px
+[ ] Turntable works (plays end-to-end, no stutters)
+[ ] No weak images included
+
+
+B. TEXT QUALITY
+---------------
+[ ] Summary clear (Option A/B/C from short_project_summary.txt)
+[ ] Case study readable (sections 1–10 of website_case_study_plan.txt)
+[ ] Captions concise (1–2 lines each in process breakdown)
+[ ] Process breakdown useful (six sections, no more)
+[ ] Tools listed clearly (Blender, Blender MCP, refs, materials, docs)
+[ ] No unnecessary long text
+
+
+C. PUBLIC SAFETY
+----------------
+[ ] Non-functional wording included
+[ ] Exterior visual prop wording included
+[ ] No functional firearm claims
+[ ] No manufacturing wording
+[ ] No internal mechanisms shown
+[ ] No real assembly instructions
+[ ] No dimensions or blueprint framing
+
+
+D. PACKAGE QUALITY
+------------------
+[ ] Public pack separated
+[ ] Submission pack complete (10 items per submission_pack_plan.txt)
+[ ] File inventory clear
+[ ] Reusable template created
+[ ] Archive ready
+
+
+DECISION
+--------
+[ ] Publish now
+[ ] Fix captions first
+[ ] Replace image first
+[ ] Review safety wording first
+[ ] Do not publish yet
+
+
+NOTES
+-----
+(Record any "fix first" items with enough detail that they can be acted on
+without re-reading the case study.)
+
+  -
+  -
+  -

@@ -1,0 +1,24 @@
+Scope and Safety Note
+Non-functional AK-style Exterior 3D Prop
+============================================================
+
+This project is a non-functional exterior 3D visual prop, created in
+Blender for portfolio presentation, hard-surface modelling practice,
+material lookdev, and game-asset display.
+
+It does NOT include:
+- internal firearm mechanisms
+- a working trigger system
+- chamber, bolt, spring, or firing components
+- a functional magazine system
+- bore, rifling, or functional barrel details
+- manufacturing dimensions or tolerances
+- blueprint-level technical modelling
+- real weapon assembly instructions
+- functional disassembly details
+- moving mechanical weapon parts
+
+The model is intended only for visual rendering, portfolio presentation,
+and game-asset display. Any resemblance to a real firearm is silhouette-
+and surface-level only — there is no functional, mechanical, or
+manufacturing content in the model or in its documentation.

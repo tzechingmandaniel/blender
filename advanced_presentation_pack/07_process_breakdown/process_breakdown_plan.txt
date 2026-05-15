@@ -1,0 +1,73 @@
+Process Breakdown Plan
+Non-functional AK-style Exterior 3D Prop
+============================================================
+
+PURPOSE
+-------
+Short, public-safe process breakdown for ArtStation and the website case
+study. Each section has ONE image and ONE caption. Captions are 1–2 lines.
+Focus is on art workflow, not technical detail.
+
+
+1. REFERENCE AND SETUP
+----------------------
+Image:   folder structure screenshot OR safe reference board excerpt
+Caption: Project setup focused on clean folder structure, references,
+         collections, and non-functional exterior prop scope.
+
+
+2. BLOCKOUT
+-----------
+Image:   simple blockout — side silhouette preferred
+Caption: Rough blockout used to establish exterior silhouette, part
+         separation, and 3D volume before detail work.
+
+
+3. MAJOR FORMS
+--------------
+Image:   refined major parts — full model in clay or unlit
+Caption: Major exterior parts were refined from the blockout while keeping
+         objects modular and editable.
+
+
+4. DECORATIVE EXTERIOR DETAILS
+------------------------------
+Image:   receiver close-up OR magazine close-up OR wood detail
+Caption: Decorative surface details were added to support visual realism
+         without introducing functional mechanisms.
+
+
+5. MATERIALS AND LOOKDEV
+------------------------
+Image:   material close-up grid (4 thumbnails) OR a single hero material shot
+Caption: Final lookdev focused on worn dark metal, reddish-brown wood,
+         blackened magazine material, bakelite-style grip, controlled edge
+         wear, and subtle roughness variation.
+
+
+6. FINAL PRESENTATION
+---------------------
+Image:   02_front_3quarter_hero.png + turntable thumbnail
+Caption: Final presentation includes studio renders, material close-ups,
+         a turntable animation, and a clean delivery package.
+
+
+PROCESS RULES
+-------------
+1. Keep the process short — six sections, no more.
+2. Avoid technical weapon details.
+3. Do not show internal diagrams.
+4. Do not include measurements or dimension callouts.
+5. Focus on art workflow, not engineering.
+6. One image per section is enough — resist adding more.
+
+
+CHECKLIST
+---------
+[ ] Reference/setup section written
+[ ] Blockout section written
+[ ] Major forms section written
+[ ] Exterior details section written
+[ ] Materials section written
+[ ] Final presentation section written
+[ ] Safe wording used

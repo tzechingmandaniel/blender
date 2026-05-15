@@ -1,0 +1,62 @@
+Thumbnail and Cover Plan
+Non-functional AK-style Exterior 3D Prop
+============================================================
+
+PURPOSE
+-------
+The thumbnail should make people click while still representing the project
+accurately and safely. The cover image is the larger version of the same
+hero shot used at the top of the project page.
+
+
+COVER IMAGE
+-----------
+Primary:     02_front_3quarter_hero.png
+Alternative: 01_side_profile.png  (use if hero is too busy or background
+             contrast is weak)
+Aspect:      Match destination platform (1920x1080 portfolio, 1500x844
+             ArtStation, square crops for social).
+Background:  Neutral, low-contrast. Avoid scene context (no environment,
+             no surfaces that imply use).
+
+
+THUMBNAIL
+---------
+Source:      Crop from 02_front_3quarter_hero.png
+Crop rules:
+- Focus on full prop silhouette — keep the whole prop in frame.
+- Show metal/wood material contrast clearly (both groups visible).
+- Do not cut off too much of the model — silhouette must read.
+- No text if the image is strong on its own.
+- Optional small text: "Exterior 3D Prop".
+- Readable at small size — check at 200x200 px and at 100x100 px before
+  approving.
+
+
+THUMBNAIL RULES
+---------------
+1. Use a neutral background.
+2. Avoid aggressive scene context (tactical staging, action poses, etc.).
+3. Avoid technical-diagram look (no callouts, no measurement lines).
+4. Avoid showing the prop as usable.
+5. Keep it clean and professional.
+6. Do not include dimensions or blueprint overlays.
+
+
+PLATFORM-SPECIFIC NOTES
+-----------------------
+ArtStation:    Use 02_front_3quarter_hero.png as cover; thumbnail is auto-
+               generated but can be overridden — supply a square-safe crop.
+Personal site: Use cover at hero section; thumbnail used in project grid.
+LinkedIn:      Square crop. Heavier breathing room; small text overlay OK.
+Social posts:  Square crop. No text overlay needed if reusing portfolio art.
+
+
+CHECKLIST
+---------
+[ ] Hero render selected
+[ ] Crop planned
+[ ] Text/no-text decision made
+[ ] Safe context confirmed
+[ ] Thumbnail readable at small size
+[ ] No technical blueprint styling

@@ -1,0 +1,50 @@
+Short Project Summary
+Non-functional AK-style Exterior 3D Prop
+============================================================
+
+PURPOSE
+-------
+Short summary, 1–3 sentences. Used in portfolio cards, social post bodies,
+LinkedIn featured items, and submission pack. Pick ONE option and stay
+consistent across surfaces.
+
+
+OPTION A  (most descriptive)
+----------------------------
+Non-functional AK-style exterior 3D prop created as a Blender hard-surface
+modelling and material lookdev study. Focus areas included exterior
+silhouette, modular object organisation, dark metal, reddish-brown wood,
+blackened magazine material, bakelite-style grip, controlled edge wear,
+studio renders, and turntable presentation.
+
+
+OPTION B  (workflow-focused)
+----------------------------
+A non-functional exterior visual prop made for portfolio and game-asset
+presentation. This project focused on hard-surface modelling workflow,
+material separation, worn metal/wood lookdev, close-up render presentation,
+and final delivery packaging.
+
+
+OPTION C  (shortest)
+--------------------
+Blender exterior prop study focused on silhouette, hard-surface forms,
+material lookdev, edge wear, studio rendering, and clean asset delivery.
+Non-functional visual prop only.
+
+
+RECOMMENDATION
+--------------
+Default to Option A for the portfolio page and ArtStation description.
+Use Option C for social post bodies and LinkedIn descriptions.
+Use Option B in the submission pack project_summary_short.txt.
+
+
+CHECKLIST
+---------
+[ ] Short summary written
+[ ] Non-functional stated
+[ ] Exterior visual prop stated
+[ ] Visual/render/game-asset purpose stated
+[ ] No functional wording
+[ ] No technical weapon wording

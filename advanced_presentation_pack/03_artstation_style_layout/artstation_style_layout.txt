@@ -1,0 +1,97 @@
+ArtStation-style Layout Plan
+Non-functional AK-style Exterior 3D Prop
+============================================================
+
+PURPOSE
+-------
+Image-led layout for an ArtStation-style project page. Captions are short.
+Text blocks are minimal. The strongest image leads.
+
+
+1. COVER IMAGE
+--------------
+File:    02_front_3quarter_hero.png
+Crop:    full prop visible, neutral background, slight breathing room
+
+
+2. TITLE AND TAGLINE
+--------------------
+Title:   Non-functional AK-style Exterior 3D Prop
+Tagline: Hard-surface exterior modelling and material lookdev study.
+
+
+3. FULL MODEL IMAGE STRIP
+-------------------------
+Order (left to right or top to bottom):
+1. 01_side_profile.png        — side silhouette
+2. 02_front_3quarter_hero.png — front 3/4 hero
+3. 03_rear_3quarter.png       — rear 3/4
+4. 04_top_angle.png           — top angle
+
+
+4. MATERIAL CLOSE-UP STRIP
+--------------------------
+Order:
+1. 05_closeup_receiver_metal.png — receiver metal
+2. 06_closeup_wood_stock.png     — wood stock
+3. 07_closeup_handguard_wood.png — handguard wood
+4. 08_closeup_magazine.png       — magazine
+5. 10_closeup_grip.png           — grip
+
+
+5. PROCESS BREAKDOWN STRIP
+--------------------------
+Order:
+1. blockout              (single image, side silhouette)
+2. major forms           (single image, refined parts)
+3. decorative details    (single image, surface detail close-up)
+4. final material/render (single image, hero render or material close-up)
+
+
+6. TURNTABLE EMBED
+------------------
+File:    turntable_ak_style_exterior_prop.mp4
+Where:   Embed as video; place between material strip and tool notes
+Length:  Short (under 20 seconds preferred)
+
+
+7. TOOL AND WORKFLOW NOTES
+--------------------------
+Keep this as a short bullet list, not a paragraph.
+
+Tools:
+- Blender (modelling, materials, lighting, rendering, turntable)
+- Blender MCP (prompt-based workflow support)
+
+Workflow:
+- Phase-based: setup → blockout → major forms → details → materials → renders
+- Modular collections per part group
+- Shared material set across part groups
+
+
+8. SAFE SCOPE NOTE
+------------------
+Non-functional exterior visual prop only. No internal mechanisms,
+working components, manufacturing dimensions, or real assembly
+instructions are included or implied.
+
+
+ARTSTATION-STYLE RULES
+----------------------
+1. Lead with the strongest image.
+2. Avoid too many text blocks.
+3. Use image captions, not long paragraphs.
+4. Do not include dimensions.
+5. Do not show technical internal diagrams.
+6. Keep safe wording.
+
+
+CHECKLIST
+---------
+[ ] Cover image chosen
+[ ] Image strip order created
+[ ] Material close-up order created
+[ ] Process breakdown selected
+[ ] Turntable included
+[ ] Tool notes short
+[ ] Safe scope note included

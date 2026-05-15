@@ -1,0 +1,68 @@
+File Inventory
+Non-functional AK-style Exterior 3D Prop
+============================================================
+
+PURPOSE
+-------
+Authoritative list of every file the submission pack references. Paths are
+relative to the project root.
+
+
+FINAL BLENDER FILE
+------------------
+- final_delivery/01_blender_final/AK47_exterior_prop_final.blend
+
+
+FINAL RENDERS
+-------------
+- final_delivery/04_final_renders/full_model/
+- final_delivery/04_final_renders/closeups/
+- final_delivery/04_final_renders/portfolio_selected/
+
+
+TURNTABLE
+---------
+- final_delivery/05_turntable/turntable_ak_style_exterior_prop.mp4
+
+
+EXPORTS
+-------
+- final_delivery/02_exports/fbx/
+- final_delivery/02_exports/glb/
+- final_delivery/02_exports/obj/
+
+
+TEXTURES
+--------
+- final_delivery/03_textures/metal/
+- final_delivery/03_textures/wood/
+- final_delivery/03_textures/magazine/
+- final_delivery/03_textures/grip/
+- final_delivery/03_textures/shared/
+
+
+DOCUMENTATION
+-------------
+- final_delivery/06_documentation/
+
+
+PUBLIC PACK
+-----------
+- final_delivery/07_public_pack/
+
+
+ADVANCED PRESENTATION
+---------------------
+- advanced_presentation_pack/
+
+
+INVENTORY CHECKLIST
+-------------------
+[ ] Final .blend listed
+[ ] Renders listed
+[ ] Turntable listed
+[ ] Exports listed
+[ ] Textures listed
+[ ] Documentation listed
+[ ] Public pack listed
+[ ] Presentation pack listed
