@@ -1,0 +1,32 @@
+Section 3 — Receiver Prompt (§3.6, §3.19.2)
+============================================
+
+Refine only the receiver exterior major part for the non-functional AK-style
+3D prop. AK_receiver_main already exists as a duplicate of BLK_receiver_main
+in 03_MAJOR_PARTS/03A_receiver.
+
+Tasks:
+  1. Confirm AK_receiver_main is the active edit target (BLK_receiver_main
+     remains hidden in 03H_major_part_backup as backup).
+  2. Improve exterior silhouette versus the locked side reference:
+       - Keep rectangular hard-surface body.
+       - Add slight variation on upper and lower silhouette edges.
+       - Add shallow exterior plate-like surface depth (raised side panel).
+       - Keep front and rear boundaries clear.
+  3. Modifier stack — replace any Section-2 bevel/weighted-normal stack with:
+       - Bevel    : width=0.0018, segments=2, limit=ANGLE 30°  (small, hard metal feel)
+       - Weighted normal : weight=50, threshold=0.01, keep_sharp=True
+  4. Ensure MAT_placeholder_dark_metal is the only material slot.
+  5. Sanity-check from side, top, and 3/4 view: still central, still aligned
+     with magazine well and stock connection.
+
+Do not add:
+  - Real internal openings, bolt path, chamber, trigger mechanism.
+  - Real receiver construction details.
+
+Allowed details:
+  - Basic raised side plate area.
+  - Basic shallow panel shapes.
+  - Decorative exterior surface steps.
+
+Stop at this part. Each major part is refined in its own prompt.

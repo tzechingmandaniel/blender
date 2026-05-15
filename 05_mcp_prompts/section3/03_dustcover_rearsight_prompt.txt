@@ -1,0 +1,29 @@
+Section 3 — Dust Cover and Rear Sight Prompt (§3.7, §3.15, §3.19.8)
+====================================================================
+
+Refine only the dust cover and rear sight exterior parts. AK_dustcover_main
+and AK_rear_sight_visual already exist as duplicates in
+03_MAJOR_PARTS/03A_receiver and 03_MAJOR_PARTS/03G_sights respectively.
+
+Dust cover (AK_dustcover_main):
+  - Confirm it sits visually above AK_receiver_main without merging.
+  - Improve top curve: lift centre slightly, taper toward front/rear ends.
+  - Modifier stack:
+      Bevel    : width=0.0015, segments=2, limit=ANGLE 30°
+      Weighted normal : weight=50, threshold=0.01, keep_sharp=True
+  - Material: MAT_placeholder_dark_metal (single slot).
+  - Do not add ribs, locking details, or internal cover geometry yet.
+
+Rear sight (AK_rear_sight_visual):
+  - Confirm it sits on top of dust cover / front receiver area.
+  - Keep silhouette simple — small raised top element.
+  - Modifier stack:
+      Bevel    : width=0.0010, segments=2, limit=ANGLE 30°
+      Weighted normal : weight=50, threshold=0.01, keep_sharp=True
+  - Material: MAT_placeholder_dark_metal (single slot).
+  - Do not add adjustment scale, sight leaf mechanism, or functional pivot.
+
+Sanity-check from side and 3/4: dust cover sits cleanly above receiver,
+rear sight is visible but does not dominate.
+
+Stop at these parts.

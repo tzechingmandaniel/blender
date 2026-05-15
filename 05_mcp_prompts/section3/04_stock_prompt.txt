@@ -1,0 +1,33 @@
+Section 3 — Stock Prompt (§3.8, §3.19.3)
+=========================================
+
+Refine only the wooden buttstock exterior major part. AK_stock_main already
+exists as a duplicate in 03_MAJOR_PARTS/03B_stock.
+
+Tasks for AK_stock_main:
+  1. Confirm the existing taper from BLK_stock_main is preserved
+     (front toward receiver narrower than rear butt end).
+  2. Round the rear butt end (apply a slightly larger bevel to the rear
+     vertical edges).
+  3. Apply modifier stack:
+       Bevel    : width=0.0035, segments=3, limit=ANGLE 35°  (larger rounded
+                  bevel, wood feel per §3.18.2)
+       Weighted normal : weight=50, threshold=0.01, keep_sharp=True
+  4. Material: MAT_placeholder_dark_wood (single slot).
+  5. Add optional decorative AK_stock_buttplate_visual as a separate object:
+       - thin box, dims ≈ (0.012, 0.040, 0.085)
+       - located at the rear of the stock, oriented along the butt face
+       - material: MAT_placeholder_black_metal
+       - linked to 03B_stock
+       - parented to AK47_MASTER_ASSET
+       - keep it solid and decorative (no functional attachment).
+
+Do not add:
+  - Wood grain or final texture (deferred to Section 5).
+  - Screw detail or functional mounting structure.
+  - Real internal attachment geometry.
+
+Sanity-check side and 3/4 view: stock has thickness, top curve is natural,
+lower angled edge matches reference.
+
+Stop at this part.

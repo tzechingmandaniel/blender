@@ -1,0 +1,43 @@
+Section 3 — Handguards and Gas Tube Prompt (§3.11, §3.12, §3.19.6)
+===================================================================
+
+Refine only the lower handguard, upper handguard, and gas tube exterior
+parts. AK_handguard_lower_main, AK_handguard_upper_main, and
+AK_gas_tube_outer already exist as duplicates in 03_MAJOR_PARTS/03E_handguard.
+
+Lower handguard (AK_handguard_lower_main):
+  - Modifier stack:
+      Bevel    : width=0.0030, segments=3, limit=ANGLE 35°  (rounded wood feel)
+      Weighted normal : weight=50, threshold=0.01, keep_sharp=True
+  - Material: MAT_placeholder_dark_wood (single slot).
+  - Confirm slight lower contour from BLK_ source is preserved.
+
+Upper handguard (AK_handguard_upper_main):
+  - Modifier stack: same as lower handguard.
+  - Material: MAT_placeholder_dark_wood (single slot).
+  - Confirm visual sits above lower handguard with no merge.
+
+Gas tube exterior (AK_gas_tube_outer):
+  - Modifier stack:
+      Bevel    : width=0.0010, segments=2, limit=ANGLE 30°  (small bevel on
+                 cylinder ends per §3.18.2)
+      Weighted normal : weight=50, threshold=0.01, keep_sharp=True
+  - Material: MAT_placeholder_dark_metal (single slot).
+  - Do not add gas port or any internal tube detail.
+
+Optional decorative collars, each a separate object parented to
+AK47_MASTER_ASSET, linked to 03E_handguard, material MAT_placeholder_dark_metal:
+
+  AK_handguard_upper_front_collar_visual
+    - thin ring/cylinder, radius ≈ 0.013, depth ≈ 0.012, axis X
+    - position: at the front end of AK_handguard_upper_main, around the
+      barrel/gas tube line.
+
+  AK_handguard_upper_rear_collar_visual
+    - thin ring/cylinder, same dims as the front collar
+    - position: at the rear end of AK_handguard_upper_main.
+
+Sanity-check: wood and metal parts read as separate; no internal gas-system
+detail; nothing collides badly with the barrel exterior.
+
+Stop at these parts.

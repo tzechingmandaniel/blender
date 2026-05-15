@@ -1,0 +1,89 @@
+MCP Mega Prompt §Phase 7 — Final Scene, Renders, Turntable, Export
+====================================================================
+
+(This is Section 6 in the project's naming convention, executing the Phase 7
+plan from phase_7_final_scene_render_turntable_export_detailed_plan.txt.
+Skips the optional "Phase 6 final texture lookdev" step because Section 5
+already produced procedural-textured materials.)
+
+Open v05_uv_materials.blend. Build the final presentation scene, render the
+portfolio still set, render a 360° turntable, and prepare clean export
+collections. Save as v06_final_assembly.blend.
+
+Important safety and scope:
+- This is only a visual exterior prop.
+- Do not animate functional weapon parts (no trigger, no bolt, no magazine).
+- Do not create internal mechanisms, bore, rifling, chamber, manufacturing
+  dimensions, or technical assembly details.
+- Final renders and exports must show the exterior visual prop only.
+
+Tasks:
+
+1. Scene cleanup (§7.3) — hide from render:
+     00_REFERENCE, 01_GUIDES, 02_BLOCKOUT, 03H_major_part_backup,
+     06_MATERIAL_TESTS (if exists). Final AK_ objects stay visible.
+
+2. Final master assembly (§7.5) — reuse existing AK47_MASTER_ASSET as the
+   master empty (already parents every BLK_ and AK_ object). Create
+   EMPTY_turntable_center at world origin and parent AK47_MASTER_ASSET to it
+   for the turntable.
+
+3. Final cameras (§7.7) — create:
+     CAM_final_side_profile           (orthographic, Y-axis side)
+     CAM_final_front_3quarter         (hero — front 3/4 elevated)
+     CAM_final_rear_3quarter          (rear 3/4)
+     CAM_final_top_angle              (~45° elevated)
+     CAM_final_low_angle_optional     (low front 3/4, optional)
+     CAM_closeup_receiver
+     CAM_closeup_wood_stock
+     CAM_closeup_handguard
+     CAM_closeup_magazine
+     CAM_closeup_front_sight
+     CAM_closeup_grip
+     CAM_closeup_material_edgewear
+     CAM_turntable_main
+   All linked into 08_LIGHTING_CAMERA collection. Close-ups frame their
+   target AK_ part using the part's world bbox + an offset on +Y, slightly
+   elevated.
+
+4. Final studio lighting (§7.10) — create in 08_LIGHTING_CAMERA:
+     LIGHT_final_key_soft     large area light, upper front, ~120 W
+     LIGHT_final_fill_soft    area light, opposite side, ~40 W
+     LIGHT_final_rim_subtle   small area light behind, ~80 W
+     LIGHT_final_top_soft     soft top light, ~60 W (optional)
+
+5. Background and stage (§7.12) — in 08_LIGHTING_CAMERA:
+     BG_final_neutral_backdrop   large plane behind the prop
+     FLOOR_final_studio_plane    large plane under the prop
+   Both use MAT_background_neutral_dark (new mid-grey matte material).
+
+6. Render output plan (§7.14) — 11 stills + 2 optional clay/wireframe.
+   Cycles, 1920x1080, 128 samples (CPU). Filmic + Medium Contrast.
+   Output folder: 04_renders/final/. Names render_01 … render_13.
+
+7. Turntable (§7.22) — animate EMPTY_turntable_center.rotation_euler.z from
+   0 to 2π over frames 1..180, linear interpolation. Output:
+   04_renders/turntable/turntable_ak_style_exterior_prop.mp4 at 1920x1080,
+   30 fps.
+
+8. Export-ready collection (§7.25) — create 09_EXPORT_READY containing
+   *links* (not copies) to every AK_ object. BLK_ objects and lights/cameras
+   not included.
+
+9. Exports (§7.27, §7.28) — when run, export to:
+     02_exports/fbx/AK47_exterior_prop_visual.fbx
+     02_exports/glb/AK47_exterior_prop_visual.glb
+     02_exports/obj/AK47_exterior_prop_visual.obj
+   Only objects in 09_EXPORT_READY are exported.
+
+Sanity targets at end:
+- 13 cameras exist in 08_LIGHTING_CAMERA.
+- 4 LIGHT_final_* lights exist.
+- BG_final_neutral_backdrop + FLOOR_final_studio_plane exist.
+- EMPTY_turntable_center exists and parents AK47_MASTER_ASSET.
+- Animation: rotation_z on EMPTY_turntable_center has 2 keyframes
+  (frame 1 = 0, frame 180 = 2π).
+- 09_EXPORT_READY links every AK_ object.
+- Render settings: Cycles, 1920x1080, 128 samples.
+
+Save:  01_blender/v06_final_assembly.blend

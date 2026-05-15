@@ -1,0 +1,44 @@
+Section 3 — Barrel and Front Assembly Prompt (§3.13, §3.14, §3.19.7)
+=====================================================================
+
+Refine only the barrel exterior and front assembly visual parts.
+AK_barrel_outer_closed, AK_front_sight_block_visual, AK_front_ring_visual,
+and AK_gas_block_visual already exist as duplicates in
+03_MAJOR_PARTS/03F_barrel_front (with rear sight already handled in prompt 03).
+
+Barrel exterior (AK_barrel_outer_closed):
+  - Confirm straight alignment with GUIDE_centerline.
+  - Modifier stack:
+      Bevel    : width=0.0010, segments=2, limit=ANGLE 30°
+      Weighted normal : weight=50, threshold=0.01, keep_sharp=True
+  - Material: MAT_placeholder_dark_metal (single slot).
+  - Keep the muzzle end visually solid — no real bore.
+
+Front sight block (AK_front_sight_block_visual):
+  - Modifier stack:
+      Bevel    : width=0.0008, segments=2, limit=ANGLE 30°
+      Weighted normal : weight=50, threshold=0.01, keep_sharp=True
+  - Material: MAT_placeholder_dark_metal (single slot).
+  - Keep the existing upright block + small post silhouette from BLK_.
+
+Front ring (AK_front_ring_visual):
+  - Modifier stack:
+      Bevel    : width=0.0008, segments=2, limit=ANGLE 30°
+      Weighted normal : weight=50, threshold=0.01, keep_sharp=True
+  - Material: MAT_placeholder_dark_metal (single slot).
+  - Keep the existing decorative barrel band shape from BLK_.
+
+Gas block (AK_gas_block_visual):
+  - Modifier stack: same as front ring.
+  - Material: MAT_placeholder_dark_metal (single slot).
+  - Keep the existing block + cleaning-rod boss silhouette from BLK_.
+
+Do not add:
+  - Real bore, rifling, chamber.
+  - Threaded muzzle device, functional sight adjustment mechanism.
+  - Internal barrel supports or manufacturing-level barrel features.
+
+Sanity-check from front view and 3/4: barrel exterior is straight, front
+sight reads at a glance, front ring + gas block are clearly distinct.
+
+Stop at these parts.

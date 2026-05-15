@@ -1,0 +1,41 @@
+Section 3 — Magazine Prompt (§3.10, §3.19.5)
+=============================================
+
+Refine only the curved magazine exterior major part. AK_magazine_main
+already exists as a duplicate in 03_MAJOR_PARTS/03D_magazine.
+
+Tasks for AK_magazine_main:
+  1. Confirm the existing banana curve from BLK_magazine_main is preserved.
+  2. Modifier stack:
+       Bevel    : width=0.0020, segments=2, limit=ANGLE 30°  (medium bevel,
+                  stamped metal feel per §3.18.2)
+       Weighted normal : weight=50, threshold=0.01, keep_sharp=True
+  3. Material: MAT_placeholder_black_metal (single slot).
+
+Add optional decorative parts, each a separate object parented to
+AK47_MASTER_ASSET and linked to 03D_magazine, with
+MAT_placeholder_black_metal:
+
+  AK_magazine_baseplate_visual
+    - dims ≈ (0.115, 0.030, 0.010)
+    - position: bottom face of magazine, follows curve forward offset
+    - thin flange under the magazine body.
+
+  AK_magazine_front_spine_visual
+    - thin raised ridge along the front (curved) edge of the magazine body
+    - dims ≈ (0.008, 0.026, 0.140), then aligned with the front-curve face
+    - represents the stamped spine seen on AK-style magazines.
+
+  AK_magazine_rear_spine_visual
+    - thin raised ridge along the rear (mostly vertical) edge
+    - dims ≈ (0.008, 0.026, 0.140)
+    - represents the rear stamped spine.
+
+Do not add:
+  - Feed lips, internal cartridge space, follower, spring, locking tab,
+    or any true magazine interface details.
+
+Sanity-check from 3/4 view: magazine has clear thickness, spines visible
+but not oversized, baseplate present but simple.
+
+Stop at this part.

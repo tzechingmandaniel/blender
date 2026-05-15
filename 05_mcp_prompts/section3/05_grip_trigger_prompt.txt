@@ -1,0 +1,37 @@
+Section 3 — Grip and Trigger Guard Prompt (§3.9, §3.16, §3.19.4)
+=================================================================
+
+Refine the pistol grip and trigger guard visual parts. AK_grip_main and
+AK_trigger_guard_visual already exist as duplicates in 03_MAJOR_PARTS/03C_grip.
+
+Grip (AK_grip_main):
+  1. Keep the existing backward tilt from BLK_grip_main (~-18°).
+  2. Round front and back vertical edges with a larger bevel.
+  3. Modifier stack:
+       Bevel    : width=0.0030, segments=3, limit=ANGLE 35°  (rounded
+                  ergonomic feel per §3.18.2)
+       Weighted normal : weight=50, threshold=0.01, keep_sharp=True
+  4. Material: MAT_placeholder_bakelite_grip (single slot).
+  5. Add optional AK_grip_basecap_visual as a separate object:
+       - thin box, dims ≈ (0.050, 0.034, 0.005)
+       - located at the bottom face of the grip
+       - material: MAT_placeholder_black_metal
+       - linked to 03C_grip
+       - parented to AK47_MASTER_ASSET
+       - keep it thin and decorative (no functional screw or internal detail).
+
+Trigger guard (AK_trigger_guard_visual):
+  1. Keep the simple curved silhouette from BLK_trigger_guard_visual.
+  2. Modifier stack:
+       Bevel    : width=0.0015, segments=2, limit=ANGLE 30°
+       Weighted normal : weight=50, threshold=0.01, keep_sharp=True
+  3. Material: MAT_placeholder_dark_metal (single slot).
+  4. Confirm visual position: below receiver, in front of grip, no overlap
+     with magazine.
+
+Do not add:
+  - Checkered texture or fine grip grooves (deferred).
+  - Real screw detail or internal grip structure.
+  - Working trigger mechanism, internal linkage, or pivot points.
+
+Stop at these parts.

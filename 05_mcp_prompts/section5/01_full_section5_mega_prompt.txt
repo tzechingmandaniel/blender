@@ -1,0 +1,82 @@
+MCP Mega Prompt §5.19 — Full Section 5 (Ready-to-Use)
+======================================================
+
+Open v04_minor_details.blend. Prepare the model for materials: clean meshes,
+unwrap UVs, build final material groups, and reassign every AK_ object away
+from the MAT_placeholder_* set to its final material. Save as
+v05_uv_materials.blend.
+
+Important safety and scope:
+- This is only a visual exterior prop.
+- Do not create internal firearm mechanisms, working trigger, chamber, bolt,
+  spring, firing system, functional magazine system, or manufacturing-level
+  details. Materials are surface-only.
+
+Tasks:
+
+1. Mesh cleanup (§5.3) — for every AK_ and BLK_ object:
+     - Apply scale (rotation/location untouched).
+     - Recalculate face normals (outside).
+     - Remove duplicate vertices (merge by distance, threshold 1e-5).
+
+2. UV unwrap (§5.5) — Smart UV Project per AK_ object:
+     - Receiver, dust cover, magazine, stock, grip, handguards:
+         angle_limit=66°, island_margin=0.02
+     - Cylinder-like parts (barrel, gas tube, gas block, front ring, rings):
+         angle_limit=89°, island_margin=0.015
+     - Small details (rivets, ribs, seams, etc.):
+         angle_limit=66°, island_margin=0.01
+     - Wood parts should keep grain direction lengthwise (X axis).
+
+3. Material groups (§5.7) — create 7 final materials with Principled BSDF
+   plus procedural noise → ColorRamp → Roughness and Noise → Bump → Normal:
+
+     MAT_metal_dark_blued       dark blue-grey worn steel
+                                base ~ (0.06, 0.06, 0.07), metallic 0.9,
+                                roughness 0.35–0.65 (noise-driven),
+                                low bump (0.05)
+
+     MAT_metal_black_magazine   blackened metal, slightly matter than blued
+                                base ~ (0.03, 0.03, 0.035), metallic 0.85,
+                                roughness 0.5–0.8, low bump (0.04)
+
+     MAT_wood_dark_reddish      dark reddish-brown varnished wood
+                                base ~ (0.18, 0.08, 0.05), metallic 0.0,
+                                roughness 0.45–0.70 (grain-aligned noise),
+                                grain bump (0.10), mapping scaled along X
+
+     MAT_grip_dark_bakelite     dark maroon/reddish bakelite
+                                base ~ (0.10, 0.04, 0.03), metallic 0.0,
+                                roughness 0.55–0.75, subtle bump (0.05)
+
+     MAT_edge_wear_light_metal  lighter worn-metal accent
+                                base ~ (0.45, 0.45, 0.45), metallic 0.95,
+                                roughness 0.3, no bump
+
+     MAT_shadow_seam_dark       very dark grey, matte, for seam objects
+                                base ~ (0.02, 0.02, 0.02), metallic 0.0,
+                                roughness 0.85, no bump
+
+     MAT_rubber_dark_optional   reserved for future rubber-like parts (created
+                                but unassigned in this section)
+
+4. Material assignment (§5.7.2) — for every AK_ object currently using a
+   placeholder material, replace the slot with its final material:
+     MAT_placeholder_dark_metal      -> MAT_metal_dark_blued
+     MAT_placeholder_black_metal     -> MAT_metal_black_magazine
+     MAT_placeholder_dark_wood       -> MAT_wood_dark_reddish
+     MAT_placeholder_bakelite_grip   -> MAT_grip_dark_bakelite
+
+   Seam objects (AK_seam_*) get MAT_shadow_seam_dark.
+   Rivets / sling loops can stay on MAT_metal_dark_blued.
+
+5. Test render setup (§5.18) — no extra cameras needed; reuse existing
+   CAM_preview_3quarter and VIEW_side_modeling.
+
+Sanity targets at end:
+- 7 new MAT_ materials exist (MAT_metal_dark_blued etc).
+- Every AK_ object has a final material assigned (no placeholder slots).
+- BLK_ backups remain in 03H_major_part_backup, still hidden.
+- Every AK_ mesh has uv_layer set.
+
+Save:  01_blender/v05_uv_materials.blend

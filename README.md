@@ -13,10 +13,15 @@ scripts driven by an LLM/MCP workflow.
 
 - ✅ **Section 1 — Project Setup** complete (`v01_project_setup.blend`)
 - ✅ **Section 2 — Blockout** complete (`v02_blockout.blend`)
-- ⬜ Section 3 — Major parts (planned)
-- ⬜ Section 4 — Detail pass (planned)
-- ⬜ Section 5 — Materials (planned)
-- ⬜ Section 6 — Final assembly (planned)
+- ✅ **Section 3 — Major parts** complete (`v03_major_parts.blend`)
+- ✅ **Section 4 — Minor exterior details** complete (`v04_minor_details.blend`)
+- ✅ **Section 5 — UV / materials** complete (`v05_uv_materials.blend`)
+- ✅ **Section 6 — Final scene / renders / turntable / export** complete (`v06_final_assembly.blend`)
+  - 13 portfolio cameras, 4 studio lights, neutral background, 180-frame turntable rig
+  - 11 stills @ 1920×1080 / Cycles 128 samples → `04_renders/final/render_01..11_*.png`
+  - 120-frame 360° turntable @ 1280×720 / 30 fps / Cycles 24 samples → `04_renders/turntable/frames/turntable_####.png` (PNG sequence; assemble to .mp4 with `ffmpeg -framerate 30 -i frames/turntable_%04d.png -c:v libx264 -pix_fmt yuv420p -crf 18 turntable_ak_style_exterior_prop.mp4`)
+  - Exports → `02_exports/{fbx,glb,obj}/AK47_exterior_prop_visual.*`
+  - Lighting tuned after first render pass (key 50W / fill 20W / rim 30W / top 25W); side profile ortho_scale 2.7× model length
 
 ## Directory layout
 

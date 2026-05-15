@@ -1,0 +1,102 @@
+MCP Mega Prompt §4.19 — Full Section 4 (Ready-to-Use)
+======================================================
+
+Open v03_major_parts.blend. Add only non-functional decorative exterior
+details to the AK_ major parts. Save the result as v04_minor_details.blend.
+
+Important safety and scope:
+- This is only a visual exterior prop.
+- Do not create internal firearm mechanisms.
+- Do not create functional trigger, magazine release, locking, hinge, latch,
+  bore, rifling, chamber, threaded muzzle, gas port, or any disassembly
+  feature.
+- All details must be surface-only and decorative.
+
+Task — create the following collections under the scene root:
+  04_MINOR_PARTS
+    04A_receiver_details
+    04B_dustcover_details
+    04C_magazine_details
+    04D_wood_details
+    04E_grip_details
+    04F_sling_loop
+    04G_surface_seams
+    04H_detail_backup
+    04I_front_details      (referenced by §4.12.1)
+    04J_sight_details      (referenced by §4.13.1)
+
+Then add the following detail groups (each detail object is its own mesh,
+parented to AK47_MASTER_ASSET, placed in the listed sub-collection, with the
+single placeholder material from the parent's material family).
+
+Use AK_ part world bounding boxes as anchors so every detail follows the
+parent's transform. Keep all dimensions small (rivets 2 mm; ribs/grooves
+0.5–1 mm thick; seams 0.4 mm thick).
+
+Receiver (04A_receiver_details, MAT_placeholder_dark_metal):
+  - AK_rivet_receiver_001 … _003     small rounded rivet heads on the side
+  - AK_panel_receiver_side_001/_002   shallow raised side panel outlines
+  - AK_lever_receiver_visual_001      decorative selector-style lever
+
+Dust cover (04B_dustcover_details, MAT_placeholder_dark_metal):
+  - AK_rib_dustcover_001/_002         shallow raised ribs along the top
+  - AK_seam_dustcover_receiver_001    subtle seam between cover and receiver
+
+Magazine (04C_magazine_details, MAT_placeholder_black_metal):
+  - AK_groove_magazine_001 … _003     broad shallow curve-following grooves
+  - AK_ridge_magazine_front_001       front spine surface emphasis
+  - AK_ridge_magazine_rear_001        rear spine surface emphasis
+  - AK_seam_magazine_baseplate_001    decorative baseplate seam
+
+Wood — stock + handguards (04D_wood_details, MAT_placeholder_dark_wood):
+  - AK_wood_contour_stock_001         broad subtle wood contour
+  - AK_wood_contour_handguard_upper_001
+  - AK_groove_handguard_lower_001/_002
+  - AK_seam_handguard_front_001/_rear_001
+  - AK_wear_stock_edge_001/_002       shallow wear strips on high-contact edges
+  - AK_wear_handguard_edge_001
+
+Grip (04E_grip_details, MAT_placeholder_bakelite_grip):
+  - AK_groove_grip_001 … _003         shallow broad grip grooves
+  - AK_seam_grip_basecap_001          base cap seam
+  - AK_wear_grip_edge_001             lower edge wear placeholder
+
+Sling loops (04F_sling_loop, MAT_placeholder_dark_metal):
+  - AK_loop_sling_rear_visual         simple ring near rear stock
+  - AK_loop_sling_front_visual        simple ring near handguard front
+  - AK_plate_sling_rear_visual        small visual bracket plate (rear)
+
+Seams (04G_surface_seams, MAT_placeholder_dark_metal):
+  - AK_seam_stock_receiver_001
+  - AK_seam_grip_receiver_001
+  - AK_seam_handguard_receiver_001
+  - AK_seam_barrel_front_001
+
+Front (04I_front_details, MAT_placeholder_dark_metal):
+  - AK_ring_barrel_visual_001/_002    decorative bands around barrel exterior
+  - AK_seam_front_block_001           seam where front block meets barrel
+  - AK_wear_front_sight_edge_001
+  - AK_line_cleaningrod_visual_001    thin visual line underneath barrel
+
+Sights (04J_sight_details, MAT_placeholder_dark_metal):
+  - AK_detail_rearsight_001           small raised top shape
+  - AK_notch_rearsight_visual_001     shallow visual notch
+  - AK_wear_rearsight_edge_001
+
+Receiver wear (04A_receiver_details, MAT_placeholder_dark_metal):
+  - AK_wear_receiver_edge_001
+Magazine wear (04C_magazine_details, MAT_placeholder_black_metal):
+  - AK_wear_magazine_edge_001
+
+Detail density rule (§4.17.1):
+  receiver: medium-high, magazine: medium, stock/handguard: medium,
+  grip: low-medium, barrel/front: medium, rear sight: low.
+
+Sanity targets at end:
+- 04_MINOR_PARTS exists with the listed sub-collections.
+- ~40 detail objects exist, each parented to AK47_MASTER_ASSET.
+- Every detail has a single placeholder material from the parent family.
+- All AK_ major parts from v03 still exist and are unchanged.
+- BLK_ backups still hidden in 03H_major_part_backup.
+
+Save:  01_blender/v04_minor_details.blend

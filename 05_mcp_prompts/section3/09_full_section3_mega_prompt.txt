@@ -1,0 +1,61 @@
+MCP Mega Prompt §3.19 — Full Section 3 (Ready-to-Use)
+======================================================
+
+Open v02_blockout.blend. Refine the BLK_ blockout objects into AK_ major
+exterior parts for a non-functional AK-style exterior 3D prop. Save the
+result as v03_major_parts.blend.
+
+Important safety and scope:
+- This is only a visual exterior prop.
+- Do not create internal firearm mechanisms.
+- Do not create a functional barrel, chamber, bolt, spring, trigger
+  mechanism, firing system, detachable magazine system, or manufacturing-
+  level details.
+- All objects must remain solid decorative exterior meshes only.
+
+Task — for each BLK_ object listed below, in order:
+  1. Duplicate the object (object + mesh data).
+  2. Rename the duplicate using the BLK_ → AK_ map.
+  3. Move the duplicate to the matching sub-collection under 03_MAJOR_PARTS.
+  4. Parent the AK_ object to AK47_MASTER_ASSET.
+  5. Replace any pre-existing Bevel / WeightedNormal modifiers with the
+     per-part bevel style from §3.18.2.
+  6. Assign the single placeholder material listed.
+  7. Move the original BLK_ into 03H_major_part_backup and hide it.
+
+BLK_ → AK_ map and per-part bevel style:
+
+  BLK_receiver_main             -> AK_receiver_main             03A_receiver       MAT_placeholder_dark_metal     bevel=0.0018/2
+  BLK_dustcover_main            -> AK_dustcover_main            03A_receiver       MAT_placeholder_dark_metal     bevel=0.0015/2
+  BLK_stock_main                -> AK_stock_main                03B_stock          MAT_placeholder_dark_wood      bevel=0.0035/3
+  BLK_grip_main                 -> AK_grip_main                 03C_grip           MAT_placeholder_bakelite_grip  bevel=0.0030/3
+  BLK_trigger_guard_visual      -> AK_trigger_guard_visual      03C_grip           MAT_placeholder_dark_metal     bevel=0.0015/2
+  BLK_magazine_main             -> AK_magazine_main             03D_magazine       MAT_placeholder_black_metal    bevel=0.0020/2
+  BLK_handguard_lower           -> AK_handguard_lower_main      03E_handguard      MAT_placeholder_dark_wood      bevel=0.0030/3
+  BLK_handguard_upper           -> AK_handguard_upper_main      03E_handguard      MAT_placeholder_dark_wood      bevel=0.0030/3
+  BLK_gas_tube_outer            -> AK_gas_tube_outer            03E_handguard      MAT_placeholder_dark_metal     bevel=0.0010/2
+  BLK_barrel_outer_closed       -> AK_barrel_outer_closed       03F_barrel_front   MAT_placeholder_dark_metal     bevel=0.0010/2
+  BLK_front_sight_block_visual  -> AK_front_sight_block_visual  03F_barrel_front   MAT_placeholder_dark_metal     bevel=0.0008/2
+  BLK_front_ring_visual         -> AK_front_ring_visual         03F_barrel_front   MAT_placeholder_dark_metal     bevel=0.0008/2
+  BLK_gas_block_visual          -> AK_gas_block_visual          03F_barrel_front   MAT_placeholder_dark_metal     bevel=0.0008/2
+  BLK_rear_sight_visual         -> AK_rear_sight_visual         03G_sights         MAT_placeholder_dark_metal     bevel=0.0010/2
+
+Then add the following optional decorative AK_ visual parts, each linked to
+the listed sub-collection and parented to AK47_MASTER_ASSET:
+
+  AK_stock_buttplate_visual              03B_stock       MAT_placeholder_black_metal
+  AK_grip_basecap_visual                 03C_grip        MAT_placeholder_black_metal
+  AK_magazine_baseplate_visual           03D_magazine    MAT_placeholder_black_metal
+  AK_magazine_front_spine_visual         03D_magazine    MAT_placeholder_black_metal
+  AK_magazine_rear_spine_visual          03D_magazine    MAT_placeholder_black_metal
+  AK_handguard_upper_front_collar_visual 03E_handguard   MAT_placeholder_dark_metal
+  AK_handguard_upper_rear_collar_visual  03E_handguard   MAT_placeholder_dark_metal
+
+Sanity targets at end:
+- All 14 AK_ refined parts exist in 03_MAJOR_PARTS sub-collections.
+- All 7 optional AK_ decorative parts exist and are placed.
+- BLK_ objects all exist but are hidden in 03H_major_part_backup.
+- Receiver remains central; barrel forward; stock backward; magazine below.
+- AK47_MASTER_ASSET parents both BLK_ and AK_ objects.
+
+Save:  01_blender/v03_major_parts.blend

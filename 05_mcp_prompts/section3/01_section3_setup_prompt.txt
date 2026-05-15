@@ -1,0 +1,38 @@
+Section 3 — Setup Prompt (Major Parts Refinement)
+=================================================
+
+Open the existing Section 2 file v02_blockout.blend. Prepare it for Section 3
+major-parts refinement.
+
+Important safety and scope:
+- This is only a visual exterior prop.
+- Do not create internal firearm mechanisms.
+- Do not create functional barrel, chamber, bolt, spring, trigger mechanism,
+  firing system, detachable magazine system, or manufacturing-level details.
+- All objects must remain solid decorative exterior meshes only.
+
+Task:
+Create the following collections under the scene root:
+  03_MAJOR_PARTS
+    03A_receiver
+    03B_stock
+    03C_grip
+    03D_magazine
+    03E_handguard
+    03F_barrel_front
+    03G_sights
+    03H_major_part_backup
+
+For each existing BLK_ blockout object listed in §3.3.1, in this order:
+  1. Duplicate the BLK_ object (object + mesh data).
+  2. Rename the duplicate using the BLK_ → AK_ map in §3.3.1.
+  3. Link the AK_ duplicate to the matching sub-collection above.
+  4. Parent the AK_ object to AK47_MASTER_ASSET (keep transform).
+  5. Move the original BLK_ object to 03H_major_part_backup.
+  6. Hide the original BLK_ object in viewport (do not delete it).
+
+Do not edit geometry yet — this prompt only sets up the collection structure
+and the AK_ duplicates. Each subsequent prompt (02–08) refines a single
+major part.
+
+Save the file as v03_major_parts.blend before continuing.
